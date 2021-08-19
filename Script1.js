@@ -1,2 +1,2 @@
 import { english, ukrainian, transcription } from "./words.js";
-console.log("10");
+console.log(english[7]);
