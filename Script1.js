@@ -1,6 +1,6 @@
 import { english, ukrainian, transcription } from "./words.js";
 
-const favourite = ["wow"];
+const favourite = [];
 localStorage.setItem("favouriteWords", JSON.stringify(favourite));
 let favouriteWords = JSON.parse(localStorage.getItem("favouriteWords"));
 
