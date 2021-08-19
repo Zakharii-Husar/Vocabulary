@@ -8,6 +8,7 @@ const like = document.getElementById("like");
 like.addEventListener("click", function () { favourite.push("wss") });
 
 console.log(favouriteWords);
+console.log(favourite + "2");
 
 const know = [];
 const doubt = [];
