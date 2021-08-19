@@ -1,0 +1,77 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    #container * {
+        border: 2px solid black;
+    }
+
+#card {
+    background-image: url(img/flag.jpg);
+    background-size: 100% 100%;
+}
+
+#word{
+    padding: 13% 0 13% 0;
+    color: wheat;
+    text-shadow: 2px 2px 4px black;
+    font-size: 300%;
+    font-weight: 800;
+}
+
+#transcription {
+    color: wheat;
+    border: unset;
+    font-size: 150%;
+    font-weight: 400;
+    margin-top: -10%;
+}
+
+#flip{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 3%;
+    border: unset;
+}
+
+#like {
+    width: 10%;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    border: unset;
+}
+
+#panel {
+    display: flex;
+    flex-direction: row;
+}
+
+    #panel * {
+        width: 100%;
+        padding: 5% 0 5% 0;
+        text-shadow: 1px 1px 2px grey;
+        font-size: 100%;
+        font-family: 'Courier New';
+        font-weight: 700;
+    }
+
+#green{
+    background-color: green;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#red{
+    background-color: red;
+}
