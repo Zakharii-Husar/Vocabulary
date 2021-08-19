@@ -7,7 +7,7 @@ let favouriteWords = JSON.parse(localStorage.getItem("favouriteWords"));
 const like = document.getElementById("like");
 like.addEventListener("click", favourite.push("wowo"))
 
-
+console.log(favouriteWords[0]);
 const know = [];
 const doubt = [];
 const dontKnow = [];
