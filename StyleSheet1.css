@@ -18,7 +18,7 @@
     }
 
 #card {
-    background-image: url(img/flag.jpg);
+    
 
     transform-style: preserve-3d;
     transition: all 0.8s ease;
@@ -30,6 +30,8 @@
 }
 
 #word {
+    background-image: url(img/flag.jpg);
+
     padding: 13% 0 13% 0;
     color: wheat;
     text-shadow: 2px 2px 4px black;
