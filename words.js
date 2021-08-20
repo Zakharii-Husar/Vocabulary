@@ -1,4 +1,4 @@
-﻿const english = [
+﻿const englishArray = [
 "a/an",
 "ability",
 "able",
