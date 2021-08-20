@@ -8,7 +8,7 @@ like.addEventListener("click", function () {
 });
 
 
-localStorage.setItem("favouriteWords", favourite);
+localStorage.setItem("favouriteWords", JSON.stringify(favourite));
 
 let data = localStorage.getItem("favouriteWords");
 let favouriteWords = JSON.parse(data);
