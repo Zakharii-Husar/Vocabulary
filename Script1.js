@@ -1,22 +1,22 @@
 import { english, ukrainian, transcription } from "./words.js";
 
-let favourite = ["lol"];
+let favourite = ["first"];
 
-favourite.push("kek");
+const like = document.getElementById("like");
+like.addEventListener("click", function () {
+    favourite.push("second");
+});
 
-let income = JSON.stringify(favourite);
-localStorage.setItem("favouriteWords", income);
+
+localStorage.setItem("favouriteWords", favourite);
 
 let data = localStorage.getItem("favouriteWords");
 let favouriteWords = JSON.parse(data);
 
 
-const like = document.getElementById("like");
-like.addEventListener("click", function () {
-    console.log(income);
-    console.log(favouriteWords);
-});
 
+console.log(income);
+console.log(favouriteWords);
 
 const know = [];
 const doubt = [];
