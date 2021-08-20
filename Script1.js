@@ -50,7 +50,7 @@ const card = document.getElementById("card");
 
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
-    card.classList.toggle("active");
+    card.classList.toggle("#card.active");
 });
 
 const knownWords = [];
