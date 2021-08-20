@@ -2999,4 +2999,5 @@ const ukrainianArray = [
     "себе"
 ]
 
+
 export { englishArray, ukrainianArray, transcriptionArray };
