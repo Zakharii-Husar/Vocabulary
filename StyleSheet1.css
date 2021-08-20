@@ -76,7 +76,7 @@
     border: unset;
 }
 
-    #flip.active {
+    #card.active {
         transform: rotateY(180deg);
     }
 
