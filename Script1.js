@@ -1,21 +1,21 @@
 import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
 let currentArray = englishArray;
+let random = Math.floor(Math.random() * currentArray.length);
+const word = document.getElementById("word");
+word.textContent = currentArray[random];
+const transcription = document.getElementById("transcription");
+transcription.textContent = transcriptionArray[random];
+
+
+
+// FAVOURITE WORDS
+
 let inputFavourite = [];
 let outputFavourite = JSON.parse(localStorage.getItem("favouriteWords"));
 if (localStorage.getItem("favouriteWords") !== null) {
     inputFavourite = outputFavourite;
 };
-
-
-let random = Math.floor(Math.random() * currentArray.length);
-
-const word = document.getElementById("word");
-
-word.textContent = currentArray[random];
-
-const transcription = document.getElementById("transcription");
-transcription.textContent = transcriptionArray[random];
 
 let starPic = document.getElementById("like");
 if (inputFavourite.includes(currentArray[random])) {
@@ -44,6 +44,15 @@ like.addEventListener("click", star);
 
 console.log(inputFavourite);
 
-const know = [];
-const doubt = [];
-const dontKnow = [];
+//FLIP THE CARD
+
+const card = document.getElementById("card");
+
+const flipBtn = document.getElementById("flip");
+flipBtn.addEventListener("click", () => {
+    card.classList.toggle("active");
+});
+
+const knownWords = [];
+const doubtfulWords = [];
+const unknownWords = [];
