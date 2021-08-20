@@ -12,7 +12,7 @@ const randomNum = () => {
 };
 
 const word = document.getElementById("word");
-word.textContent = currentArray[randomNum];
+word.innerText = currentArray[randomNum];
 
 const star = () => {
     let starPic = document.getElementById("like");
