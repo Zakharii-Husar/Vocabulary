@@ -11,8 +11,8 @@ const randomNum = () => {
     return Math.floor(Math.random() * currentArray.length)
 };
 
-const word = document.getElementById("word");
-word.textContent = JSON.stringify(currentArray[randomNum]);
+let words = document.getElementById("word");
+words.textContent = currentArray[randomNum];
 
 const star = () => {
     let starPic = document.getElementById("like");
