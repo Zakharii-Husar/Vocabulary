@@ -11,14 +11,17 @@ const randomNum = () => {
     return Math.floor(Math.random() * currentArray.length)
 };
 
+const word = document.getElementById("word");
+word.textContent = currentArray[randomNum];
+
 const star = () => {
     let starPic = document.getElementById("like");
-    if (!inputFavourite.includes(english[randomNum()])) {
+    if (!inputFavourite.includes(currentArray[randomNum()])) {
         starPic.setAttribute("src", "img/like.png");
-        inputFavourite.push(english[randomNum()]);
+        inputFavourite.push(currentArray[randomNum()]);
     } else {
         starPic.setAttribute("src", "img/unlike.png")
-        let i = inputFavourite.indexOf(english[randomNum()])
+        let i = inputFavourite.indexOf(currentArray[randomNum()])
         if (i > -1) {
             inputFavourite.splice(i, 1)
         }
