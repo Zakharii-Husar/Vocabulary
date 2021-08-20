@@ -1,29 +1,30 @@
 import { english, ukrainian, transcription } from "./words.js";
 
-let currentArray = english;
+let currentArray = ["banana", "saw", "cherry"];
 let inputFavourite = [];
 let outputFavourite = JSON.parse(localStorage.getItem("favouriteWords"));
 if (localStorage.getItem("favouriteWords") !== null) {
     inputFavourite = outputFavourite;
 };
 
-const randomNum = () => {
-    return 
-};
 
 let random = Math.floor(Math.random() * currentArray.length);
 
 const word = document.getElementById("word");
 
-word.textContent = currentArray[random] + "2";
+word.textContent = currentArray[random];
+
+let starPic = document.getElementById("like");
+if (!inputFavourite.includes(currentArray[random])) {
+    starPic.setAttribute("src", "img/like.png");
+} else {
+    starPic.setAttribute("src", "img/unlike.png")
+}
 
 const star = () => {
-    let starPic = document.getElementById("like");
     if (!inputFavourite.includes(currentArray[random])) {
-        starPic.setAttribute("src", "img/like.png");
         inputFavourite.push(currentArray[random]);
     } else {
-        starPic.setAttribute("src", "img/unlike.png")
         let i = inputFavourite.indexOf(currentArray[random])
         if (i > -1) {
             inputFavourite.splice(i, 1)
