@@ -15,7 +15,7 @@ const word = document.getElementById("word");
 word.textContent = currentArray[random];
 
 let starPic = document.getElementById("like");
-if (!inputFavourite.includes(currentArray[random])) {
+if (inputFavourite.includes(currentArray[random])) {
     starPic.setAttribute("src", "img/like.png");
 } else {
     starPic.setAttribute("src", "img/unlike.png")
