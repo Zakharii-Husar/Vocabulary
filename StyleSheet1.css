@@ -76,7 +76,7 @@
     border: unset;
 }
 
-    #card:hover {
+    #flip.active {
         transform: rotateY(180deg);
     }
 
