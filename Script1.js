@@ -1,19 +1,16 @@
 import { english, ukrainian, transcription } from "./words.js";
 
-let favourite = ["first"];
+let inputFavourite = ["first"];
+let outputFavourite = JSON.parse(localStorage.getItem("favouriteWords"));
 
 const like = document.getElementById("like");
 like.addEventListener("click", function () {
-    favourite.push(english[7]);
-    localStorage.setItem("favouriteWords", JSON.stringify(favourite));
+    inputFavourite.push(english[7]);
+    localStorage.setItem("favouriteWords", JSON.stringify(inputFavourite));
 });
 
 
-let data = localStorage.getItem("favouriteWords");
-let favouriteWords = JSON.parse(data);
-
-
-console.log(favouriteWords);
+console.log(localStorage.getItem("fav"));
 
 const know = [];
 const doubt = [];
