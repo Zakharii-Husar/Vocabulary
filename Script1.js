@@ -1,17 +1,17 @@
 import { english, ukrainian, transcription } from "./words.js";
 
 let favourite = [];
-if (favourite.length > 0) {
-    localStorage.setItem("favouriteWords", JSON.stringify(favourite));
-}
+localStorage.setItem("favouriteWords", JSON.stringify(favourite));
+
 let data = localStorage.getItem("favouriteWords");
 let favouriteWords = JSON.parse(data);
 
+favourite.push("kek");
+
 const like = document.getElementById("like");
 like.addEventListener("click", function () {
-    favourite.push("kek");
-    console.log("outcome" + favouriteWords);
-    console.log("favourite" + favourite);
+    console.log(favourite);
+    console.log(favouriteWords);
 });
 
 
