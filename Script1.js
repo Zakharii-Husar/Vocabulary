@@ -10,8 +10,8 @@ let favouriteWords = JSON.parse(data);
 const like = document.getElementById("like");
 like.addEventListener("click", function () { favourite.push("kek") });
 
-console.log(favouriteWords);
-console.log(favourite);
+console.log("outcome" + favouriteWords);
+console.log("favourite" + favourite);
 
 const know = [];
 const doubt = [];
