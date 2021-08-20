@@ -11,6 +11,7 @@ const like = document.getElementById("like");
 like.addEventListener("click", function () { favourite.push("kek") });
 
 console.log(favouriteWords);
+console.log(favourite);
 
 const know = [];
 const doubt = [];
