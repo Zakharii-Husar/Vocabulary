@@ -46,11 +46,11 @@ console.log(inputFavourite);
 
 //FLIP THE CARD
 
-const card = document.getElementById("card");
+const card = document.getElementsByClassName("card")[0];
 
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
-    card.classList.toggle("#card.active");
+    card.classList.toggle("active");
 });
 
 const knownWords = [];

@@ -76,7 +76,7 @@
     border: unset;
 }
 
-    #card.active {
+    .card.active {
         transform: rotateY(180deg);
     }
 
