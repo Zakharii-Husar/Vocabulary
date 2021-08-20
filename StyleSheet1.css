@@ -76,7 +76,7 @@
     border: unset;
 }
 
-    .card.active {
+    #card:hover {
         transform: rotateY(180deg);
     }
 
