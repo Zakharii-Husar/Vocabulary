@@ -23,8 +23,10 @@ if (inputFavourite.includes(currentArray[random])) {
 
 const star = () => {
     if (!inputFavourite.includes(currentArray[random])) {
+        starPic.setAttribute("src", "img/like.png");
         inputFavourite.push(currentArray[random]);
     } else {
+        starPic.setAttribute("src", "img/unlike.png");
         let i = inputFavourite.indexOf(currentArray[random])
         if (i > -1) {
             inputFavourite.splice(i, 1)
