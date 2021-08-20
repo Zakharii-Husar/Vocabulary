@@ -8,14 +8,14 @@ if (localStorage.getItem("favouriteWords") !== null) {
 };
 
 const randomNum = () => {
-    return Math.floor(Math.random() * currentArray.length)
+    return 
 };
 
-let random = randomNum();
+let random = Math.floor(Math.random() * currentArray.length);
 
 const word = document.getElementById("word");
 
-word.textContent = currentArray[random];
+word.textContent = currentArray[random] + "2";
 
 const star = () => {
     let starPic = document.getElementById("like");
