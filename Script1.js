@@ -4,7 +4,7 @@ let favourite = ["first"];
 
 const like = document.getElementById("like");
 like.addEventListener("click", function () {
-    favourite.push("second");
+    favourite.push(english[7]);
     localStorage.setItem("favouriteWords", JSON.stringify(favourite));
 });
 
