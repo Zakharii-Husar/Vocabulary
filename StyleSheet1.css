@@ -58,7 +58,7 @@
     border: unset;
 }
 
-    #flip.active {
+    #flip:hover {
         transform: rotateY(180deg);
     }
 
