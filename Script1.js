@@ -13,7 +13,7 @@ const randomNum = () => {
 
 const word = document.getElementById("word");
 window.onload = function () {
-    word.textContent = currentArray[randomNum];
+    word.textContent = currentArray[randomNum()];
 }
 
 const star = () => {
