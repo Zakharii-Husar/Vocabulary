@@ -998,7 +998,7 @@
 "your",
 "yourself"
 ]
-const transcription = [
+const transcriptionArray = [
     "eɪ/æn",
     "əˈbɪlɪti",
     "ˈeɪbl",
@@ -1998,7 +1998,7 @@ const transcription = [
     "jɔː",
     "jɔːˈsɛlf"
 ]
-const ukrainian = [
+const ukrainianArray = [
     "неозначений артикль",
     "здатність",
     "здатний(а)",
@@ -2999,4 +2999,4 @@ const ukrainian = [
     "себе"
 ]
 
-export { english, ukrainian, transcription };
+export { englishArray, ukrainianArray, transcriptionArray };

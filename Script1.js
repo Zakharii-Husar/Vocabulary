@@ -1,6 +1,6 @@
-import { english, ukrainian, transcription } from "./words.js";
+import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
-let currentArray = ["banana", "saw", "cherry"];
+let currentArray = englishArray;
 let inputFavourite = [];
 let outputFavourite = JSON.parse(localStorage.getItem("favouriteWords"));
 if (localStorage.getItem("favouriteWords") !== null) {
@@ -13,6 +13,9 @@ let random = Math.floor(Math.random() * currentArray.length);
 const word = document.getElementById("word");
 
 word.textContent = currentArray[random];
+
+const transcription = document.getElementById("transcription");
+transcription.textContent = transcriptionArray[random];
 
 let starPic = document.getElementById("like");
 if (inputFavourite.includes(currentArray[random])) {
