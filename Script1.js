@@ -14,8 +14,6 @@ let data = localStorage.getItem("favouriteWords");
 let favouriteWords = JSON.parse(data);
 
 
-
-console.log(income);
 console.log(favouriteWords);
 
 const know = [];
