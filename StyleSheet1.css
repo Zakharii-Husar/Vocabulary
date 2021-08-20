@@ -32,6 +32,7 @@
 
 #word {
     background-image: url(img/flag.jpg);
+    background-size: cover;
 
     padding: 13% 0 13% 0;
     color: wheat;
