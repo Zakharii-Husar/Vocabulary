@@ -8,7 +8,7 @@ if (localStorage.getItem("favouriteWords") !== null) {
 };
 
 const randomNum = () => {
-    Math.floor(Math.random() * currentArray.length)
+    return Math.floor(Math.random() * currentArray.length)
 };
 
 const star = () => {
