@@ -1,15 +1,20 @@
-﻿* {
+﻿html, body{
+    height: 100%;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
+
 
 #container {
     display: flex;
     flex-direction: column;
     text-align: center;
-    position: absolute;
     width: 100%;
     height: 100%;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -20,56 +25,56 @@
     }
 
 #card {
-    
     width: 100%;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
 }
+
+
 
 #word {
     background-image: url(img/flag.jpg);
-    background-size: cover;
-
+    background-size: 100% 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
     padding: 13% 0 13% 0;
     color: wheat;
     text-shadow: 2px 2px 4px black;
     font-size: 300%;
     font-weight: 800;
-    backface-visibility: hidden;
-    overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
-    height: auto;
 }
 
 #flipside {
+    background-image: url(img/flag2.jpg);
+    background-size: 100% 100%;
+
+    backface-visibility: hidden;
+    overflow: hidden;
     padding: 13% 0 13% 0;
     color: wheat;
     text-shadow: 2px 2px 4px black;
     font-size: 300%;
+
     font-weight: 800;
-    backface-visibility: hidden;
-    overflow: hidden;
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    height: auto;
 }
+
 
 #transcription {
     color: wheat;
     border: unset;
-    font-size: 150%;
-    font-weight: 400;
-    margin-top: -10%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #flip{
@@ -81,7 +86,8 @@
 }
 
     #card:hover {
-        transform: rotateY(180deg);
+        transform: rotateX(180deg);
+        
     }
 
 #like {
