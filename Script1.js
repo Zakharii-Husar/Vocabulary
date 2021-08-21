@@ -1,12 +1,17 @@
 import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
-let currentArray = englishArray;
-let random = Math.floor(Math.random() * currentArray.length);
-const word = document.getElementById("word");
-word.textContent = currentArray[random];
-const transcription = document.getElementById("transcription");
-transcription.textContent = transcriptionArray[random];
+let currentArrayEng = englishArray;
+let currentArrayUa = ukrainianArray;
+let currentTranscription = transcriptionArray
 
+let random = Math.floor(Math.random() * currentArrayEng.length);
+
+const word = document.getElementById("word");
+word.textContent = currentArrayEng[random];
+const transcription = document.getElementById("transcription");
+transcription.textContent = currentTranscription[random];
+const translation = document.getElementById("flipside");
+translation.textContent = currentArrayUa[random];
 
 
 // FAVOURITE WORDS
@@ -18,19 +23,19 @@ if (localStorage.getItem("favouriteWords") !== null) {
 };
 
 let starPic = document.getElementById("like");
-if (inputFavourite.includes(currentArray[random])) {
+if (inputFavourite.includes(currentArrayEng[random])) {
     starPic.setAttribute("src", "img/like.png");
 } else {
     starPic.setAttribute("src", "img/unlike.png")
 }
 
 const star = () => {
-    if (!inputFavourite.includes(currentArray[random])) {
+    if (!inputFavourite.includes(currentArrayEng[random])) {
         starPic.setAttribute("src", "img/like.png");
-        inputFavourite.push(currentArray[random]);
+        inputFavourite.push(currentArrayEng[random]);
     } else {
         starPic.setAttribute("src", "img/unlike.png");
-        let i = inputFavourite.indexOf(currentArray[random])
+        let i = inputFavourite.indexOf(currentArrayEng[random])
         if (i > -1) {
             inputFavourite.splice(i, 1)
         }
