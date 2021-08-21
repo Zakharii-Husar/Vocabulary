@@ -18,7 +18,7 @@ translation.textContent = currentArrayUa[random];
 
 let inputFavourite = [];
 let outputFavourite = JSON.parse(localStorage.getItem("favouriteWords"));
-if (localStorage.getItem("favouriteWords") !== null) {
+if (outputFavourite !== null) {
     inputFavourite = outputFavourite;
 };
 
