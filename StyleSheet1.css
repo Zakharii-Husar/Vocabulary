@@ -9,6 +9,7 @@
 
 
 #container {
+    background-image: url(img/flag3.jpg);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -85,7 +86,7 @@
     border: unset;
 }
 
-    #card:hover {
+    #card.active {
         transform: rotateX(180deg);
         
     }

@@ -50,6 +50,7 @@ const card = document.getElementsByClassName("card")[0];
 
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
+    console.log("shhh")
     card.classList.toggle("active");
 });
 
