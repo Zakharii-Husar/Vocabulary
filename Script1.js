@@ -30,17 +30,29 @@ if (inputFavourite.includes(currentArrayEng[random])) {
 }
 
 const star = () => {
-    if (!inputFavourite.includes(currentArrayEng[random])) {
+
+    //ADDING FAVOURITE TO THE ARRAY
+    const likingWord = () => {
         starPic.setAttribute("src", "img/like.png");
         inputFavourite.push(currentArrayEng[random]);
-    } else {
+    };
+    //REMOVING FROM THE ARRAY
+    const unlikingWord = () => {
         starPic.setAttribute("src", "img/unlike.png");
         let i = inputFavourite.indexOf(currentArrayEng[random])
         if (i > -1) {
             inputFavourite.splice(i, 1)
         }
+    };
+
+    //CHECKING IF THE ARRAY HAS THE WORD
+    if (!inputFavourite.includes(currentArrayEng[random])) {
+        likingWord()
+    } else {
+        unlikingWord();
     }
 
+    //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem("favouriteWords", JSON.stringify(inputFavourite));
 }
 
