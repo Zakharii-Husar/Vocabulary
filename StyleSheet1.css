@@ -128,19 +128,21 @@
 }
 
 
-.toggleMenu.inactive {
-    flex-direction: column;
-    height: 0;
-    opacity: 0;
-    transition: opacity 0.5s steps(5, start);
-    overflow: hidden;
-}
 
     .toggleMenu.active {
         height: auto;
         opacity: 1;
         display: flex;
     }
+
+.toggleMenu.inactive {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.5s steps(5, start);
+    overflow: hidden;
+}
 
     #menu * {
         margin: 5%;
