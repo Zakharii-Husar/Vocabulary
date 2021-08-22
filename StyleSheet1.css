@@ -19,7 +19,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
 }
 
     #container * {
@@ -127,28 +126,14 @@
     background-color: red;
 }
 
-#menu{
+#menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    background-image: url(img/flag3.jpg);
 }
 
     #menu * {
-        width: 25%;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        width: 119px;
-        height: 469px;
+        margin: 5%;
     }
 
-    #goldenFolder{
-background-image: url("img/folderO.jpg")
-    }
-#redFolder {
-    background-image: url("img/folderR.jpg")
-}
-#yellowFolder {
-    background-image: url("img/folderY.jpg")
-}
-#greenFolder {
-    background-image: url("img/folderG.jpg")
-}

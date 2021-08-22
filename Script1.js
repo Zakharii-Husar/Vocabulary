@@ -97,10 +97,10 @@ const hidingObject = (obj) => {
     obj.style.display = "none";
 };
 
-const container = document.getElementById("container");
+/*const cardas = document.getElementById("cardas");*/
 const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", () => {
-    hidingObject(container);
+    hidingObject(card);
 });
 
 const knownWords = [];
