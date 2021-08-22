@@ -2,7 +2,7 @@ import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
-let currentTranscription = transcriptionArray;
+let currentTranscription = transcriptionArray
 
 let random = Math.floor(Math.random() * currentArrayEng.length);
 
@@ -16,17 +16,24 @@ translation.textContent = currentArrayUa[random];
 
 // FAVOURITE WORDS
 
-//RUNTIME ARRAY
-let inputFavourite = [[], [], []];
+//RUNTIME ARRAYS
+let inputFavouriteEng = [];
+let inputFavouriteUa = [];
+let inputFavouriteTranscription = [];
 
-console.log(inputFavourite[0]);
-console.log(inputFavourite[1]);
-console.log(inputFavourite[2]);
+console.log(inputFavouriteEng);
+console.log(inputFavouriteUa);
+console.log(inputFavouriteTranscription);
 
-//CHECKING IF USER HAS FAVOURITE WORDS IN LS IF SO UPDATING RUNTIME ARRAY
-let outputFavourite = JSON.parse(localStorage.getItem("favouriteWords"));
-if (outputFavourite !== null) {
-    inputFavourite = outputFavourite;
+//CHECKING IF USER HAS FAVOURITE WORDS IN LS IF SO UPDATING RUNTIME ARRAYS
+let outputFavouriteEng = JSON.parse(localStorage.getItem("favouriteWordsEng"));
+let outputFavouriteUa = JSON.parse(localStorage.getItem("favouriteWordsUa"));
+let outputFavouriteTranscription = JSON.parse(localStorage.getItem("favouriteWordsTranscription"));
+
+if (outputFavouriteEng !== null) {
+    inputFavouriteEng = outputFavouriteEng;
+    inputFavouriteUa = outputFavouriteUa;
+    inputFavouriteTranscription = outputFavouriteTranscription;
 };
 
 
@@ -35,35 +42,37 @@ const star = () => {
     //ADDING FAVOURITE TO THE ARRAY
     const likingWord = () => {
         starPic.setAttribute("src", "img/like.png");
-        inputFavourite[0].push(currentArrayEng[random]);
-        inputFavourite[1].push(currentArrayUa[random]);
-        inputFavourite[2].push(currentTranscription[random]);
+        inputFavouriteEng.push(currentArrayEng[random]);
+        inputFavouriteUa.push(currentArrayUa[random]);
+        inputFavouriteTranscription.push(currentTranscription[random]);
     };
     //REMOVING FROM THE ARRAY
     const unlikingWord = () => {
         starPic.setAttribute("src", "img/unlike.png");
-        let i = inputFavourite.indexOf(currentArrayEng[random])
+        let i = inputFavouriteEng.indexOf(currentArrayEng[random])
         if (i > -1) {
-            inputFavourite[0].splice(i, 1);
-            inputFavourite[1].splice(i, 1);
-            inputFavourite[2].splice(i, 1);
+            inputFavouriteEng.splice(i, 1);
+            inputFavouriteUa.splice(i, 1);
+            inputFavouriteTranscription.splice(i, 1);
         }
     };
 
     //CHECKING IF THE ARRAY HAS THE WORD
-    if (!inputFavourite[0].includes(currentArrayEng[random])) {
+    if (!inputFavouriteEng.includes(currentArrayEng[random])) {
         likingWord()
     } else {
         unlikingWord();
     }
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
-    localStorage.setItem("favouriteWords", JSON.stringify(inputFavourite));
+    localStorage.setItem("favouriteWordsEng", JSON.stringify(inputFavouriteEng));
+    localStorage.setItem("favouriteWordsUa", JSON.stringify(inputFavouriteUa));
+    localStorage.setItem("favouriteWordsTranscription", JSON.stringify(inputFavouriteTranscription));
 }
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
 let starPic = document.getElementById("like");
-if (inputFavourite.includes(currentArrayEng[random])) {
+if (inputFavouriteEng.includes(currentArrayEng[random])) {
     starPic.setAttribute("src", "img/like.png");
 } else {
     starPic.setAttribute("src", "img/unlike.png")
