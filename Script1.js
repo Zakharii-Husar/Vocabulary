@@ -97,10 +97,14 @@ const hidingObject = (obj) => {
     obj.style.display = "none";
 };
 
-/*const cardas = document.getElementById("cardas");*/
+const topPanel = document.getElementById("topPanel");
+const panel = document.getElementById("panel");
+
 const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", () => {
     hidingObject(card);
+    hidingObject(topPanel);
+    hidingObject(panel);
 });
 
 const knownWords = [];
