@@ -90,7 +90,7 @@
 }
 
     #topPanel * {
-        width: 5%;
+        width: 8%;
         border: unset;
         padding: 0 2% 0 2%;
     }
@@ -150,18 +150,18 @@
         font-weight: 700;
     }
 
-#goldenFolder{
+#goldenBtn{
     background-color: darkgoldenrod;
 }
 
-#redFolder {
+#redBtn {
     background-color: red;
 }
 
-#yellowFolder {
+#yellowBtn {
     background-color: yellow;
 }
 
-#greenFolder {
+#greenBtn {
     background-color: green;
 }

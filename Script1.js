@@ -97,7 +97,18 @@ const hidingObject = (obj, visibility) => {
     obj.style.display = visibility;
 };
 
+const hide = () => {
+    hidingObject(card, "none");
+    hidingObject(topPanel, "none");
+    hidingObject(panel, "none");
+    menu.classList.toggle("active");
+};
 
+const unHide = () => {
+    hidingObject(card, "flex");
+    hidingObject(topPanel, "flex");
+    hidingObject(panel, "flex");
+};
 
 const topPanel = document.getElementById("topPanel");
 const panel = document.getElementById("panel");
@@ -105,13 +116,14 @@ const menu = document.getElementsByClassName("toggleMenu")[0];
 
 const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", () => {
-    hidingObject(card, "none");
-    hidingObject(topPanel, "none");
-    hidingObject(panel, "none");
-    menu.classList.toggle("active");
+    hide();
 });
 
+const knownWordsBtn = document.getElementById("greenBtn");
+knownWordsBtn.addEventListener("click", () => {
+    unHide();
+})
 
-const knownWords = [];
-const doubtfulWords = [];
-const unknownWords = [];
+const knownWordsArr = [];
+const doubtfulWordsArr = [];
+const unknownWordsArr = [];
