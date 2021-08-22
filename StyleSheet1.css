@@ -78,26 +78,34 @@
     transform: translate(-50%, -50%);
 }
 
-#flip{
-    width: 15%;
-    position: absolute;
-    top: 0;
-    right: 3%;
+#topPanel {
     border: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 5%;
+}
+
+#topPanel * {
+    border: unset;
+}
+
+#flip {
+    width: 13.5%;
+}
+
+#like {
+    width: 10%;
+}
+
+#menu {
+    width: 10%;
 }
 
     #card.active {
         transform: rotateX(180deg);
         
     }
-
-#like {
-    width: 10%;
-    position: absolute;
-    top: 1%;
-    left: 2%;
-    border: unset;
-}
 
 #panel {
     display: flex;
