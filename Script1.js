@@ -21,9 +21,6 @@ let inputFavouriteEng = [];
 let inputFavouriteUa = [];
 let inputFavouriteTranscription = [];
 
-console.log(inputFavouriteEng);
-console.log(inputFavouriteUa);
-console.log(inputFavouriteTranscription);
 
 //CHECKING IF USER HAS FAVOURITE WORDS IN LS IF SO UPDATING RUNTIME ARRAYS
 let outputFavouriteEng = JSON.parse(localStorage.getItem("favouriteWordsEng"));
@@ -34,7 +31,6 @@ if (outputFavouriteEng !== null) {
     inputFavouriteEng = outputFavouriteEng;
     inputFavouriteUa = outputFavouriteUa;
     inputFavouriteTranscription = outputFavouriteTranscription;
-    console.log("1.checking memory")
 };
 
 
@@ -46,7 +42,6 @@ const star = () => {
         inputFavouriteEng.push(currentArrayEng[random]);
         inputFavouriteUa.push(currentArrayUa[random]);
         inputFavouriteTranscription.push(currentTranscription[random]);
-        console.log("3.liking")
     };
     //REMOVING FROM THE ARRAY
     const unlikingWord = () => {
@@ -56,7 +51,6 @@ const star = () => {
             inputFavouriteEng.splice(i, 1);
             inputFavouriteUa.splice(i, 1);
             inputFavouriteTranscription.splice(i, 1);
-            console.log("4.unliking")
         }
     };
 
@@ -72,7 +66,6 @@ const star = () => {
     localStorage.setItem("favouriteWordsUa", JSON.stringify(inputFavouriteUa));
     localStorage.setItem("favouriteWordsTranscription", JSON.stringify(inputFavouriteTranscription));
 
-    console.log("2.updating")
 }
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -86,6 +79,9 @@ if (inputFavouriteEng.includes(currentArrayEng[random])) {
 const like = document.getElementById("like");
 like.addEventListener("click", star);
 
+console.log(inputFavouriteEng);
+console.log(inputFavouriteUa);
+console.log(inputFavouriteTranscription);
 
 //FLIP THE CARD
 
