@@ -93,9 +93,10 @@ flipBtn.addEventListener("click", () => {
 });
 
 //MENU
-const hidingObject = (obj) => {
-    obj.style.display = "none";
+const hidingObject = (obj, type) => {
+    obj.style.display = type;
 };
+
 
 const topPanel = document.getElementById("topPanel");
 const panel = document.getElementById("panel");
@@ -103,11 +104,13 @@ const menu = document.getElementById("menu");
 
 const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", () => {
-    hidingObject(card);
-    hidingObject(topPanel);
-    hidingObject(panel);
-    menu.style.display = "flex";
+    hidingObject(card, "none");
+    hidingObject(topPanel, "none");
+    hidingObject(panel, "none");
+    hidingObject(menu, "flex");
 });
+
+console.log("done")
 
 const knownWords = [];
 const doubtfulWords = [];
