@@ -103,14 +103,14 @@ const hide = () => {
     hidingObject(card, "none");
     hidingObject(topPanel, "none");
     hidingObject(panel, "none");
-    menu.classList.add("showMenu");
+    menu.classList.add(".showMenu");
 };
 
 const unHide = () => {
     hidingObject(card, "flex");
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
-    menu.classList.remove("showMenu");
+    menu.classList.remove(".showMenu");
 };
 
 const topPanel = document.getElementById("topPanel");
