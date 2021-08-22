@@ -93,24 +93,24 @@ flipBtn.addEventListener("click", () => {
 });
 
 //MENU
-const hidingObject = (obj, type) => {
-    obj.style.display = type;
+const hidingObject = (obj, visibility) => {
+    obj.style.display = visibility;
 };
+
 
 
 const topPanel = document.getElementById("topPanel");
 const panel = document.getElementById("panel");
-const menu = document.getElementById("menu");
+const menu = document.getElementsByClassName("toggleMenu")[0];
 
 const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", () => {
     hidingObject(card, "none");
     hidingObject(topPanel, "none");
     hidingObject(panel, "none");
-    hidingObject(menu, "flex");
+    menu.classList.toggle("active");
 });
 
-console.log("done")
 
 const knownWords = [];
 const doubtfulWords = [];
