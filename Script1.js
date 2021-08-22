@@ -85,11 +85,10 @@ console.log(inputFavouriteTranscription);
 
 //FLIP THE CARD
 
-const card = document.getElementsByClassName("card")[0];
+const card = document.getElementsByClassName("toggle")[0];
 
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
-    console.log("shhh")
     card.classList.toggle("active");
 });
 
