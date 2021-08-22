@@ -127,7 +127,7 @@
     background-color: red;
 }
 
-.toggleMenu .toggleMenu.inactive {
+.toggleMenu, .toggleMenu.inactive {
     flex-direction: column;
     height: 0;
     opacity: 0;
