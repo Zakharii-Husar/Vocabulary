@@ -127,7 +127,15 @@
     background-color: red;
 }
 
-.toggleMenu, .toggleMenu.inactive {
+.toggleMenu{
+    flex-direction: column;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.5s steps(5, start);
+    overflow: hidden;
+}
+
+.toggleMenu.inactive {
     flex-direction: column;
     height: 0;
     opacity: 0;
