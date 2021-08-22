@@ -108,6 +108,7 @@ const unHide = () => {
     hidingObject(card, "flex");
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
+    menu.classList.toggle();
 };
 
 const topPanel = document.getElementById("topPanel");
