@@ -128,14 +128,7 @@
 }
 
 
-
-    .toggleMenu.active {
-        height: auto;
-        opacity: 1;
-        display: flex;
-    }
-
-.toggleMenu.inactive {
+#menu {
     display: flex;
     flex-direction: column;
     height: 0;
