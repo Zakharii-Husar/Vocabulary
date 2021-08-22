@@ -127,27 +127,28 @@
     background-color: red;
 }
 
-#menu {
+#menu{
     display: flex;
     flex-direction: row;
 }
 
     #menu * {
-        background-size: cover;
+        width: 25%;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        width: 119px;
+        height: 469px;
     }
 
-#gold {
-    background-image: url(img/folderO.png);
+    #goldenFolder{
+background-image: url("img/folderO.jpg")
+    }
+#redFolder {
+    background-image: url("img/folderR.jpg")
 }
-
-#red {
-    background-image: url(img/folderR.png);
+#yellowFolder {
+    background-image: url("img/folderY.jpg")
 }
-
-#yellow {
-    background-image: url(img/folderY.png);
-}
-
-#green {
-    background-image: url(img/folderG.png);
+#greenFolder {
+    background-image: url("img/folderG.jpg")
 }
