@@ -99,12 +99,14 @@ const hidingObject = (obj) => {
 
 const topPanel = document.getElementById("topPanel");
 const panel = document.getElementById("panel");
+const menu = document.getElementById("menu");
 
 const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", () => {
     hidingObject(card);
     hidingObject(topPanel);
     hidingObject(panel);
+    menu.style.display = "flex";
 });
 
 const knownWords = [];

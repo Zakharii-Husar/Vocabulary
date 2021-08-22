@@ -128,13 +128,31 @@
 }
 
 #menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
-    background-image: url(img/flag3.jpg);
 }
 
     #menu * {
         margin: 5%;
+        padding: 5%;
+        font-family: 'Courier New';
+        font-size: large;
+        font-weight: 700;
     }
 
+#goldenFolder{
+    background-color: darkgoldenrod;
+}
+
+#redFolder {
+    background-color: red;
+}
+
+#yellowFolder {
+    background-color: yellow;
+}
+
+#greenFolder {
+    background-color: green;
+}
