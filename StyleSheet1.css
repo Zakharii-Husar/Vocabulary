@@ -136,11 +136,11 @@
     overflow: hidden;
 }
 
-.showMenu {
+/*.showMenu {
     height: auto;
     opacity: 1;
     display: flex;
-}
+}*/
 
     #menu * {
         margin: 5%;
