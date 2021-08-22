@@ -92,6 +92,17 @@ flipBtn.addEventListener("click", () => {
     card.classList.toggle("active");
 });
 
+//MENU
+const hidingObject = (obj) => {
+    obj.style.display = "none";
+};
+
+const container = document.getElementById("container");
+const menuBtn = document.getElementById("menu");
+menuBtn.addEventListener("click", () => {
+    hidingObject(container);
+});
+
 const knownWords = [];
 const doubtfulWords = [];
 const unknownWords = [];
