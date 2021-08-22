@@ -19,6 +19,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
 }
 
     #container * {
@@ -124,4 +125,29 @@
 
 #red{
     background-color: red;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+    #menu * {
+        background-size: cover;
+    }
+
+#gold {
+    background-image: url(img/folderO.png);
+}
+
+#red {
+    background-image: url(img/folderR.png);
+}
+
+#yellow {
+    background-image: url(img/folderY.png);
+}
+
+#green {
+    background-image: url(img/folderG.png);
 }
