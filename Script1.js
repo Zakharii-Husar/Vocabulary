@@ -93,6 +93,8 @@ flipBtn.addEventListener("click", () => {
 });
 
 //MENU
+const menu = document.getElementById("menu");
+
 const hidingObject = (obj, visibility) => {
     obj.style.display = visibility;
 };
@@ -101,19 +103,21 @@ const hide = () => {
     hidingObject(card, "none");
     hidingObject(topPanel, "none");
     hidingObject(panel, "none");
+    menu.classList.add("showMenu");
 };
 
 const unHide = () => {
     hidingObject(card, "flex");
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
+    menu.classList.remove("showMenu");
 };
 
 const topPanel = document.getElementById("topPanel");
 const panel = document.getElementById("panel");
-const menu = document.getElementsByClassName("toggleMenu")[0];
-
 const menuBtn = document.getElementById("menuBtn");
+
+
 menuBtn.addEventListener("click", () => {
     hide();
 });
