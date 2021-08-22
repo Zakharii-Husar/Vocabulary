@@ -83,24 +83,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    top: 5%;
+    width: 100%;
+    position: absolute;
+    top: 2%;
 }
 
-#topPanel * {
-    border: unset;
-}
+    #topPanel * {
+        width: 5%;
+        border: unset;
+        padding: 0 2% 0 2%;
+    }
 
-#flip {
-    width: 13.5%;
-}
-
-#like {
-    width: 10%;
-}
-
-#menu {
-    width: 10%;
-}
 
     #card.active {
         transform: rotateX(180deg);
