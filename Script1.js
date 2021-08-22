@@ -103,14 +103,12 @@ const hide = () => {
     hidingObject(card, "none");
     hidingObject(topPanel, "none");
     hidingObject(panel, "none");
-    menu.classList.add(".showMenu");
 };
 
 const unHide = () => {
     hidingObject(card, "flex");
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
-    menu.classList.remove(".showMenu");
 };
 
 const topPanel = document.getElementById("topPanel");
@@ -120,11 +118,13 @@ const menuBtn = document.getElementById("menuBtn");
 
 menuBtn.addEventListener("click", () => {
     hide();
+    menu.classList.add("showMenu");
 });
 
 const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
+    menu.classList.remove("showMenu");
 })
 
 const knownWordsArr = [];
