@@ -128,7 +128,6 @@
 }
 
 .toggleMenu {
-    display: flex;
     flex-direction: column;
     height: 0;
     opacity: 0;
