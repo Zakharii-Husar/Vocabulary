@@ -38,16 +38,29 @@ const retrievingData = (() => {
 
 const actionButtons = (inputArr, storage) => {
 
+    const removeFromArray = (targetArr) => {
+        let i = targetArr.indexOf(index);
+        if (i > -1) {
+            likedWordsArr.splice(i, 1);
+        };
+    }
+
+    if (knownWordsArr.includes(index)) {
+        removeFromArray(knownWordsArr)
+    }
+    else if (doubtfulWordsArr.includes(index)) {
+        removeFromArray(doubtfulWordsArr)
+    }
+    else if (unknownWordsArr.includes(index)) {
+        removeFromArray(index)
+    };
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
 
     } else {
         if (inputArr == likedWordsArr) {
-            let i = likedWordsArr.indexOf(index)
-            if (i > -1) {
-                likedWordsArr.splice(i, 1);
-            }
+            removeFromArray(likedWordsArr);
         }
     }
 
