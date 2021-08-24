@@ -47,6 +47,8 @@ const actionButtons = (inputArr, storage) => {
         }
     }
 
+    console.log(likedWordsArr)
+
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
 }
@@ -86,7 +88,6 @@ const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr, "likedWord");
     star();
-    console.log(likedWordsArr)
 });
 
 //// FAVOURITE WORDS
