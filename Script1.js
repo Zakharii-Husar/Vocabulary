@@ -146,7 +146,6 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
     unHide();
-    textContent();
 })
 
 textContent();
