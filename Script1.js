@@ -27,6 +27,9 @@ const wordsIKnow = () =>{
     if (outputKnown !== null) {
         inputKnown = outputKnown;
     };
+
+    inputKnown.push.indexOf(currentArrayEng);
+    console.log(inputKnown);
 }
 
 
@@ -141,6 +144,7 @@ menuBtn.addEventListener("click", () => {
 const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
+    wordsIKnow();
 });
 
 const UnknownWordsBtn = document.getElementById("redBtn");
