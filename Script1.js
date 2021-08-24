@@ -36,7 +36,7 @@ const retrievingData = (() => {
     };
 })();
 
-const actionButtons = (inputArr, storage) => {
+const actionButtons = (inputArr) => {
 
 
     if (knownWordsArr.includes(index)) {
@@ -85,7 +85,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test6")
+console.log("test7")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -119,25 +119,25 @@ update();
 
 const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
-    actionButtons(knownWordsArr, "knownWord");
+    actionButtons(knownWordsArr);
     update();
 });
 
 const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
-    actionButtons(doubtfulWordsArr, "doubtfulWord")
+    actionButtons(doubtfulWordsArr)
     update();
 });
 
 const redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => {
     update();
-    actionButtons(unknownWordsArr, "unknownWord")
+    actionButtons(unknownWordsArr)
 });
 
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
-    actionButtons(likedWordsArr, "likedWord");
+    actionButtons(likedWordsArr);
     star();
 });
 
