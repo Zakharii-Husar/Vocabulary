@@ -37,10 +37,10 @@ const actionButtons = (inputArr, storage, outputArr) =>{
 //DOWN PANEL
 
 let greenBtn = document.getElementById("green");
-greenBtn.addEventListener("click", () => actionButtons(knownWordsArr, "knownWords", knownWordsOutput));
+greenBtn.addEventListener("click", () => { actionButtons(knownWordsArr, "knownWords", knownWordsOutput) });
 
 let yellowBtn = document.getElementById("yellow");
-yellowBtn.addEventListener("click", () => actionButtons(doubtfulWordsArr, "doubtfulWords", knownWordsOutput));
+yellowBtn.addEventListener("click", () => actionButtons(doubtfulWordsArr, "doubtfulWords", doubtfulWordsOutput));
 
 let redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => actionButtons());
