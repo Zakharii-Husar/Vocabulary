@@ -7,6 +7,7 @@ const unknownWordsArr = [];
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
+let random = Math.floor(Math.random() * 10);
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -16,6 +17,20 @@ const textContent = () => {
     const translation = document.getElementById("flipside");
     translation.textContent = currentArrayUa[0];
 };
+
+//KNOWN WORDS
+const wordsIKnow = () =>{
+    let inputKnown = [];
+
+    let outputKnown = JSON.parse(localStorage.getItem("knownWords"));
+
+    if (outputKnown !== null) {
+        inputKnown = outputKnown;
+    };
+}
+
+
+
 
 // FAVOURITE WORDS
 
@@ -157,10 +172,3 @@ textContent();
 //console.log(inputFavouriteUa);
 //console.log(inputFavouriteTranscription);
 
-let numbers = [];
-
-for (let i = 0; i < 9; i++) {
-    numbers = [`${i}`]
-}
-
-console.log(numbers)
