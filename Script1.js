@@ -10,19 +10,19 @@ console.log(doubtfulWordsArr);
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-let random;
+let index;
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = currentArrayEng[random];
+    word.textContent = currentArrayEng[index];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = currentTranscription[random];
+    transcription.textContent = currentTranscription[index];
     const translation = document.getElementById("flipside");
-    translation.textContent = currentArrayUa[random];
+    translation.textContent = currentArrayUa[index];
 };
 
 const updateTextContent = () => {
-    random = Math.floor(Math.random() * currentArrayEng.length);
+    index = Math.floor(Math.random() * currentArrayEng.length);
     textContent();
 };
 
@@ -35,9 +35,12 @@ const actionButtons = (inputArr, storage) => {
         inputArr = JSON.parse(localStorage.getItem(storage));
     };
 
-    if (!inputArr.includes(random)) {
-        inputArr.push(random);
-    }
+    if (!inputArr.includes(index)) {
+        inputArr.push(index);
+    };
+
+    //SAVING MODIFIED ARRAY TO LOCAL STORAGE
+    localStorage.setItem(storage, JSON.stringify(inputArr));
 }
 
 //DOWN PANEL
