@@ -31,6 +31,8 @@ const wordsIKnow = () =>{
     }
 }
 
+console.log(knownWordsArr);
+
 
 
 
