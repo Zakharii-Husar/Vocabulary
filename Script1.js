@@ -40,7 +40,7 @@ const actionButtons = (inputArr, storage) => {
 
     } else {
         if (inputArr == likedWordsArr) {
-            let i = likedWordsArr.indexOf(currentArrayEng[index])
+            let i = likedWordsArr.indexOf(index)
             if (i > -1) {
                 likedWordsArr.splice(i, 1);
             }
