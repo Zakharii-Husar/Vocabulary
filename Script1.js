@@ -37,7 +37,7 @@ const actionButtons = (inputArr, storage) => {
     };
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
-    localStorage.setItem(storage, JSON.stringify(inputArr));
+    
 }
 
 //DOWN PANEL
@@ -45,6 +45,7 @@ const actionButtons = (inputArr, storage) => {
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWords");
+    updateTextContent();
 });
 
 let yellowBtn = document.getElementById("yellow");
