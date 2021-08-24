@@ -10,13 +10,6 @@ let currentTranscription = transcriptionArray
 
 let random = Math.floor(Math.random() * currentArrayEng.length);
 
-const word = document.getElementById("word");
-word.textContent = currentArrayEng[random];
-const transcription = document.getElementById("transcription");
-transcription.textContent = currentTranscription[random];
-const translation = document.getElementById("flipside");
-translation.textContent = currentArrayUa[random];
-
 
 //FLIP THE CARD
 
@@ -143,3 +136,12 @@ if (inputFavouriteEng.includes(currentArrayEng[random])) {
 
 const like = document.getElementById("like");
 like.addEventListener("click", star);
+
+//TEXT CONTENT
+
+const word = document.getElementById("word");
+word.textContent = currentArrayEng[random];
+const transcription = document.getElementById("transcription");
+transcription.textContent = currentTranscription[random];
+const translation = document.getElementById("flipside");
+translation.textContent = currentArrayUa[random];
