@@ -19,22 +19,28 @@ const textContent = () => {
 };
 
 //KNOWN WORDS
-const wordsIKnow = () =>{
-    let outputKnown = JSON.parse(localStorage.getItem("knownWords"));
+const actionButtons = (input, storage, output) =>{
+    let output = JSON.parse(localStorage.getItem(storage));
 
-    if (outputKnown !== null) {
-        knownWordsArr = outputKnown;
+    if (output !== null) {
+        input = output;
     };
 
-    if (!knownWordsArr.includes(currentArrayEng[random])) {
-        knownWordsArr.push(random);
+    if (!input.includes(currentArrayEng[random])) {
+        input.push(random);
     }
 }
 
-console.log(knownWordsArr);
+//DOWN PANEL
 
+let greenBtn = document.getElementById("green");
+greenBtn.addEventListener("click", () => actionButtons(knownWordsArr, "knownWords", knownWordsOutput));
 
+let yellowBtn = document.getElementById("yellow");
+yellowBtn.addEventListener("click", () => actionButtons(doubtfulWordsArr, "doubtfulWords", knownWordsOutput));
 
+let redBtn = document.getElementById("red");
+redBtn.addEventListener("click", () => actionButtons());
 
 // FAVOURITE WORDS
 
@@ -145,7 +151,6 @@ menuBtn.addEventListener("click", () => {
 const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
-    wordsIKnow();
 });
 
 const UnknownWordsBtn = document.getElementById("redBtn");
