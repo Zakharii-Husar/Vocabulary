@@ -39,12 +39,21 @@ const retrievingData = (() => {
 const actionButtons = (inputArr, storage) => {
 
 
-    if (inputArr !== likedWordsArr) {
-        let i = inputArr.indexOf(index);
-        if (i > -1) {
-            inputArr.splice(i, 1);
-        };
-    }
+
+    let a = knownWordsArr.indexOf(index);
+    if (a > -1) {
+        knownWordsArr.splice(a, 1);
+    };
+
+    let b = unknownWordsArr.indexOf(index);
+    if (b > -1) {
+        unknownWordsArr.splice(b, 1);
+    };
+
+    let c = doubtfulWordsArr.indexOf(index);
+    if (c > -1) {
+        doubtfulWordsArr.splice(c, 1);
+    };
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
@@ -66,7 +75,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test3")
+console.log("test4")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
