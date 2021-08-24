@@ -4,7 +4,7 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = englishArray;
 let likedWordsArr = [];
-let currentArray = unknownWordsArr;
+let currentArray = doubtfulWordsArr;
 
 let index;
 
@@ -85,7 +85,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test8")
+console.log("test9")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
