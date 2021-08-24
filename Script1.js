@@ -28,7 +28,7 @@ const wordsIKnow = () =>{
         inputKnown = outputKnown;
     };
 
-    inputKnown.push.indexOf(currentArrayEng);
+    inputKnown.push(random);
     console.log(inputKnown);
 }
 
