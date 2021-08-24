@@ -7,16 +7,14 @@ const unknownWordsArr = [];
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-let currentLength = currentArrayEng.length;
-let random = Math.floor(Math.random() * currentLength);
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = currentArrayEng[random];
+    word.textContent = currentArrayEng[0];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = currentTranscription[random];
+    transcription.textContent = currentTranscription[0];
     const translation = document.getElementById("flipside");
-    translation.textContent = currentArrayUa[random];
+    translation.textContent = currentArrayUa[0];
 };
 
 // FAVOURITE WORDS
@@ -44,14 +42,14 @@ const star = () => {
     //ADDING FAVOURITE TO THE ARRAY
     const likingWord = () => {
         starPic.setAttribute("src", "img/like.png");
-        inputFavouriteEng.push(currentArrayEng[random]);
-        inputFavouriteUa.push(currentArrayUa[random]);
-        inputFavouriteTranscription.push(currentTranscription[random]);
+        inputFavouriteEng.push(currentArrayEng[0]);
+        inputFavouriteUa.push(currentArrayUa[0]);
+        inputFavouriteTranscription.push(currentTranscription[0]);
     };
     //REMOVING FROM THE ARRAY
     const unlikingWord = () => {
         starPic.setAttribute("src", "img/unlike.png");
-        let i = inputFavouriteEng.indexOf(currentArrayEng[random])
+        let i = inputFavouriteEng.indexOf(currentArrayEng[0])
         if (i > -1) {
             inputFavouriteEng.splice(i, 1);
             inputFavouriteUa.splice(i, 1);
@@ -60,7 +58,7 @@ const star = () => {
     };
 
     //CHECKING IF THE ARRAY HAS THE WORD
-    if (!inputFavouriteEng.includes(currentArrayEng[random])) {
+    if (!inputFavouriteEng.includes(currentArrayEng[0])) {
         likingWord()
     } else {
         unlikingWord();
@@ -75,7 +73,7 @@ const star = () => {
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
 let starPic = document.getElementById("like");
-if (inputFavouriteEng.includes(currentArrayEng[random])) {
+if (inputFavouriteEng.includes(currentArrayEng[0])) {
     starPic.setAttribute("src", "img/like.png");
 } else {
     starPic.setAttribute("src", "img/unlike.png")
@@ -145,9 +143,7 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
-    currentLength = inputFavouriteEng.length;
     unHide();
-    textContent();
 })
 
 textContent();
@@ -159,5 +155,3 @@ console.log(currentTranscription);
 console.log(inputFavouriteEng);
 console.log(inputFavouriteUa);
 console.log(inputFavouriteTranscription);
-
-console.log(random)
