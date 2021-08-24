@@ -23,10 +23,10 @@ const textContent = () => {
 
 //KNOWN WORDS
 const actionButtons = (inputArr, storage, outputArr) =>{
-    let outputArr = JSON.parse(localStorage.getItem(storage));
+    outputArr = JSON.parse(localStorage.getItem(storage));
 
     if (outputArr !== null) {
-        inputArr = outputArr;
+        inputA = outputArr;
     };
 
     if (!inputArr.includes(currentArrayEng[random])) {
@@ -37,10 +37,16 @@ const actionButtons = (inputArr, storage, outputArr) =>{
 //DOWN PANEL
 
 let greenBtn = document.getElementById("green");
-greenBtn.addEventListener("click", () => { actionButtons(knownWordsArr, "knownWords", knownWordsOutput) });
+greenBtn.addEventListener("click", () => {
+    let knownWordsOutput;
+    actionButtons(knownWordsArr, "knownWords", knownWordsOutput)
+});
 
 let yellowBtn = document.getElementById("yellow");
-yellowBtn.addEventListener("click", () => actionButtons(doubtfulWordsArr, "doubtfulWords", doubtfulWordsOutput));
+yellowBtn.addEventListener("click", () => {
+    let doubtfulWordsOutput;
+    actionButtons(doubtfulWordsArr, "doubtfulWords", doubtfulWordsOutput)
+});
 
 let redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => actionButtons());
