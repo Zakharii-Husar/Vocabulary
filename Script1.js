@@ -84,7 +84,6 @@ if (inputFavouriteEng.includes(currentArrayEng[random])) {
 const like = document.getElementById("like");
 like.addEventListener("click", star);
 
-textContent();
 
 //FLIP THE CARD
 
@@ -149,3 +148,5 @@ favouriteWordsBtn.addEventListener("click", () => {
     unHide();
     textContent();
 })
+
+textContent();
