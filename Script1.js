@@ -29,10 +29,10 @@ updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
-const actionButtons = (inputArr, storage) => {
+const actionButtons = (inputArr, "storage") => {
 
-    if (JSON.parse(localStorage.getItem(storage)) !== null) {
-        inputArr = JSON.parse(localStorage.getItem(storage));
+    if (JSON.parse(localStorage.getItem("storage")) !== null) {
+        inputArr = JSON.parse(localStorage.getItem("storage"));
     };
 
     if (!inputArr.includes(index)) {
