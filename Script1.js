@@ -4,9 +4,6 @@ const knownWordsArr = [];
 const doubtfulWordsArr = [];
 const unknownWordsArr = [];
 
-console.log(knownWordsArr);
-console.log(doubtfulWordsArr);
-
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
@@ -192,3 +189,5 @@ favouriteWordsBtn.addEventListener("click", () => {
     unHide();
 })
 
+console.log(knownWordsArr);
+console.log(doubtfulWordsArr);
