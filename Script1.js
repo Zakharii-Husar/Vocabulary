@@ -31,7 +31,7 @@ updateTextContent();
 //SAVING TO LOCAL STORAGE
 
 if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
-    inputArr = JSON.parse(localStorage.getItem("likedWord"));
+    likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
 };
 
 const actionButtons = (inputArr, storage) => {
