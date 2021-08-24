@@ -29,27 +29,27 @@ updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
-//const actionButtons = (inputArr, storage) => {
+const actionButtons = (inputArr, storage) => {
 
-//    if (JSON.parse(localStorage.getItem(storage)) !== null) {
-//        inputArr = JSON.parse(localStorage.getItem(storage));
-//    };
+    if (JSON.parse(localStorage.getItem(storage)) !== null) {
+        inputArr = JSON.parse(localStorage.getItem(storage));
+    };
 
-//    if (!inputArr.includes(index)) {
-//        inputArr.push(index);
+    if (!inputArr.includes(index)) {
+        inputArr.push(index);
 
-//    } else {
-//        if (inputArr == likedWordsArr) {
-//            let i = likedWordsArr.indexOf(currentArrayEng[index])
-//            if (i > -1) {
-//                likedWordsArr.splice(i, 1);
-//            }
-//        }
-//    }
+    } else {
+        if (inputArr == likedWordsArr) {
+            let i = likedWordsArr.indexOf(currentArrayEng[index])
+            if (i > -1) {
+                likedWordsArr.splice(i, 1);
+            }
+        }
+    }
 
-//    localStorage.setItem(storage, JSON.stringify(inputArr));
+    localStorage.setItem(storage, JSON.stringify(inputArr));
 
-//}
+}
 
 console.log(JSON.parse(localStorage.getItem("likedWord")));
 
