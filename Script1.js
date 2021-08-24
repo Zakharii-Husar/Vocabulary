@@ -15,11 +15,11 @@ let random = randomNum;
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = currentArrayEng[random];
+    word.textContent = currentArrayEng[random()];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = currentTranscription[random];
+    transcription.textContent = currentTranscription[random()];
     const translation = document.getElementById("flipside");
-    translation.textContent = currentArrayUa[random];
+    translation.textContent = currentArrayUa[random()];
 };
 
 //KNOWN WORDS
