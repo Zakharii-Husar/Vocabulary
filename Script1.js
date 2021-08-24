@@ -29,7 +29,7 @@ const actionButtons = (inputArr, storage, outputArr) =>{
         inputArr = outputArr;
     };
 
-    if (!inputArr.includes(currentArrayEng[random])) {
+    if (!inputArr.includes(random)) {
         inputArr.push(random);
     }
 }
