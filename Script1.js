@@ -85,7 +85,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test7")
+console.log("test8")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -173,7 +173,6 @@ const unHide = () => {
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
     hidingObject(menu, "none");
-    update();
 };
 
 
@@ -187,23 +186,26 @@ const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
     currentArray = knownWordsArr;
+    update();
 });
 
 const UnknownWordsBtn = document.getElementById("redBtn");
 UnknownWordsBtn.addEventListener("click", () => {
     unHide();
     currentArray = unknownWordsArr;
+    update();
 });
 
 const doubtfulWordsBtn = document.getElementById("yellowBtn");
 doubtfulWordsBtn.addEventListener("click", () => {
     currentArray = doubtfulWordsArr;
     unHide();
+    update();
 });
 
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
     currentArray = likedWordsArr;
     unHide();
-
+    update();
 })
