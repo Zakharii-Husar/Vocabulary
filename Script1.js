@@ -10,6 +10,14 @@ let currentTranscription = transcriptionArray
 
 let random = Math.floor(Math.random() * currentArrayEng.length);
 
+const textContent = () => {
+    const word = document.getElementById("word");
+    word.textContent = currentArrayEng[random];
+    const transcription = document.getElementById("transcription");
+    transcription.textContent = currentTranscription[random];
+    const translation = document.getElementById("flipside");
+    translation.textContent = currentArrayUa[random];
+};
 
 //FLIP THE CARD
 
@@ -49,6 +57,8 @@ menuBtn.addEventListener("click", () => {
     hide();
 });
 
+// MENU BUTTONS
+
 const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
@@ -66,10 +76,11 @@ doubtfulWordsBtn.addEventListener("click", () => {
 
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
-    unHide();
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
+    textContent();
+    unHide();
 })
 
 // FAVOURITE WORDS
@@ -137,11 +148,4 @@ if (inputFavouriteEng.includes(currentArrayEng[random])) {
 const like = document.getElementById("like");
 like.addEventListener("click", star);
 
-//TEXT CONTENT
-
-const word = document.getElementById("word");
-word.textContent = currentArrayEng[random];
-const transcription = document.getElementById("transcription");
-transcription.textContent = currentTranscription[random];
-const translation = document.getElementById("flipside");
-translation.textContent = currentArrayUa[random];
+textContent();
