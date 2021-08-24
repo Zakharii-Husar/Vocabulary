@@ -41,7 +41,7 @@ const actionButtons = (inputArr, storage) => {
     const removeFromArray = (targetArr) => {
         let i = targetArr.indexOf(index);
         if (i > -1) {
-            likedWordsArr.splice(i, 1);
+            targetArr.splice(i, 1);
         };
     }
 
@@ -71,7 +71,7 @@ const actionButtons = (inputArr, storage) => {
 console.log(likedWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
-console.log("working")
+console.log("notworking")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
