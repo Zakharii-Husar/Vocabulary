@@ -1,9 +1,9 @@
 import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
-const knownWordsArr = [];
-const doubtfulWordsArr = [];
-const unknownWordsArr = [];
-const likedWordsArr = [];
+let knownWordsArr = [];
+let doubtfulWordsArr = [];
+let unknownWordsArr = [];
+let likedWordsArr = [];
 
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
