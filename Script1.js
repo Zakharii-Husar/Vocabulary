@@ -45,7 +45,6 @@ const actionButtons = (inputArr, storage) => {
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWords");
-    updateTextContent();
 });
 
 let yellowBtn = document.getElementById("yellow");
