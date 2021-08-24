@@ -154,3 +154,7 @@ textContent();
 console.log(currentArrayEng);
 console.log(currentArrayUa);
 console.log(currentTranscription);
+
+console.log(inputFavouriteEng);
+console.log(inputFavouriteUa);
+console.log(inputFavouriteTranscription);
