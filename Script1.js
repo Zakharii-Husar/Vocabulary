@@ -20,16 +20,15 @@ const textContent = () => {
 
 //KNOWN WORDS
 const wordsIKnow = () =>{
-    let inputKnown = [];
-
     let outputKnown = JSON.parse(localStorage.getItem("knownWords"));
 
     if (outputKnown !== null) {
-        inputKnown = outputKnown;
+        knownWordsArr = outputKnown;
     };
 
-    inputKnown.push(random);
-    console.log(inputKnown);
+    if (!knownWordsArr.includes(currentArrayEng[random])) {
+        knownWordsArr.push(random);
+    }
 }
 
 
