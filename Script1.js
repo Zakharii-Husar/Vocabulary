@@ -10,7 +10,8 @@ console.log(doubtfulWordsArr);
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-let random = Math.floor(Math.random() * 10);
+const randomNum = () => { return Math.floor(Math.random() * 10); };
+let random = randomNum;
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -46,7 +47,7 @@ yellowBtn.addEventListener("click", () => {
 });
 
 let redBtn = document.getElementById("red");
-redBtn.addEventListener("click", () => actionButtons());
+redBtn.addEventListener("click", () => actionButtons(unknownWordsArr, "unknownWords"));
 
 // FAVOURITE WORDS
 
