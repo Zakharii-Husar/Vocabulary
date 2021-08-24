@@ -150,3 +150,7 @@ favouriteWordsBtn.addEventListener("click", () => {
 })
 
 textContent();
+
+console.log(currentArrayEng);
+console.log(currentArrayUa);
+console.log(currentTranscription);
