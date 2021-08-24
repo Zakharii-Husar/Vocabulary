@@ -12,11 +12,11 @@ let random = Math.floor(Math.random() * currentArrayEng.length);
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = currentArrayEng[random];
+    word.textContent = currentArrayEng[0];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = currentTranscription[random];
+    transcription.textContent = currentTranscription[0];
     const translation = document.getElementById("flipside");
-    translation.textContent = currentArrayUa[random];
+    translation.textContent = currentArrayUa[0];
 };
 
 // FAVOURITE WORDS
