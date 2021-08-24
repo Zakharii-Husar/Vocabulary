@@ -28,11 +28,15 @@ const updateTextContent = () => {
 updateTextContent();
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-if (likedWordsArr.includes(index)) {
-    starPic.setAttribute("src", "img/like.png");
-} else {
-    starPic.setAttribute("src", "img/unlike.png")
-}
+const star = () => {
+    if (likedWordsArr.includes(index)) {
+        starPic.setAttribute("src", "img/like.png");
+    } else {
+        starPic.setAttribute("src", "img/unlike.png")
+    }
+};
+
+star();
 
 //SAVING TO LOCAL STORAGE
 const actionButtons = (inputArr, storage) => {
@@ -44,17 +48,11 @@ const actionButtons = (inputArr, storage) => {
     if (!inputArr.includes(index)) {
         inputArr.push(index);
 
-        if (inputArr === likedWordsArr) {
-            starPic.setAttribute("src", "img/like.png");
-        }
     } else {
         if (inputArr === likedWordsArr) {
-            starPic.setAttribute("src", "img/unlike.png");
-            let i = inputFavouriteEng.indexOf(currentArrayEng[0])
+            let i = likedWordsArr.indexOf(currentArrayEng[index])
             if (i > -1) {
-                inputFavouriteEng.splice(i, 1);
-                inputFavouriteUa.splice(i, 1);
-                inputFavouriteTranscription.splice(i, 1);
+                likedWordsArr.splice(i, 1);
             }
         }
     }
@@ -67,25 +65,26 @@ const actionButtons = (inputArr, storage) => {
 
 const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
-    actionButtons(knownWordsArr, "knownWords");
+    actionButtons(knownWordsArr, "knownWord");
     updateTextContent();
 });
 
 const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
-    actionButtons(doubtfulWordsArr, "doubtfulWords")
+    actionButtons(doubtfulWordsArr, "doubtfulWord")
     updateTextContent();
 });
 
 const redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => {
     updateTextContent();
-    actionButtons(unknownWordsArr, "unknownWords")
+    actionButtons(unknownWordsArr, "unknownWord")
 });
 
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
-    actionButtons(likedWordsArr, "likedWords")
+    actionButtons(likedWordsArr, "likedWord");
+    star();
 });
 
 //// FAVOURITE WORDS
