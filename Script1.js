@@ -38,7 +38,8 @@ const actionButtons = (inputArr, storage) => {
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWords");
-    random = Math.floor(Math.random() * currentArrayEng.length)
+    random = Math.floor(Math.random() * currentArrayEng.length);
+    textContent();
 });
 
 let yellowBtn = document.getElementById("yellow");
@@ -175,7 +176,6 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
-    textContent(); //UPDATING
     unHide();
 })
 
