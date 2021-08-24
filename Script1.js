@@ -49,8 +49,6 @@ const actionButtons = (inputArr, storage) => {
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
-
-    console.log(likedWordsArr)
 }
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -88,6 +86,7 @@ const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr, "likedWord");
     star();
+    console.log(likedWordsArr)
 });
 
 //// FAVOURITE WORDS
