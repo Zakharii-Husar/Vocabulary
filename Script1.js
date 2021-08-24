@@ -78,7 +78,8 @@ const update = () => {
     if (currentArray == englishArray) {
         index = randomNum;
     }
-    else if (currentArray == likedWordsArr) {
+    else
+    {
         index = currentArray[randomNum];
     }
     textContent();
@@ -145,6 +146,7 @@ const unHide = () => {
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
     hidingObject(menu, "none");
+    update();
 };
 
 
@@ -157,22 +159,24 @@ menuBtn.addEventListener("click", () => {
 const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
+    currentArray = knownWordsArr;
 });
 
 const UnknownWordsBtn = document.getElementById("redBtn");
 UnknownWordsBtn.addEventListener("click", () => {
     unHide();
+    currentArray = unknownWordsArr;
 });
 
 const doubtfulWordsBtn = document.getElementById("yellowBtn");
 doubtfulWordsBtn.addEventListener("click", () => {
+    currentArray = doubtfulWordsArr;
     unHide();
 });
 
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
     currentArray = likedWordsArr;
-    update();
     unHide();
 
 })
