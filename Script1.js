@@ -7,10 +7,8 @@ const unknownWordsArr = [];
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-const randomNum = () => {
-    return Math.floor(Math.random() * currentArrayEng.length);
-}
-let random = randomNum();
+
+let random = Math.floor(Math.random() * currentArrayEng.length);
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -160,3 +158,5 @@ console.log(currentTranscription);
 console.log(inputFavouriteEng);
 console.log(inputFavouriteUa);
 console.log(inputFavouriteTranscription);
+
+console.log(random)
