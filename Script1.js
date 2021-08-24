@@ -26,7 +26,7 @@ const actionButtons = (inputArr, storage, outputArr) =>{
     outputArr = JSON.parse(localStorage.getItem(storage));
 
     if (outputArr !== null) {
-        inputA = outputArr;
+        inputArr = outputArr;
     };
 
     if (!inputArr.includes(currentArrayEng[random])) {
