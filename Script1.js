@@ -133,11 +133,11 @@ likeBtn.addEventListener("click", () => {
 //}
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-if (inputFavouriteEng.includes(currentArrayEng[0])) {
-    starPic.setAttribute("src", "img/like.png");
-} else {
-    starPic.setAttribute("src", "img/unlike.png")
-}
+//if (inputFavouriteEng.includes(currentArrayEng[0])) {
+//    starPic.setAttribute("src", "img/like.png");
+//} else {
+//    starPic.setAttribute("src", "img/unlike.png")
+//}
 
 
 //FLIP THE CARD
