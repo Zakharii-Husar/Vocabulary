@@ -2,9 +2,9 @@ import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr = [];
+let unknownWordsArr = englishArray;
 let likedWordsArr = [];
-let currentArray = englishArray;
+let currentArray = unknownWordsArr;
 
 let index;
 
@@ -45,15 +45,7 @@ const actionButtons = (inputArr, storage) => {
         };
     }
 
-    if (knownWordsArr.includes(index)) {
-        removeFromArray(knownWordsArr)
-    }
-    else if (doubtfulWordsArr.includes(index)) {
-        removeFromArray(doubtfulWordsArr)
-    }
-    else if (unknownWordsArr.includes(index)) {
-        removeFromArray(index)
-    };
+    removeFromArray(currentArray);
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
@@ -71,7 +63,7 @@ const actionButtons = (inputArr, storage) => {
 console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
-console.log("notworking")
+console.log("test")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
