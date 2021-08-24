@@ -10,7 +10,7 @@ console.log(doubtfulWordsArr);
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-let random = Math.floor(Math.random() * currentArrayEng.length)
+let random;
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -20,6 +20,13 @@ const textContent = () => {
     const translation = document.getElementById("flipside");
     translation.textContent = currentArrayUa[random];
 };
+
+const updateTextContent = () => {
+    random = Math.floor(Math.random() * currentArrayEng.length);
+    textContent();
+};
+
+updateTextContent();
 
 //KNOWN WORDS
 const actionButtons = (inputArr, storage) => {
@@ -38,16 +45,20 @@ const actionButtons = (inputArr, storage) => {
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWords");
-    random = Math.floor(Math.random() * currentArrayEng.length);
+    updateTextContent();
 });
 
 let yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
     actionButtons(doubtfulWordsArr, "doubtfulWords")
+    updateTextContent();
 });
 
 let redBtn = document.getElementById("red");
-redBtn.addEventListener("click", () => actionButtons(unknownWordsArr, "unknownWords"));
+redBtn.addEventListener("click", () => {
+    updateTextContent();
+    actionButtons(unknownWordsArr, "unknownWords")
+});
 
 // FAVOURITE WORDS
 
@@ -177,14 +188,4 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentTranscription = inputFavouriteTranscription;
     unHide();
 })
-
-textContent();
-
-//console.log(currentArrayEng);
-//console.log(currentArrayUa);
-//console.log(currentTranscription);
-
-//console.log(inputFavouriteEng);
-//console.log(inputFavouriteUa);
-//console.log(inputFavouriteTranscription);
 
