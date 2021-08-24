@@ -22,15 +22,15 @@ const textContent = () => {
 };
 
 //KNOWN WORDS
-const actionButtons = (input, storage, output) =>{
-    let output = JSON.parse(localStorage.getItem(storage));
+const actionButtons = (inputArr, storage, outputArr) =>{
+    let outputArr = JSON.parse(localStorage.getItem(storage));
 
-    if (output !== null) {
-        input = output;
+    if (outputArr !== null) {
+        inputArr = outputArr;
     };
 
-    if (!input.includes(currentArrayEng[random])) {
-        input.push(random);
+    if (!inputArr.includes(currentArrayEng[random])) {
+        inputArr.push(random);
     }
 }
 
