@@ -42,7 +42,7 @@ const star = () => {
     //ADDING FAVOURITE TO THE ARRAY
     const likingWord = () => {
         starPic.setAttribute("src", "img/like.png");
-        inputFavouriteEng.length.push(currentArrayEng[0]);
+        inputFavouriteEng.push(currentArrayEng[0]);
         inputFavouriteUa.push(currentArrayUa[0]);
         inputFavouriteTranscription.push(currentTranscription[0]);
     };
@@ -149,10 +149,18 @@ favouriteWordsBtn.addEventListener("click", () => {
 
 textContent();
 
-console.log(currentArrayEng);
-console.log(currentArrayUa);
-console.log(currentTranscription);
+//console.log(currentArrayEng);
+//console.log(currentArrayUa);
+//console.log(currentTranscription);
 
-console.log(inputFavouriteEng);
-console.log(inputFavouriteUa);
-console.log(inputFavouriteTranscription);
+//console.log(inputFavouriteEng);
+//console.log(inputFavouriteUa);
+//console.log(inputFavouriteTranscription);
+
+let numbers = [];
+
+for (let i = 0; i < 9; i++) {
+    numbers = [`${i}`]
+}
+
+console.log(numbers)
