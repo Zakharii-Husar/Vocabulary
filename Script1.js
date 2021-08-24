@@ -7,8 +7,8 @@ const unknownWordsArr = [];
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-let arrLength = currentArrayEng.length;
-let random = Math.floor(Math.random() * arrLength);
+let currentLength = currentArrayEng.length;
+let random = Math.floor(Math.random() * currentLength);
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -145,6 +145,7 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
+    currentLength = inputFavouriteEng.length;
     unHide();
     textContent();
 })
