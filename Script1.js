@@ -28,7 +28,7 @@ const updateTextContent = () => {
 updateTextContent();
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-if (likedWordsArr.includes(currentArrayEng[index])) {
+if (likedWordsArr.includes(index)) {
     starPic.setAttribute("src", "img/like.png");
 } else {
     starPic.setAttribute("src", "img/unlike.png")
