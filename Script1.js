@@ -38,7 +38,7 @@ const actionButtons = (inputArr, storage) => {
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWords");
-    textContent();
+    random = Math.floor(Math.random() * currentArrayEng.length);
 });
 
 let yellowBtn = document.getElementById("yellow");
