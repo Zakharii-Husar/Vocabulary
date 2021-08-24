@@ -8,9 +8,8 @@ let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray
 
-let random = Math.floor(Math.random() * currentArrayEng.length);
-
 const textContent = () => {
+    let random = Math.floor(Math.random() * currentArrayEng.length);
     const word = document.getElementById("word");
     word.textContent = currentArrayEng[random];
     const transcription = document.getElementById("transcription");
