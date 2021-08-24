@@ -71,7 +71,13 @@ const actionButtons = (inputArr, storage) => {
         }
     }
 
-    localStorage.setItem(storage, JSON.stringify(inputArr));
+    /*localStorage.setItem(storage, JSON.stringify(inputArr));*/
+
+    localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
+    localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
+    localStorage.setItem("uknownWord", JSON.stringify(unknownWordsArr));
+    localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
+
 
 };
 
@@ -79,7 +85,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test5")
+console.log("test6")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
