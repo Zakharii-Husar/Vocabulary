@@ -6,8 +6,11 @@ const unknownWordsArr = [];
 
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
-let currentTranscription = transcriptionArray
-let random = Math.floor(Math.random() * currentArrayEng.length);
+let currentTranscription = transcriptionArray;
+const randomNum = () => {
+    return Math.floor(Math.random() * currentArrayEng.length);
+}
+let random = randomNum();
 
 const textContent = () => {
     const word = document.getElementById("word");
