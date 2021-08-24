@@ -18,6 +18,67 @@ const translation = document.getElementById("flipside");
 translation.textContent = currentArrayUa[random];
 
 
+//FLIP THE CARD
+
+const card = document.getElementsByClassName("toggle")[0];
+
+const flipBtn = document.getElementById("flip");
+flipBtn.addEventListener("click", () => {
+    card.classList.toggle("active");
+});
+
+//MENU
+const topPanel = document.getElementById("topPanel");
+const panel = document.getElementById("panel");
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
+
+const hidingObject = (obj, visibility) => {
+    obj.style.display = visibility;
+};
+
+const hide = () => {
+    hidingObject(card, "none");
+    hidingObject(topPanel, "none");
+    hidingObject(panel, "none");
+    hidingObject(menu, "flex");
+};
+
+const unHide = () => {
+    hidingObject(card, "flex");
+    hidingObject(topPanel, "flex");
+    hidingObject(panel, "flex");
+    hidingObject(menu, "none");
+};
+
+
+menuBtn.addEventListener("click", () => {
+    hide();
+});
+
+const knownWordsBtn = document.getElementById("greenBtn");
+knownWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const UnknownWordsBtn = document.getElementById("redBtn");
+UnknownWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const doubtfulWordsBtn = document.getElementById("yellowBtn");
+doubtfulWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const favouriteWordsBtn = document.getElementById("goldenBtn");
+favouriteWordsBtn.addEventListener("click", () => {
+    unHide();
+    currentArrayEng = inputFavouriteEng;
+    currentArrayUa = inputFavouriteUa;
+    currentTranscription = inputFavouriteTranscription;
+})
+
 // FAVOURITE WORDS
 
 //RUNTIME ARRAYS
@@ -82,64 +143,3 @@ if (inputFavouriteEng.includes(currentArrayEng[random])) {
 
 const like = document.getElementById("like");
 like.addEventListener("click", star);
-
-//FLIP THE CARD
-
-const card = document.getElementsByClassName("toggle")[0];
-
-const flipBtn = document.getElementById("flip");
-flipBtn.addEventListener("click", () => {
-    card.classList.toggle("active");
-});
-
-//MENU
-const topPanel = document.getElementById("topPanel");
-const panel = document.getElementById("panel");
-const menu = document.getElementById("menu");
-const menuBtn = document.getElementById("menuBtn");
-
-const hidingObject = (obj, visibility) => {
-    obj.style.display = visibility;
-};
-
-const hide = () => {
-    hidingObject(card, "none");
-    hidingObject(topPanel, "none");
-    hidingObject(panel, "none");
-    hidingObject(menu, "flex");
-};
-
-const unHide = () => {
-    hidingObject(card, "flex");
-    hidingObject(topPanel, "flex");
-    hidingObject(panel, "flex");
-    hidingObject(menu, "none");
-};
-
-
-menuBtn.addEventListener("click", () => {
-    hide();
-});
-
-const knownWordsBtn = document.getElementById("greenBtn");
-knownWordsBtn.addEventListener("click", () => {
-    unHide();
-});
-
-const UnknownWordsBtn = document.getElementById("redBtn");
-UnknownWordsBtn.addEventListener("click", () => {
-    unHide();
-});
-
-const doubtfulWordsBtn = document.getElementById("yellowBtn");
-doubtfulWordsBtn.addEventListener("click", () => {
-    unHide();
-});
-
-const favouriteWordsBtn = document.getElementById("goldenBtn");
-favouriteWordsBtn.addEventListener("click", () => {
-    unHide();
-    currentArrayEng = inputFavouriteEng;
-    currentArrayUa = inputFavouriteUa;
-    currentTranscription = inputFavouriteTranscription;
-})
