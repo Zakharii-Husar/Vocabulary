@@ -171,7 +171,8 @@ doubtfulWordsBtn.addEventListener("click", () => {
 
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
-    unHide();
     currentArray = likedWordsArr;
+    update();
+    unHide();
 
 })
