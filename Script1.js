@@ -29,20 +29,20 @@ updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
-//const retrievingData = (() => {
-//    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-//        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-//    };
-//    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
-//        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
-//    };
-//    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-//        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-//    };
-//    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-//        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-//    };
-//})();
+const retrievingData = (() => {
+    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+    };
+    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+    };
+    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+    };
+    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
+        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
+    };
+})();
 
 const actionButtons = (inputArr, storage) => {
 
@@ -63,12 +63,9 @@ const actionButtons = (inputArr, storage) => {
 
 };
 
-actionButtons();
-
 console.log(likedWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
-console.log("yuds");
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
 const star = () => {
