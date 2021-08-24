@@ -68,7 +68,7 @@ const actionButtons = (inputArr, storage) => {
 
 };
 
-console.log(likedWordsArr);
+console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log("notworking")
