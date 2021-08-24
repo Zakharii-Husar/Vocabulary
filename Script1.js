@@ -1,5 +1,9 @@
 import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
+const knownWordsArr = [];
+const doubtfulWordsArr = [];
+const unknownWordsArr = [];
+
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray
@@ -22,7 +26,7 @@ let inputFavouriteUa = [];
 let inputFavouriteTranscription = [];
 
 
-//CHECKING IF USER HAS FAVOURITE WORDS IN LS IF SO UPDATING RUNTIME ARRAYS
+//CHECKING IF USER HAS FAVOURITE WORDS IN LOCAL STORAGE IF SO UPDATING RUNTIME ARRAYS
 let outputFavouriteEng = JSON.parse(localStorage.getItem("favouriteWordsEng"));
 let outputFavouriteUa = JSON.parse(localStorage.getItem("favouriteWordsUa"));
 let outputFavouriteTranscription = JSON.parse(localStorage.getItem("favouriteWordsTranscription"));
@@ -79,10 +83,6 @@ if (inputFavouriteEng.includes(currentArrayEng[random])) {
 const like = document.getElementById("like");
 like.addEventListener("click", star);
 
-console.log(inputFavouriteEng);
-console.log(inputFavouriteUa);
-console.log(inputFavouriteTranscription);
-
 //FLIP THE CARD
 
 const card = document.getElementsByClassName("toggle")[0];
@@ -93,7 +93,10 @@ flipBtn.addEventListener("click", () => {
 });
 
 //MENU
+const topPanel = document.getElementById("topPanel");
+const panel = document.getElementById("panel");
 const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
 
 const hidingObject = (obj, visibility) => {
     obj.style.display = visibility;
@@ -113,10 +116,6 @@ const unHide = () => {
     hidingObject(menu, "none");
 };
 
-const topPanel = document.getElementById("topPanel");
-const panel = document.getElementById("panel");
-const menuBtn = document.getElementById("menuBtn");
-
 
 menuBtn.addEventListener("click", () => {
     hide();
@@ -125,8 +124,22 @@ menuBtn.addEventListener("click", () => {
 const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
-})
+});
 
-const knownWordsArr = [];
-const doubtfulWordsArr = [];
-const unknownWordsArr = [];
+const UnknownWordsBtn = document.getElementById("redBtn");
+knownWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const doubtfulWordsBtn = document.getElementById("yellowBtn");
+knownWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const favouriteWordsBtn = document.getElementById("goldenBtn");
+knownWordsBtn.addEventListener("click", () => {
+    unHide();
+    currentArrayEng = inputFavouriteEng;
+    currentArrayUa = inputFavouriteUa;
+    currentTranscription = inputFavouriteTranscription;
+})
