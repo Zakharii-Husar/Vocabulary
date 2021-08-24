@@ -19,44 +19,6 @@ const textContent = () => {
     translation.textContent = currentArrayUa[random];
 };
 
-//FLIP THE CARD
-
-const card = document.getElementsByClassName("toggle")[0];
-
-const flipBtn = document.getElementById("flip");
-flipBtn.addEventListener("click", () => {
-    card.classList.toggle("active");
-});
-
-//MENU
-const topPanel = document.getElementById("topPanel");
-const panel = document.getElementById("panel");
-const menu = document.getElementById("menu");
-const menuBtn = document.getElementById("menuBtn");
-
-const hidingObject = (obj, visibility) => {
-    obj.style.display = visibility;
-};
-
-const hide = () => {
-    hidingObject(card, "none");
-    hidingObject(topPanel, "none");
-    hidingObject(panel, "none");
-    hidingObject(menu, "flex");
-};
-
-const unHide = () => {
-    hidingObject(card, "flex");
-    hidingObject(topPanel, "flex");
-    hidingObject(panel, "flex");
-    hidingObject(menu, "none");
-};
-
-
-menuBtn.addEventListener("click", () => {
-    hide();
-});
-
 // FAVOURITE WORDS
 
 //RUNTIME ARRAYS
@@ -124,6 +86,44 @@ like.addEventListener("click", star);
 
 textContent();
 
+//FLIP THE CARD
+
+const card = document.getElementsByClassName("toggle")[0];
+
+const flipBtn = document.getElementById("flip");
+flipBtn.addEventListener("click", () => {
+    card.classList.toggle("active");
+});
+
+//MENU
+const topPanel = document.getElementById("topPanel");
+const panel = document.getElementById("panel");
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
+
+const hidingObject = (obj, visibility) => {
+    obj.style.display = visibility;
+};
+
+const hide = () => {
+    hidingObject(card, "none");
+    hidingObject(topPanel, "none");
+    hidingObject(panel, "none");
+    hidingObject(menu, "flex");
+};
+
+const unHide = () => {
+    hidingObject(card, "flex");
+    hidingObject(topPanel, "flex");
+    hidingObject(panel, "flex");
+    hidingObject(menu, "none");
+};
+
+
+menuBtn.addEventListener("click", () => {
+    hide();
+});
+
 // MENU BUTTONS
 
 const knownWordsBtn = document.getElementById("greenBtn");
@@ -146,6 +146,6 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
-    textContent();
     unHide();
-});
+    textContent();
+})
