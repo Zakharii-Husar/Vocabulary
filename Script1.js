@@ -27,6 +27,13 @@ const updateTextContent = () => {
 
 updateTextContent();
 
+//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
+if (likedWordsArr.includes(currentArrayEng[index])) {
+    starPic.setAttribute("src", "img/like.png");
+} else {
+    starPic.setAttribute("src", "img/unlike.png")
+}
+
 //SAVING TO LOCAL STORAGE
 const actionButtons = (inputArr, storage) => {
 
@@ -36,6 +43,10 @@ const actionButtons = (inputArr, storage) => {
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
+
+        if (inputArr === likedWordsArr) {
+            starPic.setAttribute("src", "img/like.png");
+        }
     } else {
         if (inputArr === likedWordsArr) {
             starPic.setAttribute("src", "img/unlike.png");
@@ -74,7 +85,6 @@ redBtn.addEventListener("click", () => {
 
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
-    starPic.setAttribute("src", "img/like.png");
     actionButtons(likedWordsArr, "likedWords")
 });
 
@@ -132,12 +142,6 @@ likeBtn.addEventListener("click", () => {
 
 //}
 
-//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-//if (inputFavouriteEng.includes(currentArrayEng[0])) {
-//    starPic.setAttribute("src", "img/like.png");
-//} else {
-//    starPic.setAttribute("src", "img/unlike.png")
-//}
 
 
 //FLIP THE CARD
