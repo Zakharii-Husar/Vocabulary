@@ -127,17 +127,17 @@ knownWordsBtn.addEventListener("click", () => {
 });
 
 const UnknownWordsBtn = document.getElementById("redBtn");
-knownWordsBtn.addEventListener("click", () => {
+UnknownWordsBtn.addEventListener("click", () => {
     unHide();
 });
 
 const doubtfulWordsBtn = document.getElementById("yellowBtn");
-knownWordsBtn.addEventListener("click", () => {
+doubtfulWordsBtn.addEventListener("click", () => {
     unHide();
 });
 
 const favouriteWordsBtn = document.getElementById("goldenBtn");
-knownWordsBtn.addEventListener("click", () => {
+favouriteWordsBtn.addEventListener("click", () => {
     unHide();
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
