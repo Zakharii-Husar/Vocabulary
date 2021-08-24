@@ -58,7 +58,7 @@ const actionButtons = (inputArr, storage) => {
 console.log(likedWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
-console.log("work")
+console.log("working")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
