@@ -4,7 +4,7 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = [];
 let likedWordsArr = [];
-let currenArray = englishArray;
+let currentArray = englishArray;
 
 let index;
 
