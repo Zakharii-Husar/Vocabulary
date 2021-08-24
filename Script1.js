@@ -4,7 +4,7 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = [];
 let likedWordsArr = [];
-
+let currenArray = englishArray;
 
 let index;
 
@@ -74,7 +74,7 @@ const star = () => {
 //UPDATING DATA
 
 const update = () => {
-    index = Math.floor(Math.random() * currentArrayEng.length);
+    index = Math.floor(Math.random() * currentArray.length);
     textContent();
     star();
 };
