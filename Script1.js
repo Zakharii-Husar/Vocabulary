@@ -47,12 +47,11 @@ const actionButtons = (inputArr, storage) => {
         }
     }
 
-    console.log(likedWordsArr);
-    console.log(knownWordsArr);
-    console.log(doubtfulWordsArr);
-
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
+
+    console.log(likedWordsArr);
+    console.log(knownWordsArr);
 }
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
