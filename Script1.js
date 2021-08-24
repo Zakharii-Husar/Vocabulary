@@ -29,11 +29,11 @@ updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
-const retrievingData = (() => {
+const retrievingData = () => {
     if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
         knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
     };
-})();
+};
 
 const actionButtons = (inputArr, storage) => {
 
@@ -57,7 +57,7 @@ const actionButtons = (inputArr, storage) => {
 console.log(likedWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
-console.log("yu");
+console.log("yuds");
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
 const star = () => {
@@ -93,6 +93,7 @@ redBtn.addEventListener("click", () => {
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr, "likedWord");
+    retrievingData();
     star();
 });
 
