@@ -165,8 +165,5 @@ doubtfulWordsBtn.addEventListener("click", () => {
 
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
-    currentArrayEng = inputFavouriteEng;
-    currentArrayUa = inputFavouriteUa;
-    currentTranscription = inputFavouriteTranscription;
     unHide();
 })
