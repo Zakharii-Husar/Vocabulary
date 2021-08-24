@@ -10,16 +10,15 @@ console.log(doubtfulWordsArr);
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
-const randomNum = () => { return Math.floor(Math.random() * 10); };
-let random = randomNum;
+let random = Math.floor(Math.random() * currentArrayEng.length)
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = currentArrayEng[random()];
+    word.textContent = currentArrayEng[random];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = currentTranscription[random()];
+    transcription.textContent = currentTranscription[random];
     const translation = document.getElementById("flipside");
-    translation.textContent = currentArrayUa[random()];
+    translation.textContent = currentArrayUa[random];
 };
 
 //KNOWN WORDS
@@ -38,7 +37,8 @@ const actionButtons = (inputArr, storage) => {
 
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
-    actionButtons(knownWordsArr, "knownWords")
+    actionButtons(knownWordsArr, "knownWords");
+    random = Math.floor(Math.random() * currentArrayEng.length)
 });
 
 let yellowBtn = document.getElementById("yellow");
