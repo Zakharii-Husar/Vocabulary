@@ -29,11 +29,13 @@ updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
-const actionButtons = (inputArr, "storage") => {
 
-    if (JSON.parse(localStorage.getItem("storage")) !== null) {
-        inputArr = JSON.parse(localStorage.getItem("storage"));
-    };
+if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+    knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+};
+
+const actionButtons = (inputArr, storage) => {
+
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
@@ -49,7 +51,7 @@ const actionButtons = (inputArr, "storage") => {
 
     localStorage.setItem(storage, JSON.stringify(inputArr));
 
-}
+};
 
 console.log(likedWordsArr);
 console.log(knownWordsArr);
