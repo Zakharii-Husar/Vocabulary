@@ -42,7 +42,7 @@ const star = () => {
     //ADDING FAVOURITE TO THE ARRAY
     const likingWord = () => {
         starPic.setAttribute("src", "img/like.png");
-        inputFavouriteEng.push(currentArrayEng[0]);
+        inputFavouriteEng.length.push(currentArrayEng[0]);
         inputFavouriteUa.push(currentArrayUa[0]);
         inputFavouriteTranscription.push(currentTranscription[0]);
     };
