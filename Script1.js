@@ -5,37 +5,19 @@ let doubtfulWordsArr = [];
 let unknownWordsArr = [];
 let likedWordsArr = [];
 
-let currentArrayEng = englishArray;
-let currentArrayUa = ukrainianArray;
-let currentTranscription = transcriptionArray;
+
 let index;
-let starPic = document.getElementById("like");
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = currentArrayEng[index];
+    word.textContent = englishArray[index];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = currentTranscription[index];
+    transcription.textContent = transcriptionArray[index];
     const translation = document.getElementById("flipside");
-    translation.textContent = currentArrayUa[index];
+    translation.textContent = ukrainianArray[index];
 };
 
-//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-const star = () => {
-    if (likedWordsArr.includes(index)) {
-        starPic.setAttribute("src", "img/like.png");
-    } else {
-        starPic.setAttribute("src", "img/unlike.png")
-    }
-};
 
-const updateTextContent = () => {
-    index = Math.floor(Math.random() * currentArrayEng.length);
-    textContent();
-    star();
-};
-
-updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
@@ -76,25 +58,46 @@ const actionButtons = (inputArr, storage) => {
 console.log(likedWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
+console.log("work")
 
+
+//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
+const star = () => {
+    let starPic = document.getElementById("like");
+    if (likedWordsArr.includes(index)) {
+        starPic.setAttribute("src", "img/like.png");
+    } else {
+        starPic.setAttribute("src", "img/unlike.png")
+    }
+};
+
+//UPDATING DATA
+
+const update = () => {
+    index = Math.floor(Math.random() * currentArrayEng.length);
+    textContent();
+    star();
+};
+
+update();
 
 //DOWN PANEL
 
 const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWord");
-    updateTextContent();
+    update();
 });
 
 const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
     actionButtons(doubtfulWordsArr, "doubtfulWord")
-    updateTextContent();
+    update();
 });
 
 const redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => {
-    updateTextContent();
+    update();
     actionButtons(unknownWordsArr, "unknownWord")
 });
 
