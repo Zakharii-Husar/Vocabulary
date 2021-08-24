@@ -143,6 +143,7 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentArrayEng = inputFavouriteEng;
     currentArrayUa = inputFavouriteUa;
     currentTranscription = inputFavouriteTranscription;
+    textContent(); //UPDATING
     unHide();
 })
 
