@@ -29,11 +29,20 @@ updateTextContent();
 
 
 //SAVING TO LOCAL STORAGE
-const retrievingData = () => {
-    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-    };
-};
+//const retrievingData = (() => {
+//    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+//        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+//    };
+//    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+//        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+//    };
+//    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+//        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+//    };
+//    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+//        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+//    };
+//})();
 
 const actionButtons = (inputArr, storage) => {
 
@@ -53,6 +62,8 @@ const actionButtons = (inputArr, storage) => {
     localStorage.setItem(storage, JSON.stringify(inputArr));
 
 };
+
+actionButtons();
 
 console.log(likedWordsArr);
 console.log(knownWordsArr);
@@ -93,7 +104,6 @@ redBtn.addEventListener("click", () => {
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr, "likedWord");
-    retrievingData();
     star();
 });
 
