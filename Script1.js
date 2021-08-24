@@ -57,32 +57,6 @@ menuBtn.addEventListener("click", () => {
     hide();
 });
 
-// MENU BUTTONS
-
-const knownWordsBtn = document.getElementById("greenBtn");
-knownWordsBtn.addEventListener("click", () => {
-    unHide();
-});
-
-const UnknownWordsBtn = document.getElementById("redBtn");
-UnknownWordsBtn.addEventListener("click", () => {
-    unHide();
-});
-
-const doubtfulWordsBtn = document.getElementById("yellowBtn");
-doubtfulWordsBtn.addEventListener("click", () => {
-    unHide();
-});
-
-const favouriteWordsBtn = document.getElementById("goldenBtn");
-favouriteWordsBtn.addEventListener("click", () => {
-    currentArrayEng = inputFavouriteEng;
-    currentArrayUa = inputFavouriteUa;
-    currentTranscription = inputFavouriteTranscription;
-    textContent();
-    unHide();
-})
-
 // FAVOURITE WORDS
 
 //RUNTIME ARRAYS
@@ -149,3 +123,29 @@ const like = document.getElementById("like");
 like.addEventListener("click", star);
 
 textContent();
+
+// MENU BUTTONS
+
+const knownWordsBtn = document.getElementById("greenBtn");
+knownWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const UnknownWordsBtn = document.getElementById("redBtn");
+UnknownWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const doubtfulWordsBtn = document.getElementById("yellowBtn");
+doubtfulWordsBtn.addEventListener("click", () => {
+    unHide();
+});
+
+const favouriteWordsBtn = document.getElementById("goldenBtn");
+favouriteWordsBtn.addEventListener("click", () => {
+    currentArrayEng = inputFavouriteEng;
+    currentArrayUa = inputFavouriteUa;
+    currentTranscription = inputFavouriteTranscription;
+    textContent();
+    unHide();
+});
