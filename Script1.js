@@ -37,7 +37,8 @@ const actionButtons = (inputArr, storage) => {
     };
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
-    
+    localStorage.setItem(storage, JSON.stringify(inputArr));
+    console.log(localStorage.getItem(storage))
 }
 
 //DOWN PANEL
