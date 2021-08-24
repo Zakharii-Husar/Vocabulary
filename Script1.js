@@ -40,9 +40,9 @@ const actionButtons = (inputArr, storage) => {
 
 
 
-    let i = currentArray.indexOf(index);
+    let i = inputArr.indexOf(index);
     if (i > -1) {
-        currentArray.splice(i, 1);
+        inputArr.splice(i, 1);
     };
 
     if (!inputArr.includes(index)) {
@@ -65,7 +65,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test2")
+console.log("test3")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
