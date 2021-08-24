@@ -39,11 +39,12 @@ const retrievingData = (() => {
 const actionButtons = (inputArr, storage) => {
 
 
-
-    let i = inputArr.indexOf(index);
-    if (i > -1) {
-        inputArr.splice(i, 1);
-    };
+    if (inputArr !== likedWordsArr) {
+        let i = inputArr.indexOf(index);
+        if (i > -1) {
+            inputArr.splice(i, 1);
+        };
+    }
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
