@@ -51,7 +51,7 @@ const actionButtons = (inputArr, storage) => {
 
 }
 
-console.log(JSON.parse(localStorage.getItem("likedWord")));
+console.log(likedWordsArr);
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
 const star = () => {
