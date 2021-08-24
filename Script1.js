@@ -39,7 +39,7 @@ const actionButtons = (inputArr, storage) => {
         inputArr.push(index);
 
     } else {
-        if (inputArr === likedWordsArr) {
+        if (inputArr == likedWordsArr) {
             let i = likedWordsArr.indexOf(currentArrayEng[index])
             if (i > -1) {
                 likedWordsArr.splice(i, 1);
@@ -49,6 +49,8 @@ const actionButtons = (inputArr, storage) => {
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
+
+    console.log(likedWordsArr)
 }
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
