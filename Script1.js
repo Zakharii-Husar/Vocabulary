@@ -38,9 +38,18 @@ const actionButtons = (inputArr, storage) => {
     if (!inputArr.includes(index)) {
         inputArr.push(index);
 
-    } 
+    } else {
+        if (inputArr == likedWordsArr) {
+            let i = likedWordsArr.indexOf(currentArrayEng[index])
+            if (i > -1) {
+                likedWordsArr.splice(i, 1);
+            }
+        }
+    }
 
-    console.log(likedWordsArr)
+    console.log(likedWordsArr);
+    console.log(knownWordsArr);
+    console.log(doubtfulWordsArr);
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
