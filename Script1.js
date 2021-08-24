@@ -27,16 +27,6 @@ const updateTextContent = () => {
 
 updateTextContent();
 
-//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-const star = () => {
-    if (likedWordsArr.includes(index)) {
-        starPic.setAttribute("src", "img/like.png");
-    } else {
-        starPic.setAttribute("src", "img/unlike.png")
-    }
-};
-
-star();
 
 //SAVING TO LOCAL STORAGE
 const actionButtons = (inputArr, storage) => {
@@ -60,6 +50,17 @@ const actionButtons = (inputArr, storage) => {
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
 }
+
+//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
+const star = () => {
+    if (likedWordsArr.includes(index)) {
+        starPic.setAttribute("src", "img/like.png");
+    } else {
+        starPic.setAttribute("src", "img/unlike.png")
+    }
+};
+
+star();
 
 //DOWN PANEL
 
