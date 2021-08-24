@@ -74,7 +74,13 @@ const star = () => {
 //UPDATING DATA
 
 const update = () => {
-    index = Math.floor(Math.random() * currentArray.length);
+    let randomNum = Math.floor(Math.random() * currentArray.length);
+    if (currentArray == englishArray) {
+        index = randomNum;
+    }
+    else if (currentArray == likedWordsArr) {
+        index = currentArray[randomNum];
+    }
     textContent();
     star();
 };
@@ -166,4 +172,6 @@ doubtfulWordsBtn.addEventListener("click", () => {
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
     unHide();
+    currentArray = likedWordsArr;
+
 })
