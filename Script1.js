@@ -101,6 +101,7 @@ redBtn.addEventListener("click", () => {
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr, "likedWord");
+    star();
 });
 
 
