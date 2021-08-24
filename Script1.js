@@ -3,11 +3,13 @@ import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 const knownWordsArr = [];
 const doubtfulWordsArr = [];
 const unknownWordsArr = [];
+const likedWordsArr = [];
 
 let currentArrayEng = englishArray;
 let currentArrayUa = ukrainianArray;
 let currentTranscription = transcriptionArray;
 let index;
+let starPic = document.getElementById("like");
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -25,7 +27,7 @@ const updateTextContent = () => {
 
 updateTextContent();
 
-//KNOWN WORDS
+//SAVING TO LOCAL STORAGE
 const actionButtons = (inputArr, storage) => {
 
     if (JSON.parse(localStorage.getItem(storage)) !== null) {
@@ -34,98 +36,108 @@ const actionButtons = (inputArr, storage) => {
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
-    };
+    } else {
+        if (inputArr === likedWordsArr) {
+            starPic.setAttribute("src", "img/unlike.png");
+            let i = inputFavouriteEng.indexOf(currentArrayEng[0])
+            if (i > -1) {
+                inputFavouriteEng.splice(i, 1);
+                inputFavouriteUa.splice(i, 1);
+                inputFavouriteTranscription.splice(i, 1);
+            }
+        }
+    }
 
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
-    console.log(inputArr);
-    console.log("xoxo")
 }
 
 //DOWN PANEL
 
-let greenBtn = document.getElementById("green");
+const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr, "knownWords");
     updateTextContent();
 });
 
-let yellowBtn = document.getElementById("yellow");
+const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
     actionButtons(doubtfulWordsArr, "doubtfulWords")
     updateTextContent();
 });
 
-let redBtn = document.getElementById("red");
+const redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => {
     updateTextContent();
     actionButtons(unknownWordsArr, "unknownWords")
 });
 
-// FAVOURITE WORDS
+const likeBtn = document.getElementById("like");
+likeBtn.addEventListener("click", () => {
+    starPic.setAttribute("src", "img/like.png");
+    actionButtons(likedWordsArr, "likedWords")
+});
 
-//RUNTIME ARRAYS
-let inputFavouriteEng = [];
-let inputFavouriteUa = [];
-let inputFavouriteTranscription = [];
+//// FAVOURITE WORDS
 
-
-//CHECKING IF USER HAS FAVOURITE WORDS IN LOCAL STORAGE IF SO UPDATING RUNTIME ARRAYS
-let outputFavouriteEng = JSON.parse(localStorage.getItem("favouriteWordsEng"));
-let outputFavouriteUa = JSON.parse(localStorage.getItem("favouriteWordsUa"));
-let outputFavouriteTranscription = JSON.parse(localStorage.getItem("favouriteWordsTranscription"));
-
-if (outputFavouriteEng !== null) {
-    inputFavouriteEng = outputFavouriteEng;
-    inputFavouriteUa = outputFavouriteUa;
-    inputFavouriteTranscription = outputFavouriteTranscription;
-};
+////RUNTIME ARRAYS
+//let inputFavouriteEng = [];
+//let inputFavouriteUa = [];
+//let inputFavouriteTranscription = [];
 
 
-const star = () => {
+////CHECKING IF USER HAS FAVOURITE WORDS IN LOCAL STORAGE IF SO UPDATING RUNTIME ARRAYS
+//let outputFavouriteEng = JSON.parse(localStorage.getItem("favouriteWordsEng"));
+//let outputFavouriteUa = JSON.parse(localStorage.getItem("favouriteWordsUa"));
+//let outputFavouriteTranscription = JSON.parse(localStorage.getItem("favouriteWordsTranscription"));
 
-    //ADDING FAVOURITE TO THE ARRAY
-    const likingWord = () => {
-        starPic.setAttribute("src", "img/like.png");
-        inputFavouriteEng.push(currentArrayEng[0]);
-        inputFavouriteUa.push(currentArrayUa[0]);
-        inputFavouriteTranscription.push(currentTranscription[0]);
-    };
-    //REMOVING FROM THE ARRAY
-    const unlikingWord = () => {
-        starPic.setAttribute("src", "img/unlike.png");
-        let i = inputFavouriteEng.indexOf(currentArrayEng[0])
-        if (i > -1) {
-            inputFavouriteEng.splice(i, 1);
-            inputFavouriteUa.splice(i, 1);
-            inputFavouriteTranscription.splice(i, 1);
-        }
-    };
+//if (outputFavouriteEng !== null) {
+//    inputFavouriteEng = outputFavouriteEng;
+//    inputFavouriteUa = outputFavouriteUa;
+//    inputFavouriteTranscription = outputFavouriteTranscription;
+//};
 
-    //CHECKING IF THE ARRAY HAS THE WORD
-    if (!inputFavouriteEng.includes(currentArrayEng[0])) {
-        likingWord()
-    } else {
-        unlikingWord();
-    }
 
-    //SAVING MODIFIED ARRAY TO LOCAL STORAGE
-    localStorage.setItem("favouriteWordsEng", JSON.stringify(inputFavouriteEng));
-    localStorage.setItem("favouriteWordsUa", JSON.stringify(inputFavouriteUa));
-    localStorage.setItem("favouriteWordsTranscription", JSON.stringify(inputFavouriteTranscription));
+//const star = () => {
 
-}
+//    //ADDING FAVOURITE TO THE ARRAY
+//    const likingWord = () => {
+//        starPic.setAttribute("src", "img/like.png");
+//        inputFavouriteEng.push(currentArrayEng[0]);
+//        inputFavouriteUa.push(currentArrayUa[0]);
+//        inputFavouriteTranscription.push(currentTranscription[0]);
+//    };
+//    //REMOVING FROM THE ARRAY
+//    const unlikingWord = () => {
+//        starPic.setAttribute("src", "img/unlike.png");
+//        let i = inputFavouriteEng.indexOf(currentArrayEng[0])
+//        if (i > -1) {
+//            inputFavouriteEng.splice(i, 1);
+//            inputFavouriteUa.splice(i, 1);
+//            inputFavouriteTranscription.splice(i, 1);
+//        }
+//    };
+
+//    //CHECKING IF THE ARRAY HAS THE WORD
+//    if (!inputFavouriteEng.includes(currentArrayEng[0])) {
+//        likingWord()
+//    } else {
+//        unlikingWord();
+//    }
+
+//    //SAVING MODIFIED ARRAY TO LOCAL STORAGE
+//    localStorage.setItem("favouriteWordsEng", JSON.stringify(inputFavouriteEng));
+//    localStorage.setItem("favouriteWordsUa", JSON.stringify(inputFavouriteUa));
+//    localStorage.setItem("favouriteWordsTranscription", JSON.stringify(inputFavouriteTranscription));
+
+//}
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-let starPic = document.getElementById("like");
 if (inputFavouriteEng.includes(currentArrayEng[0])) {
     starPic.setAttribute("src", "img/like.png");
 } else {
     starPic.setAttribute("src", "img/unlike.png")
 }
-
-const like = document.getElementById("like");
-like.addEventListener("click", star);
 
 
 //FLIP THE CARD
@@ -190,6 +202,3 @@ favouriteWordsBtn.addEventListener("click", () => {
     currentTranscription = inputFavouriteTranscription;
     unHide();
 })
-
-console.log(knownWordsArr);
-console.log(doubtfulWordsArr);
