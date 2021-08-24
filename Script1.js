@@ -22,11 +22,10 @@ const textContent = () => {
 };
 
 //KNOWN WORDS
-const actionButtons = (inputArr, storage, outputArr) =>{
-    outputArr = JSON.parse(localStorage.getItem(storage));
+const actionButtons = (inputArr, storage) => {
 
-    if (outputArr !== null) {
-        inputArr = outputArr;
+    if (JSON.parse(localStorage.getItem(storage)) !== null) {
+        inputArr = JSON.parse(localStorage.getItem(storage));
     };
 
     if (!inputArr.includes(random)) {
@@ -38,14 +37,12 @@ const actionButtons = (inputArr, storage, outputArr) =>{
 
 let greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
-    let knownWordsOutput;
-    actionButtons(knownWordsArr, "knownWords", knownWordsOutput)
+    actionButtons(knownWordsArr, "knownWords")
 });
 
 let yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
-    let doubtfulWordsOutput;
-    actionButtons(doubtfulWordsArr, "doubtfulWords", doubtfulWordsOutput)
+    actionButtons(doubtfulWordsArr, "doubtfulWords")
 });
 
 let redBtn = document.getElementById("red");
