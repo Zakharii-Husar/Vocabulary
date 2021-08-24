@@ -37,6 +37,7 @@ const actionButtons = (inputArr, storage) => {
 
     if (!inputArr.includes(index)) {
         inputArr.push(index);
+        console.log(likedWordsArr);
 
     } else {
         if (inputArr == likedWordsArr) {
@@ -50,8 +51,6 @@ const actionButtons = (inputArr, storage) => {
     //SAVING MODIFIED ARRAY TO LOCAL STORAGE
     localStorage.setItem(storage, JSON.stringify(inputArr));
 
-    console.log(likedWordsArr);
-    console.log(knownWordsArr);
 }
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
