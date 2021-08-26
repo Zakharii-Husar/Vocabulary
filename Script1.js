@@ -1,6 +1,6 @@
 ﻿import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
-let newArr = [for (i of Array(1000).keys()) i];
+let newArr = Array.from(Array(1000).keys());
 console.log(newArr);
 
 let knownWordsArr = [];
