@@ -1,5 +1,6 @@
 ﻿import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
+//GLOBAL VARIABLES
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(998).keys());
@@ -13,6 +14,8 @@ const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index;
 
+
+//CHANGING TEXT OF THE WORD, TRANSLATION AND TRANSCRIPTION
 const textContent = () => {
     const word = document.getElementById("word");
     const transcription = document.getElementById("transcription");
@@ -52,19 +55,8 @@ const retrievingData = (() => {
     };
 })();
 
-//const retrievingData = (arr, item) => {
-//    if (JSON.parse(localStorage.getItem(item)) !== null) {
-//        arr = JSON.parse(localStorage.getItem(item));
-//    };
-//};
-
-//retrievingData(knownWordsArr, "knownWord");
-//retrievingData(doubtfulWordsArr, "doubtfulWord");
-//retrievingData(unknownWordsArr, "unknownWord");
-//retrievingData(likedWordsArr, "likedWord");
-
 const actionButtons = (inputArr) => {
-    //REMOVING THE WORD FROM WHENEVER IT MIGHT BE
+    //REMOVING THE WORD FROM WHENEVER IT MIGHT BE BEFORE ADDING TO A NEW LIST
     let a = knownWordsArr.indexOf(index);
     let b = unknownWordsArr.indexOf(index);
     let c = doubtfulWordsArr.indexOf(index);
@@ -84,7 +76,7 @@ const actionButtons = (inputArr) => {
         };
     };
 
-    //PUSHING THE WORD TO NEW LIST
+    //PUSHING THE WORD TO A NEW LIST
     if (!inputArr.includes(index) && index > -1) {
         inputArr.push(index);
 
@@ -95,7 +87,7 @@ const actionButtons = (inputArr) => {
         }
     }
 
-    /*localStorage.setItem(storage, JSON.stringify(inputArr));*/
+    //SAVING EDITED ARRAYS TO LOCAL STORAGE
 
     localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
     localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
@@ -108,7 +100,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("3")
+console.log("5")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -128,6 +120,7 @@ const update = () => {
     index = currentArray[randomNum];
     textContent();
     star();
+    console.log(currentArray);
 };
 
 update();
