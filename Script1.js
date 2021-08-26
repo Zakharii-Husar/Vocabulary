@@ -2,12 +2,7 @@
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr;
-if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-    unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-} else {
-    unknownWordsArr = englishArray;
-}
+let unknownWordsArr = englishArray;
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
 
@@ -17,19 +12,6 @@ const doubtfulWordsBtn = document.getElementById("yellowBtn");
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index;
-
-const retrievingData = (() => {
-    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-    };
-    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
-        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
-    };
- 
-    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
-        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
-    };
-})();
 
 const textContent = () => {
     const word = document.getElementById("word");
@@ -49,7 +31,23 @@ const textContent = () => {
 
 
 //SAVING TO LOCAL STORAGE
+const retrievingData = (() => {
+    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+    };
+    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+    };
+    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+    } else {
+        unknownWordsArr = englishArray;
+    }
 
+    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
+        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
+    };
+})();
 
 const actionButtons = (inputArr) => {
 
@@ -88,13 +86,14 @@ const actionButtons = (inputArr) => {
 
     /*localStorage.setItem(storage, JSON.stringify(inputArr));*/
 
-    localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
-    localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
-    localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
-    localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
 
 
 };
+
+localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
+localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
+localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
+localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
 
 console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
