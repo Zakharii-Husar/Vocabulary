@@ -95,7 +95,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr.length);
 console.log(likedWordsArr);
-console.log("test12")
+console.log("test13")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
