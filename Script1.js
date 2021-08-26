@@ -56,13 +56,12 @@ const actionButtons = (inputArr) => {
         };
     }
 
-    if (englishArray.includes(index)) {
-        let b = englishArray.indexOf(index);
+    if (unknownWordsArr.includes(index)) {
+        let b = unknownWordsArr.indexOf(index);
         if (b > -1) {
-            englishArray.splice(b, 1);
+            unknownWordsArr.splice(b, 1);
         };
     }
-
 
     if (doubtfulWordsArr.includes(index)) {
         let c = doubtfulWordsArr.indexOf(index);
