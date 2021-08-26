@@ -97,7 +97,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test18")
+console.log("test19")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -114,13 +114,7 @@ const star = () => {
 
 const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
-    if (currentArray == englishArray) {
-        index = randomNum;
-    }
-    else
-    {
-        index = currentArray[randomNum];
-    }
+    index = currentArray[randomNum];
     textContent();
     star();
 };
@@ -143,8 +137,8 @@ yellowBtn.addEventListener("click", () => {
 
 const redBtn = document.getElementById("red");
 redBtn.addEventListener("click", () => {
+    actionButtons(unknownWordsArr);
     update();
-    actionButtons(unknownWordsArr)
 });
 
 const likeBtn = document.getElementById("like");
