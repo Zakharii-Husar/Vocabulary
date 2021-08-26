@@ -15,12 +15,17 @@ let index;
 
 const textContent = () => {
     const word = document.getElementById("word");
-    word.textContent = englishArray[index];
     const transcription = document.getElementById("transcription");
-    transcription.textContent = transcriptionArray[index];
     const translation = document.getElementById("flipside");
-    translation.textContent = ukrainianArray[index];
-
+    if (currentArray.length > -1) {
+        word.textContent = englishArray[index];
+        transcription.textContent = transcriptionArray[index];
+        translation.textContent = ukrainianArray[index];
+    }
+    else {
+        word.textContent = "no words"
+        translation.textContent = "немає слів"
+    }
     knownWordsBtn.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
     UnknownWordsBtn.textContent = `НОВІ: ${unknownWordsArr.length}`;
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
