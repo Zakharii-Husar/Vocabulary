@@ -17,7 +17,7 @@ const textContent = () => {
     const word = document.getElementById("word");
     const transcription = document.getElementById("transcription");
     const translation = document.getElementById("flipside");
-    if (word.textContent) {
+    if (word.textContent == true) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
         translation.textContent = ukrainianArray[index];
@@ -108,7 +108,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log(currentArray.length)
+console.log("2")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
