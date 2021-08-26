@@ -32,6 +32,10 @@ const textContent = () => {
 
 //SAVING TO LOCAL STORAGE
 const retrievingData = (() => {
+
+})();
+
+const actionButtons = (inputArr) => {
     if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
         knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
     };
@@ -45,9 +49,6 @@ const retrievingData = (() => {
     if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
         likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
     };
-})();
-
-const actionButtons = (inputArr) => {
 
 
     if (knownWordsArr.includes(index)) {
@@ -95,7 +96,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test20")
+console.log("test21")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
