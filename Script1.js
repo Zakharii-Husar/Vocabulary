@@ -30,7 +30,7 @@ const textContent = () => {
 
 
 
-//SAVING TO LOCAL STORAGE
+//GETTING DATA FROM PREVIOUS SESSION
 const retrievingData = (() => {
     if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
         knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
@@ -61,26 +61,26 @@ const retrievingData = (() => {
 const actionButtons = (inputArr) => {
 
 
-    if (knownWordsArr.includes(index)) {
-        let a = knownWordsArr.indexOf(index);
+    if (inputArr.includes(index)) {
+        let a = inputArr.indexOf(index);
         if (a > -1) {
-            knownWordsArr.splice(a, 1);
+            inputArr.splice(a, 1);
         };
     }
 
-    if (unknownWordsArr.includes(index)) {
-        let b = unknownWordsArr.indexOf(index);
-        if (b > -1) {
-            unknownWordsArr.splice(b, 1);
-        };
-    }
+    //if (unknownWordsArr.includes(index)) {
+    //    let b = unknownWordsArr.indexOf(index);
+    //    if (b > -1) {
+    //        unknownWordsArr.splice(b, 1);
+    //    };
+    //}
 
-    if (doubtfulWordsArr.includes(index)) {
-        let c = doubtfulWordsArr.indexOf(index);
-        if (c > -1) {
-            doubtfulWordsArr.splice(c, 1);
-        };
-    }
+    //if (doubtfulWordsArr.includes(index)) {
+    //    let c = doubtfulWordsArr.indexOf(index);
+    //    if (c > -1) {
+    //        doubtfulWordsArr.splice(c, 1);
+    //    };
+    //}
     if (!inputArr.includes(index) && index > -1) {
         inputArr.push(index);
 
@@ -106,7 +106,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test23")
+console.log("test24")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
