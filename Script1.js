@@ -40,8 +40,6 @@ const retrievingData = (() => {
     };
     if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
         unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-    } else {
-        unknownWordsArr = englishArray;
     }
 
     if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
@@ -97,7 +95,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test19")
+console.log("test20")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
