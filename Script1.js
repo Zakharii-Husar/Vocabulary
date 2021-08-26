@@ -36,10 +36,29 @@ const textContent = () => {
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 };
 
+//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
+const star = () => {
+    let starPic = document.getElementById("like");
+    if (likedWordsArr.includes(index)) {
+        starPic.setAttribute("src", "img/like.png");
+    } else {
+        starPic.setAttribute("src", "img/unlike.png")
+    }
+};
+
+//UPDATING DATA
+
+const update = () => {
+    let randomNum = Math.floor(Math.random() * currentArray.length);
+    index = currentArray[randomNum];
+    textContent();
+    star();
+};
+
+update();
 
 
-
-//GETTING DATA FROM PREVIOUS SESSION
+//GETTING DATA FROM PREVIOUS SESSION IF POSSIBLE 
 const retrievingData = (() => {
     if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
         knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
@@ -97,35 +116,7 @@ const actionButtons = (inputArr) => {
 
 };
 
-console.log(doubtfulWordsArr);
-console.log(knownWordsArr);
-console.log(unknownWordsArr);
-console.log(likedWordsArr);
-console.log("6")
-
-
-//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
-const star = () => {
-    let starPic = document.getElementById("like");
-    if (likedWordsArr.includes(index)) {
-        starPic.setAttribute("src", "img/like.png");
-    } else {
-        starPic.setAttribute("src", "img/unlike.png")
-    }
-};
-
-//UPDATING DATA
-
-const update = () => {
-    let randomNum = Math.floor(Math.random() * currentArray.length);
-    index = currentArray[randomNum];
-    textContent();
-    star();
-};
-
-update();
-
-//DOWN PANEL
+//THE BUTTONS ON BOTTOM PANEL
 
 const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
@@ -145,27 +136,11 @@ redBtn.addEventListener("click", () => {
     update();
 });
 
-const likeBtn = document.getElementById("like");
-likeBtn.addEventListener("click", () => {
-    actionButtons(likedWordsArr);
-    star();
-});
-
-
-//FLIP THE CARD
-
-const card = document.getElementsByClassName("toggle")[0];
-
-const flipBtn = document.getElementById("flip");
-flipBtn.addEventListener("click", () => {
-    card.classList.toggle("active");
-});
-
-//MENU
+//FUNCTIONS FOR SWITCHING BETWEEN MENU AND THE CARD
+const menuBtn = document.getElementById("menuBtn");
 const topPanel = document.getElementById("topPanel");
 const panel = document.getElementById("panel");
 const menu = document.getElementById("menu");
-const menuBtn = document.getElementById("menuBtn");
 
 const hidingObject = (obj, visibility) => {
     obj.style.display = visibility;
@@ -185,7 +160,27 @@ const unHide = () => {
     hidingObject(menu, "none");
 };
 
+//THE BUTTONS ON TOP PANEL
 
+//LIKE
+const likeBtn = document.getElementById("like");
+likeBtn.addEventListener("click", () => {
+    actionButtons(likedWordsArr);
+    star();
+});
+
+
+
+//FLIP
+
+const card = document.getElementsByClassName("toggle")[0];
+
+const flipBtn = document.getElementById("flip");
+flipBtn.addEventListener("click", () => {
+    card.classList.toggle("active");
+});
+
+//MENU
 menuBtn.addEventListener("click", () => {
     hide();
 });
