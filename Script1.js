@@ -20,7 +20,7 @@ const textContent = () => {
     const word = document.getElementById("word");
     const transcription = document.getElementById("transcription");
     const translation = document.getElementById("flipside");
-    if (currentArray) {
+    if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
         translation.textContent = ukrainianArray[index];
@@ -120,7 +120,6 @@ const update = () => {
     index = currentArray[randomNum];
     textContent();
     star();
-    console.log(currentArray);
 };
 
 update();
