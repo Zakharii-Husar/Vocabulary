@@ -151,7 +151,6 @@ const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr);
     star();
-    update();
 });
 
 
