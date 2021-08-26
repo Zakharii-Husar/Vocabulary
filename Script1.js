@@ -2,7 +2,7 @@
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr = englishArray;
+let unknownWordsArr = [];
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
 
@@ -86,14 +86,12 @@ const actionButtons = (inputArr) => {
 
     /*localStorage.setItem(storage, JSON.stringify(inputArr));*/
 
-
+    localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
+    localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
+    localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
+    localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
 
 };
-
-localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
-localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
-localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
-localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
 
 console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
