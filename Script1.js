@@ -70,7 +70,7 @@ const actionButtons = (inputArr) => {
             doubtfulWordsArr.splice(c, 1);
         };
     }
-    if (!inputArr.includes(index) && index !== null) {
+    if (!inputArr.includes(index) && index > -1) {
         inputArr.push(index);
 
     } else {
