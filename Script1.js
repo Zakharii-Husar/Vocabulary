@@ -65,17 +65,18 @@ const actionButtons = (inputArr) => {
     let c = doubtfulWordsArr.indexOf(index);
     let d = likedWordsArr.indexOf(index);
 
-
-    if (knownWordsArr.includes(index) && a > -1) {
+    if (inputArr !== likedWordsArr) {
+        if (knownWordsArr.includes(index) && a > -1) {
             knownWordsArr.splice(a, 1);
-    }
+        }
 
-    if (unknownWordsArr.includes(index) && b > -1) {
+        if (unknownWordsArr.includes(index) && b > -1) {
             unknownWordsArr.splice(b, 1);
-    }
+        }
 
-    if (doubtfulWordsArr.includes(index) && c > -1) {
+        if (doubtfulWordsArr.includes(index) && c > -1) {
             doubtfulWordsArr.splice(c, 1);
+        };
     };
 
     //PUSHING THE WORD TO NEW LIST
@@ -102,7 +103,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test26")
+console.log("test1")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
