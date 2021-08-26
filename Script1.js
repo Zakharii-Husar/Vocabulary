@@ -2,7 +2,7 @@
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr;
+let unknownWordsArr = englishArray;
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
 
