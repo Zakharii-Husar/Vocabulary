@@ -17,7 +17,7 @@ const textContent = () => {
     const word = document.getElementById("word");
     const transcription = document.getElementById("transcription");
     const translation = document.getElementById("flipside");
-    if (currentArray.length > -1) {
+    if (word.textContent) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
         translation.textContent = ukrainianArray[index];
