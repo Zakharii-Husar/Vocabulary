@@ -26,8 +26,9 @@ const textContent = () => {
         translation.textContent = ukrainianArray[index];
     }
     else {
-        word.textContent = "no words"
-        translation.textContent = "немає слів"
+        word.textContent = "no words";
+        translation.textContent = "немає слів";
+        transcription.textContent = "";
     }
     knownWordsBtn.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
     UnknownWordsBtn.textContent = `НОВІ: ${unknownWordsArr.length}`;
@@ -100,7 +101,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("5")
+console.log("6")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
