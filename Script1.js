@@ -4,7 +4,7 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = englishArray;
 let likedWordsArr = [];
-let currentArray = englishArray;
+let currentArray = unknownWordsArr;
 
 const knownWordsBtn = document.getElementById("greenBtn");
 const UnknownWordsBtn = document.getElementById("redBtn");
@@ -56,12 +56,13 @@ const actionButtons = (inputArr) => {
         };
     }
 
-    if (unknownWordsArr.includes(index)) {
-        let b = unknownWordsArr.indexOf(index);
+    if (englishArray.includes(index)) {
+        let b = englishArray.indexOf(index);
         if (b > -1) {
-            unknownWordsArr.splice(b, 1);
+            englishArray.splice(b, 1);
         };
     }
+
 
     if (doubtfulWordsArr.includes(index)) {
         let c = doubtfulWordsArr.indexOf(index);
@@ -95,7 +96,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test16")
+console.log("test18")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
