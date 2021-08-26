@@ -1,12 +1,8 @@
 ﻿import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
-let newArr = Array.from(Array(998).keys());
-
-console.log(newArr);
-
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr = [];
+let unknownWordsArr = Array.from(Array(998).keys());
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
 
