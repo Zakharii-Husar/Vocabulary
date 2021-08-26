@@ -1,6 +1,10 @@
 ﻿import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
 let newArr = Array.from(Array(1000).keys());
+
+
+    newArr.splice(7, 1);
+
 console.log(newArr);
 
 let knownWordsArr = [];
