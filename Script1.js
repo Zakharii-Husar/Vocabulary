@@ -4,7 +4,7 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = englishArray;
 let likedWordsArr = [];
-let currentArray = doubtfulWordsArr;
+let currentArray = unknownWordsArr;
 
 let index;
 
@@ -44,7 +44,7 @@ const actionButtons = (inputArr) => {
         if (a > -1) {
             knownWordsArr.splice(a, 1);
         };
-    }
+    }``
 
     if (unknownWordsArr.includes(index)) {
         let b = unknownWordsArr.indexOf(index);
