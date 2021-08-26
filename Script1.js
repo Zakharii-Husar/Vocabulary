@@ -1,10 +1,15 @@
-import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
+﻿import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = englishArray;
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
+
+const knownWordsBtn = document.getElementById("greenBtn");
+const UnknownWordsBtn = document.getElementById("redBtn");
+const doubtfulWordsBtn = document.getElementById("yellowBtn");
+const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index;
 
@@ -15,6 +20,11 @@ const textContent = () => {
     transcription.textContent = transcriptionArray[index];
     const translation = document.getElementById("flipside");
     translation.textContent = ukrainianArray[index];
+
+    knownWordsBtn.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
+    UnknownWordsBtn.textContent = `НОВІ: ${unknownWordsArr.length}`;
+    doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
+    favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 };
 
 
@@ -181,29 +191,24 @@ menuBtn.addEventListener("click", () => {
 });
 
 // MENU BUTTONS
-
-const knownWordsBtn = document.getElementById("greenBtn");
 knownWordsBtn.addEventListener("click", () => {
     unHide();
     currentArray = knownWordsArr;
     update();
 });
 
-const UnknownWordsBtn = document.getElementById("redBtn");
 UnknownWordsBtn.addEventListener("click", () => {
     unHide();
     currentArray = unknownWordsArr;
     update();
 });
 
-const doubtfulWordsBtn = document.getElementById("yellowBtn");
 doubtfulWordsBtn.addEventListener("click", () => {
     currentArray = doubtfulWordsArr;
     unHide();
     update();
 });
 
-const favouriteWordsBtn = document.getElementById("goldenBtn");
 favouriteWordsBtn.addEventListener("click", () => {
     currentArray = likedWordsArr;
     unHide();
