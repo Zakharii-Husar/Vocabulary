@@ -183,6 +183,7 @@ flipBtn.addEventListener("click", () => {
 //MENU
 menuBtn.addEventListener("click", () => {
     hide();
+    update();
 });
 
 // MENU BUTTONS
