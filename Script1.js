@@ -59,37 +59,33 @@ const retrievingData = (() => {
 //retrievingData(likedWordsArr, "likedWord");
 
 const actionButtons = (inputArr) => {
+    //REMOVING THE WORD FROM WHENEVER IT MIGHT BE
+    let a = knownWordsArr.indexOf(index);
+    let b = unknownWordsArr.indexOf(index);
+    let c = doubtfulWordsArr.indexOf(index);
+    let d = likedWordsArr.indexOf(index);
 
 
-    if (inputArr.includes(index)) {
-        let a = inputArr.indexOf(index);
-        if (a > -1) {
-            inputArr.splice(a, 1);
-        };
+    if (knownWordsArr.includes(index) && a > -1) {
+            knownWordsArr.splice(a, 1);
     }
 
-    //if (unknownWordsArr.includes(index)) {
-    //    let b = unknownWordsArr.indexOf(index);
-    //    if (b > -1) {
-    //        unknownWordsArr.splice(b, 1);
-    //    };
-    //}
+    if (unknownWordsArr.includes(index) && b > -1) {
+            unknownWordsArr.splice(b, 1);
+    }
 
-    //if (doubtfulWordsArr.includes(index)) {
-    //    let c = doubtfulWordsArr.indexOf(index);
-    //    if (c > -1) {
-    //        doubtfulWordsArr.splice(c, 1);
-    //    };
-    //}
+    if (doubtfulWordsArr.includes(index) && c > -1) {
+            doubtfulWordsArr.splice(c, 1);
+    };
+
+    //PUSHING THE WORD TO NEW LIST
     if (!inputArr.includes(index) && index > -1) {
         inputArr.push(index);
 
+        //DELETIG THE WORD FROM FAVOURITE LIST ON SECOND CLICK
     } else {
-        if (inputArr == likedWordsArr) {
-            let j = likedWordsArr.indexOf(index);
-            if (j > -1) {
-                likedWordsArr.splice(j, 1);
-            };
+        if (inputArr == likedWordsArr && d > -1) {
+                likedWordsArr.splice(d, 1);
         }
     }
 
@@ -106,7 +102,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test24")
+console.log("test25")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -153,7 +149,7 @@ redBtn.addEventListener("click", () => {
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr);
-    star();
+    update();
 });
 
 
