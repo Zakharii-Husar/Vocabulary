@@ -102,7 +102,7 @@ console.log(doubtfulWordsArr);
 console.log(knownWordsArr);
 console.log(unknownWordsArr);
 console.log(likedWordsArr);
-console.log("test25")
+console.log("test26")
 
 
 //SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -149,6 +149,7 @@ redBtn.addEventListener("click", () => {
 const likeBtn = document.getElementById("like");
 likeBtn.addEventListener("click", () => {
     actionButtons(likedWordsArr);
+    star();
     update();
 });
 
