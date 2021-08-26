@@ -2,7 +2,12 @@
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr = englishArray;
+let unknownWordsArr;
+if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+    unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+} else {
+    unknownWordsArr = englishArray;
+}
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
 
@@ -20,11 +25,7 @@ const retrievingData = (() => {
     if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
         doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
     };
-    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-    } else {
-        unknownWordsArr = englishArray;
-    }
+ 
     if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
         likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
     };
