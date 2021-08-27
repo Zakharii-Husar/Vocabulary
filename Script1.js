@@ -72,6 +72,7 @@ const fontSize = () => {
     else {
         flipside.style.fontSize = "300%";
     }
+    console.log(flipside.style.fontSize)
 }
 
 //UPDATING DATA
