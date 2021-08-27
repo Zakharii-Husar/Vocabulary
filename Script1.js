@@ -14,8 +14,6 @@ const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index;
 
-console.log(Array.from(currentArray[index]))
-
 //CHANGING TEXT OF THE WORD, TRANSLATION AND TRANSCRIPTION
 const textContent = () => {
     const word = document.getElementById("word");
@@ -211,3 +209,8 @@ favouriteWordsBtn.addEventListener("click", () => {
     unHide();
     update();
 })
+
+
+console.log(Array.from(currentArray[index]))
+
+console.log("w")
