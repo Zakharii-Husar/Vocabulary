@@ -53,8 +53,17 @@ const fontSize = () => {
     const flipside = document.getElementById("flipside");
     console.log(wordsLength)
 
-    if (wordsLength.length >= 12) {
+    if (wordsLength.length = 2) {
+        flipside.style.fontSize = "275%";
+    }
+    else if (wordsLength.length = 3) {
         flipside.style.fontSize = "250%";
+    }
+    else if (wordsLength.length = 4) {
+        flipside.style.fontSize = "225%";
+    }
+    else if (wordsLength.length > 4) {
+        flipside.style.fontSize = "200%";
     }
     else {
         flipside.style.fontSize = "300%";
