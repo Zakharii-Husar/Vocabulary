@@ -47,7 +47,7 @@ const star = () => {
 
 //ADJUSTING FONTSIZE OF TRANSLATION DEPENDING ON QUANTITY OF THE WORDS TO PREVENT OVERFLOW
 let lettersLength = Array.from(ukrainianArray[index]);
-let wordsLength = ukrainianArray[index].split(" ");
+let wordsLength = ukrainianArray[index].split(",");
 
 const fontSize = () => {
     const flipside = document.getElementById("flipside");
