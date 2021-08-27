@@ -60,10 +60,10 @@ const fontSize = () => {
         flipside.style.fontSize = "275%";
     }
     else if (wordsLength.length == 2) {
-        flipside.style.fontSize = "250%";
+        flipside.style.fontSize = "225%";
     }
     else if (wordsLength.length == 3) {
-        flipside.style.fontSize = "225%";
+        flipside.style.fontSize = "200%";
     }
     else if (wordsLength.length > 4) {
         flipside.style.fontSize = "200%";
