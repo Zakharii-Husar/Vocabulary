@@ -27,6 +27,7 @@
     }
 
 #card {
+    display: flex;
     width: 100%;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
