@@ -53,7 +53,7 @@ const fontSize = () => {
     const flipside = document.getElementById("flipside");
 
     if (wordsLength.length == 1 && lettersLength > 12) {
-        flipside.style.fontSize = "175%";
+        flipside.style.fontSize = "150%";
     }
     else if (wordsLength.length == 1 && lettersLength < 12) {
         flipside.style.fontSize = "275%";
