@@ -53,14 +53,14 @@ const fontSize = () => {
     const flipside = document.getElementById("flipside");
 
     if (wordsLength.length == 1 && lettersLength > 12) {
-        flipside.style.fontSize = "250%";
+        flipside.style.fontSize = "200%";
     };
 
     if (wordsLength.length == 1) {
-        flipside.style.fontSize = "275%";
+        flipside.style.fontSize = "175%";
     }
     else if (wordsLength.length == 2) {
-        flipside.style.fontSize = "230%";
+        flipside.style.fontSize = "175%";
     }
     else if (wordsLength.length == 3) {
         flipside.style.fontSize = "175%";
