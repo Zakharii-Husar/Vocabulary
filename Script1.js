@@ -50,11 +50,11 @@ const star = () => {
 const fontSize = () => {
     let wordsLength = Array.from(ukrainianArray[index]);
     const flipside = document.getElementById("flipside");
-    if (wordsLength.length > 15 && wordsLength.length < 25) {
+    if (wordsLength.length > 20 && wordsLength.length < 25) {
         flipside.style.fontSize = "200%";
     }
     else if (wordsLength.length > 25) {
-        flipside.style.fontSize = "200%";
+        flipside.style.fontSize = "100%";
     }
     else {
         flipside.style.fontSize = "300%";
