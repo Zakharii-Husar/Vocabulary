@@ -22,7 +22,7 @@ const textContent = () => {
     if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
-        translation.textContent = "йцукенгшщз"; //ukrainianArray[index];
+        translation.textContent = "йцукенгшщзqqqww"; //ukrainianArray[index];
     }
     else {
         word.textContent = "no words";
