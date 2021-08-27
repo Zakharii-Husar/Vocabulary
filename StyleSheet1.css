@@ -30,9 +30,6 @@
     width: 100%;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 
@@ -65,7 +62,7 @@
     font-size: 100%;
     font-weight: 800;
     transform: rotateX(180deg);
-    position: relative;
+    position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
