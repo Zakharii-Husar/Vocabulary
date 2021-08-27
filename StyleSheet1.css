@@ -53,7 +53,6 @@
 }
 
 #flipside {
-    display: flex;
     background-image: url(img/flag2.jpg);
     background-size: 100% 100%;
     backface-visibility: hidden;
