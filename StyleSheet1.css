@@ -106,7 +106,7 @@
 #panel {
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
