@@ -42,7 +42,7 @@
     padding: 13% 0 13% 0;
     color: wheat;
     text-shadow: 2px 2px 4px black;
-    font-size: 200%;
+    font-size: 100%;
     font-weight: 800;
     position: relative;
     top: 0;
@@ -51,8 +51,6 @@
 }
 
 #flipside {
-    display: flex;
-    flex-wrap: wrap;
     background-image: url(img/flag2.jpg);
     background-size: 100% 100%;
 
@@ -61,7 +59,7 @@
     padding: 13% 0 13% 0;
     color: wheat;
     text-shadow: 2px 2px 4px black;
-    font-size: 200%;
+    font-size: 100%;
 
     font-weight: 800;
     transform: rotateX(180deg);
