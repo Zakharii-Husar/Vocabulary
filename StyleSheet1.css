@@ -106,6 +106,8 @@
 #panel {
     display: flex;
     flex-direction: row;
+    position: absolute;
+    bottom: 0;
 }
 
     #panel * {
