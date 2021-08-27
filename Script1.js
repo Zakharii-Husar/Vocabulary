@@ -45,9 +45,9 @@ const star = () => {
     }
 };
 
-//UPDATING DATA
+//ADJUSTING FONTSIZE OF TRANSLATION DEPENDING ON QUANTITY OF THE WORDS TO PREVENT OVERFLOW
 
-const update = () => {
+const fontSize = () => {
     let wordsLength = Array.from(ukrainianArray[index]);
     const flipside = document.getElementById("flipside");
     if (wordsLength.length > 15 && wordsLength.length < 25) {
@@ -56,9 +56,14 @@ const update = () => {
     else if (wordsLength.length > 25) {
         flipside.style.fontSize = "100%";
     };
+}
 
+//UPDATING DATA
+
+const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
+    fontSize();
     textContent();
     star();
 };
