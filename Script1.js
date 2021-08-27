@@ -1,6 +1,8 @@
-﻿import { englishArray, ukrainianArray, transcriptionArray } from "./words.js";
+﻿//GLOBAL VARIABLES
+let englishArray = JSON.parse(englishArray);
+let ukrainianArray = JSON.parse(ukrainianArray);
+let transcriptionArray = JSON.parse(transcriptionArray);
 
-//GLOBAL VARIABLES
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
