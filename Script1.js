@@ -54,11 +54,14 @@ const fontSize = () => {
     if (wordsLength.length >= 25) {
         flipside.style.fontSize = "175%";
     }
-    else if (wordsLength.length > 19 && wordsLength.length < 25) {
+    else if (wordsLength.length >= 20 && wordsLength.length < 25) {
         flipside.style.fontSize = "250%";
     }
-    else if (wordsLength.length > 13 && wordsLength.length < 20) {
+    else if (wordsLength.length >= 15 && wordsLength.length < 20) {
         flipside.style.fontSize = "225%";
+    }
+    else if (wordsLength.length >= 10 && wordsLength.length < 15) {
+        flipside.style.fontSize = "200%";
     }
     else {
         flipside.style.fontSize = "300%";
