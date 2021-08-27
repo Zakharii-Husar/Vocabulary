@@ -57,16 +57,16 @@ const fontSize = () => {
         flipside.style.fontSize = "250%";
     };
 
-    if (wordsLength.length = 2) {
+    if (wordsLength.length = 1) {
         flipside.style.fontSize = "275%";
     }
-    else if (wordsLength.length = 3) {
+    else if (wordsLength.length = 2) {
         flipside.style.fontSize = "250%";
     }
-    else if (wordsLength.length = 4) {
+    else if (wordsLength.length = 3) {
         flipside.style.fontSize = "225%";
     }
-    else if (wordsLength.length > 5) {
+    else if (wordsLength.length > 4) {
         flipside.style.fontSize = "200%";
     }
     else {
