@@ -1,7 +1,7 @@
 ﻿//GLOBAL VARIABLES
-let englishArray = JSON.parse(englishArray);
-let ukrainianArray = JSON.parse(ukrainianArray);
-let transcriptionArray = JSON.parse(transcriptionArray);
+let englishArray = JSON.parse("englishArray");
+let ukrainianArray = JSON.parse("ukrainianArray");
+let transcriptionArray = JSON.parse("transcriptionArray");
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
