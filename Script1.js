@@ -12,7 +12,7 @@ const UnknownWordsBtn = document.getElementById("redBtn");
 const doubtfulWordsBtn = document.getElementById("yellowBtn");
 const favouriteWordsBtn = document.getElementById("goldenBtn");
 
-let index;
+let index = 0;
 
 //CHANGING TEXT OF THE WORD, TRANSLATION AND TRANSCRIPTION
 const textContent = () => {
@@ -48,6 +48,15 @@ const star = () => {
 //UPDATING DATA
 
 const update = () => {
+    let wordsLength = Array.from(ukrainianArray[index]);
+    const flipside = document.getElementById("flipside");
+    if (wordsLength.length > 15 && wordsLength.length < 25) {
+        flipside.style.fontSize = "200%";
+    }
+    else if (wordsLength.length > 25) {
+        flipside.style.fontSize = "100%";
+    };
+
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
     textContent();
@@ -208,12 +217,3 @@ favouriteWordsBtn.addEventListener("click", () => {
     unHide();
     update();
 })
-
-let wordsLength = Array.from(ukrainianArray[index]);
-const flipside = document.getElementById("flipside");
-if (wordsLength.length > 15 && wordsLength.length < 25) {
-    flipside.style.fontSize = "1d00%";
-}
-else if (wordsLength.length > 25) {
-    flipside.style.fontSize = "xx-small";
-}
