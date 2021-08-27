@@ -3,7 +3,7 @@
 //GLOBAL VARIABLES
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
-let unknownWordsArr = Array.from(Array(998).keys());
+let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
 
@@ -50,15 +50,11 @@ const star = () => {
 const fontSize = () => {
     let wordsLength = Array.from(ukrainianArray[index]);
     const flipside = document.getElementById("flipside");
-    if (wordsLength.length > 20 && wordsLength.length < 25) {
-        flipside.style.fontSize = "200%";
-    }
-    else if (wordsLength.length > 25) {
+
+    if (wordsLength.length > 25) {
         flipside.style.fontSize = "150%";
     }
-    else {
-        flipside.style.fontSize = "300%";
-    }
+
 }
 
 //UPDATING DATA
