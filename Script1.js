@@ -47,28 +47,28 @@ const star = () => {
 
 //ADJUSTING FONTSIZE OF TRANSLATION DEPENDING ON QUANTITY OF THE WORDS TO PREVENT OVERFLOW
 
-const fontSize = () => {
-    let lettersLength = Array.from(ukrainianArray[index]);
-    let wordsLength = ukrainianArray[index].split(",");
-    const flipside = document.getElementById("flipside");
+//const fontSize = () => {
+//    let lettersLength = Array.from(ukrainianArray[index]);
+//    let wordsLength = ukrainianArray[index].split(",");
+//    const flipside = document.getElementById("flipside");
 
-    if (wordsLength.length > 2) {
-        flipside.style.fontSize = "200%";
-    }
+//    if (wordsLength.length > 2) {
+//        flipside.style.fontSize = "200%";
+//    }
 
 
-    console.log(wordsLength.length)
-    console.log(flipside.style.fontSize)
-}
+//    console.log(wordsLength.length)
+//    console.log(flipside.style.fontSize)
+//}
 
 //UPDATING DATA
 
 const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
-    if (currentArray.length !== 0) {
-       fontSize();
-    };
+    //if (currentArray.length !== 0) {
+    //   fontSize();
+    //};
     textContent();
     star();
 };
