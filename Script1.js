@@ -62,7 +62,7 @@ if (wordsLength.length > 15 && wordsLength.length < 25) {
     flipside.style.fontSize = "200%";
 }
 else if (wordsLength.length > 25) {
-    flipside.style.fontSize = "50%";
+    flipside.style.fontSize = "25%";
 }
 
 //GETTING DATA FROM PREVIOUS SESSION IF POSSIBLE 
