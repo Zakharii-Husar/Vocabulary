@@ -48,8 +48,10 @@ const star = () => {
 //ADJUSTING FONTSIZE OF TRANSLATION DEPENDING ON QUANTITY OF THE WORDS TO PREVENT OVERFLOW
 
 const fontSize = () => {
-    let wordsLength = Array.from(ukrainianArray[index]);
+    // let wordsLength = Array.from(ukrainianArray[index].split(" "));
+    let wordsLength = ukrainianArray[index].split(" ");
     const flipside = document.getElementById("flipside");
+    console.log(wordsLength)
 
     if (wordsLength.length >= 12) {
         flipside.style.fontSize = "250%";
