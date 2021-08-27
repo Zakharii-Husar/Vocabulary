@@ -51,7 +51,7 @@ const fontSize = () => {
     let lettersLength = Array.from(ukrainianArray[index]);
     let wordsLength = ukrainianArray[index].split(",");
     const flipside = document.getElementById("flipside");
-    console.log(wordsLength)
+    console.log(wordsLength.length)
 
     if (wordsLength.length = 1 && lettersLength > 12) {
         flipside.style.fontSize = "250%";
