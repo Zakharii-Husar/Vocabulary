@@ -22,7 +22,7 @@ const textContent = () => {
     if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
-        translation.textContent = ukrainianArray[index];
+        translation.textContent = "йцукенгшщзхїфів"; //ukrainianArray[index];
     }
     else {
         word.textContent = "no words";
@@ -213,4 +213,4 @@ favouriteWordsBtn.addEventListener("click", () => {
 
 console.log(Array.from(ukrainianArray[index]))
 
-console.log("a")
+console.log("f")
