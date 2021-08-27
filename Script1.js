@@ -52,7 +52,7 @@ const fontSize = () => {
     let wordsLength = ukrainianArray[index].split(",");
     const flipside = document.getElementById("flipside");
 
-    if (wordsLength.length > 2 &&) {
+    if (wordsLength.length > 2) {
         flipside.style.fontSize = "200%";
     }
 
