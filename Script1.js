@@ -54,16 +54,15 @@ const fontSize = () => {
 
     if (wordsLength.length == 1 && lettersLength > 12) {
         flipside.style.fontSize = "200%";
-    };
-
-    if (wordsLength.length == 1) {
-        flipside.style.fontSize = "175%";
+    }
+    else if (wordsLength.length == 1 && lettersLength < 12) {
+        flipside.style.fontSize = "275%";
     }
     else if (wordsLength.length == 2) {
-        flipside.style.fontSize = "175%";
+        flipside.style.fontSize = "250%";
     }
     else if (wordsLength.length == 3) {
-        flipside.style.fontSize = "175%";
+        flipside.style.fontSize = "225%";
     }
     else if (wordsLength.length > 4) {
         flipside.style.fontSize = "200%";
