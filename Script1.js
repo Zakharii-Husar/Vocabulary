@@ -52,17 +52,17 @@ const fontSize = () => {
     let wordsLength = ukrainianArray[index].split(",");
     const flipside = document.getElementById("flipside");
 
-    if (wordsLength.length = 1 && lettersLength > 12) {
+    if (wordsLength.length == 1 && lettersLength > 12) {
         flipside.style.fontSize = "250%";
     };
 
-    if (wordsLength.length = 1) {
+    if (wordsLength.length == 1) {
         flipside.style.fontSize = "275%";
     }
-    else if (wordsLength.length = 2) {
+    else if (wordsLength.length == 2) {
         flipside.style.fontSize = "250%";
     }
-    else if (wordsLength.length = 3) {
+    else if (wordsLength.length == 3) {
         flipside.style.fontSize = "225%";
     }
     else if (wordsLength.length > 4) {
