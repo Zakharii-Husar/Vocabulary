@@ -55,7 +55,7 @@ const fontSize = () => {
         flipside.style.fontSize = "175%";
     }
     else if (wordsLength.length > 13 && wordsLength.length < 20) {
-        flipside.style.fontSize = "250%";
+        flipside.style.fontSize = "225%";
     }
     else {
         flipside.style.fontSize = "300%";
