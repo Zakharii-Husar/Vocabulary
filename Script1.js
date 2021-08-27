@@ -211,6 +211,6 @@ favouriteWordsBtn.addEventListener("click", () => {
 })
 
 
-console.log(Array.from(currentArray[index]))
+console.log(Array.from(ukrainianArray[index]))
 
-console.log("w")
+console.log("a")
