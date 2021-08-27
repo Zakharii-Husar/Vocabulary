@@ -22,8 +22,7 @@ const textContent = () => {
     if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
-        translation.textContent = "йцукенгшщзqqq"; //ukrainianArray[index];
-        console.log("3")
+        translation.textContent = ukrainianArray[index];
     }
     else {
         word.textContent = "no words";
@@ -212,4 +211,11 @@ favouriteWordsBtn.addEventListener("click", () => {
 })
 
 
-console.log(Array.from(ukrainianArray[index]))
+let wordsLength = Array.from(ukrainianArray[index]);
+const flipside = document.getElementById("flipside");
+if (wordsLength.length > 15 && wordsLength.length < 25) {
+    flipside.style.fontSize = "200%";
+}
+else if (wordsLength.length > 25) {
+    flipside.style.fontSize = "100%";
+}
