@@ -47,21 +47,21 @@ const star = () => {
 
 //ADJUSTING FONTSIZE OF TRANSLATION DEPENDING ON QUANTITY OF THE WORDS TO PREVENT OVERFLOW
 
-//const fontSize = () => {
-//    let wordsLength = Array.from(ukrainianArray[index]);
-//    const flipside = document.getElementById("flipside");
+const fontSize = () => {
+    let wordsLength = Array.from(ukrainianArray[index]);
+    const flipside = document.getElementById("flipside");
 
-//    if (wordsLength.length >= 20) {
-//        flipside.style.fontSize = "150%";
-//    }
-//    else if (wordsLength.length > 13 && wordsLength.length < 20) {
-//        flipside.style.fontSize = "250%";
-//    }
-//    else {
-//        flipside.style.fontSize = "300%";
-//    }
+    if (wordsLength.length >= 20) {
+        flipside.style.fontSize = "150%";
+    }
+    else if (wordsLength.length > 13 && wordsLength.length < 20) {
+        flipside.style.fontSize = "250%";
+    }
+    else {
+        flipside.style.fontSize = "300%";
+    }
 
-//}
+}
 
 //UPDATING DATA
 
@@ -69,7 +69,7 @@ const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
     if (currentArray.length !== 0) {
-        //fontSize();
+        fontSize();
     };
     textContent();
     star();
