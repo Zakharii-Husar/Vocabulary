@@ -66,7 +66,9 @@ const fontSize = () => {
 const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
-    fontSize();
+    if (currentArray.length !== 0) {
+        fontSize();
+    };
     textContent();
     star();
 };
