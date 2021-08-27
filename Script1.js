@@ -22,8 +22,8 @@ const textContent = () => {
     if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
-        translation.textContent = "йцукенгшщзqqqw"; //ukrainianArray[index];
-        console.log("2")
+        translation.textContent = "йцукенгшщзqqq"; //ukrainianArray[index];
+        console.log("3")
     }
     else {
         word.textContent = "no words";
