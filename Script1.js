@@ -1,4 +1,11 @@
 ﻿//GLOBAL VARIABLES
+
+fetch("words.json")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data[0])
+    });
+
 let englishArray = JSON.parse("englishArray");
 let ukrainianArray = JSON.parse("ukrainianArray");
 let transcriptionArray = JSON.parse("transcriptionArray");
