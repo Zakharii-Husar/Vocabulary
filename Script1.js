@@ -1,12 +1,13 @@
 ﻿//GLOBAL VARIABLES
 
-let englishArray;
-let transcriptionArray;
-let ukrainianArray;
-
 fetch("words.json")
     .then(response => response.json())
     .then(data => {
+
+        let englishArray;
+        let transcriptionArray;
+        let ukrainianArray;
+
         englishArray = data[0];
         transcriptionArray = data[1];
         ukrainianArray = data[2];
