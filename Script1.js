@@ -85,6 +85,9 @@ const update = () => {
     if (HeaderColor == "darkblue") {
         header.style.color = "white"
     }
+    else {
+        return
+    }
 };
 
 update();
