@@ -4,6 +4,7 @@ fetch("words.json")
     .then(data => {    
 //GLOBAL VARIABLES
 const header = document.getElementById("menuHead");
+const transcription = document.getElementById("transcription");
 let englishArray;
 let transcriptionArray;
 let ukrainianArray;
@@ -29,7 +30,6 @@ let index = 0;
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
     const word = document.getElementById("word");
-    const transcription = document.getElementById("transcription");
     const translation = document.getElementById("flipside");
 
     if (currentArray.length !== 0) {
@@ -212,6 +212,7 @@ const card = document.getElementsByClassName("toggle")[0];
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
     card.classList.toggle("active");
+    transcription.style.display = "none";
 });
 
 //MENU
