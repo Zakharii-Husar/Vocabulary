@@ -47,7 +47,10 @@ const textContent = () => {
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 
-    if (color !== "darkblue") {
+    if (color == "darkblue") {
+        header.textContent = "ВИБЕРІТЬ СПИСОК";
+    }
+    else {
         if (currentArray == knownWordsArr) {
             header.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
         }
@@ -60,9 +63,6 @@ const textContent = () => {
         else {
             header.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
         }
-    }
-    else {
-        header.textContent = "ВИБЕРІТЬ СПИСОК"
     }
 };
 
