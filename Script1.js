@@ -1,23 +1,21 @@
-﻿//GLOBAL VARIABLES
-
+﻿
 fetch("words.json")
     .then(response => response.json())
-    .then(data => {
-
-        let englishArray;
-        let transcriptionArray;
-        let ukrainianArray;
-
-        englishArray = data[0];
-        transcriptionArray = data[1];
-        ukrainianArray = data[2];
-    
-
+    .then(data => {    
+//GLOBAL VARIABLES
+let englishArray;
+let transcriptionArray;
+let ukrainianArray;
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
-let currentArray = unknownWordsArr;
+        let currentArray = unknownWordsArr;
+        console.log("ive made it!!!")
+        //RETRIEVING DATA FROM JSON AND STORING TO THE ARRAYS
+        englishArray = data[0];
+        transcriptionArray = data[1];
+        ukrainianArray = data[2];
 
 const knownWordsBtn = document.getElementById("greenBtn");
 const UnknownWordsBtn = document.getElementById("redBtn");
@@ -57,30 +55,9 @@ const star = () => {
     }
 };
 
-//ADJUSTING FONTSIZE OF TRANSLATION DEPENDING ON QUANTITY OF THE WORDS TO PREVENT OVERFLOW
-
-//const fontSize = () => {
-//    let lettersLength = Array.from(ukrainianArray[index]);
-//    let wordsLength = ukrainianArray[index].split(",");
-//    const flipside = document.getElementById("flipside");
-
-//    if (wordsLength.length > 2) {
-//        flipside.style.fontSize = "200%";
-//    }
-
-
-//    console.log(wordsLength.length)
-//    console.log(flipside.style.fontSize)
-//}
-
-//UPDATING DATA
-
 const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
-    //if (currentArray.length !== 0) {
-    //   fontSize();
-    //};
     textContent();
     star();
 };
