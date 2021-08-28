@@ -167,3 +167,13 @@ flex-direction: column;
 #greenBtn {
     background-color: green;
 }
+
+@media only screen and (min-width: 750px){
+    #container{
+        width: 60%;
+    }
+    body {
+        background-image: url(img/flag3.jpg);
+    }
+
+}
