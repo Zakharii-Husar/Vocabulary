@@ -83,10 +83,10 @@ const update = () => {
     star();
     header.style.backgroundColor = HeaderColor;
     if (HeaderColor == "darkblue") {
-        header.style.color = "white"
+        header.style.color = "white";
     }
     else {
-        return
+        header.style.color = "black";
     }
 };
 
