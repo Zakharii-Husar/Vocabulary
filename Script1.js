@@ -3,6 +3,7 @@ fetch("words.json")
     .then(response => response.json())
     .then(data => {    
 //GLOBAL VARIABLES
+const header = document.getElementById("menuHead");
 let englishArray;
 let transcriptionArray;
 let ukrainianArray;
@@ -30,7 +31,6 @@ const textContent = () => {
     const word = document.getElementById("word");
     const transcription = document.getElementById("transcription");
     const translation = document.getElementById("flipside");
-    const header = document.getElementById("menuHead");
 
     if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
@@ -47,7 +47,7 @@ const textContent = () => {
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 
-    if (currentArray == 0) {
+    if (color == "darkblue") {
         header.textContent = "ВИБЕРІТЬ СПИСОК";
     }
     else {
@@ -213,7 +213,6 @@ menuBtn.addEventListener("click", () => {
     hide();
     update();
     color = "darkblue";
-    currentArray = 0;
 });
 
 // MENU BUTTONS
