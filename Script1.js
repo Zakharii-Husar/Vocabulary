@@ -12,7 +12,7 @@ let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
-let color = "darkblue";
+let color = "red";
 
         //RETRIEVING DATA FROM JSON AND STORING TO THE ARRAYS
         englishArray = data[0];
