@@ -12,6 +12,7 @@
     font-family: 'Courier New';
     font-size: large;
     font-weight: 700;
+    background-color: darkblue;
 }
 
 #container {
@@ -171,6 +172,7 @@ flex-direction: column;
 @media only screen and (min-width: 750px){
     #container{
         width: 60%;
+        background: unset;
     }
     body {
         background-image: url(img/flag3.jpg);
