@@ -209,10 +209,10 @@ flipBtn.addEventListener("click", () => {
 });
 
 //MENU
-menuBtn.addEventListener("click", () => {
+        menuBtn.addEventListener("click", () => {
+            color = "darkblue";
     hide();
     update();
-    color = "darkblue";
 });
 
 // MENU BUTTONS
