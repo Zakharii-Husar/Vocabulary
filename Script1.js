@@ -12,7 +12,7 @@ let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
-let color = "red";
+let HeaderColor = "red";
 
         //RETRIEVING DATA FROM JSON AND STORING TO THE ARRAYS
         englishArray = data[0];
@@ -47,7 +47,7 @@ const textContent = () => {
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 
-    if (color == "darkblue") {
+    if (HeaderColor == "darkblue") {
         header.textContent = "ВИБЕРІТЬ СПИСОК";
     }
     else {
@@ -81,7 +81,10 @@ const update = () => {
     index = currentArray[randomNum];
     textContent();
     star();
-    header.style.backgroundColor = color;
+    header.style.backgroundColor = HeaderColor;
+    if (HeaderColor == "darkblue") {
+        header.style.color = "white"
+    }
 };
 
 update();
@@ -210,35 +213,35 @@ flipBtn.addEventListener("click", () => {
 
 //MENU
         menuBtn.addEventListener("click", () => {
-            color = "darkblue";
+            HeaderColor = "darkblue";
     hide();
     update();
 });
 
 // MENU BUTTONS
         knownWordsBtn.addEventListener("click", () => {
-            color = "green";
+            HeaderColor = "green";
             currentArray = knownWordsArr;
     unHide();
     update();
 });
 
         UnknownWordsBtn.addEventListener("click", () => {
-            color = "red";
+            HeaderColor = "red";
             currentArray = unknownWordsArr;
     unHide();
     update();
 });
 
         doubtfulWordsBtn.addEventListener("click", () => {
-            color = "yellow";
+            HeaderColor = "yellow";
             currentArray = doubtfulWordsArr;
     unHide();
     update();
 });
 
         favouriteWordsBtn.addEventListener("click", () => {
-            color = "darkgoldenrod";
+            HeaderColor = "darkgoldenrod";
             currentArray = likedWordsArr;
     unHide();
     update();
