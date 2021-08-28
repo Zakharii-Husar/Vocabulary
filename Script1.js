@@ -47,7 +47,7 @@ const textContent = () => {
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 
-    if (color == "darkblue") {
+    if (currentArray == 0) {
         header.textContent = "ВИБЕРІТЬ СПИСОК";
     }
     else {
@@ -213,6 +213,7 @@ menuBtn.addEventListener("click", () => {
     hide();
     update();
     color = "darkblue";
+    currentArray = 0;
 });
 
 // MENU BUTTONS
