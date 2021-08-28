@@ -212,7 +212,7 @@ const card = document.getElementsByClassName("toggle")[0];
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
     card.classList.toggle("active");
-    transcription.style.display = "none";
+    //transcription.style.display = "none";
 });
 
 //MENU
