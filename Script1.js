@@ -10,7 +10,7 @@ fetch("words.json")
         englishArray = data[0];
         transcriptionArray = data[1];
         ukrainianArray = data[2];
-    });
+    
 
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
@@ -238,3 +238,4 @@ favouriteWordsBtn.addEventListener("click", () => {
     unHide();
     update();
 })
+    });
