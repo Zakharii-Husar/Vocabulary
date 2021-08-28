@@ -11,6 +11,7 @@ let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
 let currentArray = unknownWordsArr;
+let color = "darkblue";
 
         //RETRIEVING DATA FROM JSON AND STORING TO THE ARRAYS
         englishArray = data[0];
@@ -46,26 +47,23 @@ const textContent = () => {
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
 
-    let color = "red";
-
-    if (currentArray == knownWordsArr) {
-        header.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
-        color = "green"
-    }
-    else if (currentArray == unknownWordsArr) {
-        header.textContent = `НОВІ: ${unknownWordsArr.length}`;
-        color = "red"
-    }
-    else if (currentArray == doubtfulWordsArr) {
-        header.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
-        color = "yellow"
+    if (color !== "darkblue") {
+        if (currentArray == knownWordsArr) {
+            header.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
+        }
+        else if (currentArray == unknownWordsArr) {
+            header.textContent = `НОВІ: ${unknownWordsArr.length}`;
+        }
+        else if (currentArray == doubtfulWordsArr) {
+            header.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
+        }
+        else {
+            header.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
+        }
     }
     else {
-        header.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
-        color = "darkgoldenrod"
+        header.textContent = "ВИБЕРІТЬ СПИСОК"
     }
-
-    header.style.backgroundColor = color;
 };
 
 //SETS STAR ON CLICK OR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
@@ -83,6 +81,7 @@ const update = () => {
     index = currentArray[randomNum];
     textContent();
     star();
+    header.style.backgroundColor = color;
 };
 
 update();
@@ -213,29 +212,34 @@ flipBtn.addEventListener("click", () => {
 menuBtn.addEventListener("click", () => {
     hide();
     update();
+    color = "darkblue";
 });
 
 // MENU BUTTONS
-knownWordsBtn.addEventListener("click", () => {
-    unHide();
-    currentArray = knownWordsArr;
-    update();
-});
-
-UnknownWordsBtn.addEventListener("click", () => {
-    unHide();
-    currentArray = unknownWordsArr;
-    update();
-});
-
-doubtfulWordsBtn.addEventListener("click", () => {
-    currentArray = doubtfulWordsArr;
+        knownWordsBtn.addEventListener("click", () => {
+            color = "green";
+            currentArray = knownWordsArr;
     unHide();
     update();
 });
 
-favouriteWordsBtn.addEventListener("click", () => {
-    currentArray = likedWordsArr;
+        UnknownWordsBtn.addEventListener("click", () => {
+            color = "red";
+            currentArray = unknownWordsArr;
+    unHide();
+    update();
+});
+
+        doubtfulWordsBtn.addEventListener("click", () => {
+            color = "yellow";
+            currentArray = doubtfulWordsArr;
+    unHide();
+    update();
+});
+
+        favouriteWordsBtn.addEventListener("click", () => {
+            color = "darkgoldenrod";
+            currentArray = likedWordsArr;
     unHide();
     update();
 })
