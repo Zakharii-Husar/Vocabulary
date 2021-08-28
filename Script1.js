@@ -24,11 +24,13 @@ const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index = 0;
 
-//CHANGING TEXT OF THE WORD, TRANSLATION AND TRANSCRIPTION
+//CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
     const word = document.getElementById("word");
     const transcription = document.getElementById("transcription");
     const translation = document.getElementById("flipside");
+    const header = document.getElementById("menuHead");
+
     if (currentArray.length !== 0) {
         word.textContent = englishArray[index];
         transcription.textContent = transcriptionArray[index];
@@ -43,9 +45,30 @@ const textContent = () => {
     UnknownWordsBtn.textContent = `НОВІ: ${unknownWordsArr.length}`;
     doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
     favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
+
+    let color = "red";
+
+    if (currentArray == knownWordsArr) {
+        header.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
+        color = "green"
+    }
+    else if (currentArray == unknownWordsArr) {
+        header.textContent = `НОВІ: ${unknownWordsArr.length}`;
+        color = "red"
+    }
+    else if (currentArray == doubtfulWordsArr) {
+        header.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
+        color = "yellow"
+    }
+    else {
+        header.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
+        color = "darkgoldenrod"
+    }
+
+    header.style.backgroundColor = color;
 };
 
-//SETS STAR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
+//SETS STAR ON CLICK OR IF CURRENT WORD IS ALREADY IN THE FAVOURITE ARRAY 
 const star = () => {
     let starPic = document.getElementById("like");
     if (likedWordsArr.includes(index)) {

@@ -7,6 +7,13 @@
     padding: 0;
 }
 
+#menuHead {
+    padding: 1%;
+    font-family: 'Courier New';
+    font-size: large;
+    font-weight: 700;
+    background-color: red;
+}
 
 #container {
     background-image: url(img/flag3.jpg);
@@ -87,8 +94,8 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    position: absolute;
-    top: 2%;
+    position: relative;
+    bottom: 95%;
 }
 
     #topPanel * {
@@ -108,7 +115,7 @@
     flex-direction: row;
     width: 100%;
     position: relative;
-    top: 28%;
+    top: 10%;
 }
 
     #panel * {
@@ -137,12 +144,6 @@
 display: none;
 flex-direction: column;
 }
-
-/*.showMenu {
-    height: auto;
-    opacity: 1;
-    display: flex;
-}*/
 
     #menu * {
         margin: 5%;
