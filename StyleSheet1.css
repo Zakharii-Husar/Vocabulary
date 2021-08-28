@@ -12,7 +12,6 @@
     font-family: 'Courier New';
     font-size: large;
     font-weight: 700;
-    overflow: hidden;
 }
 
 #container {
@@ -85,7 +84,7 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 #topPanel {
