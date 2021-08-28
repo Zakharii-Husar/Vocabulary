@@ -10,8 +10,8 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
-        let currentArray = unknownWordsArr;
-        console.log("ive made it!!!")
+let currentArray = unknownWordsArr;
+
         //RETRIEVING DATA FROM JSON AND STORING TO THE ARRAYS
         englishArray = data[0];
         transcriptionArray = data[1];
