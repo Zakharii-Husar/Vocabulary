@@ -27,7 +27,7 @@ const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index = 0;
 
-        //GETTING DATA FROM PREVIOUS SESSION IF POSSIBLE 
+//GETTING DATA FROM PREVIOUS SESSION IF POSSIBLE 
         const retrievingData = (() => {
             if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
                 knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
