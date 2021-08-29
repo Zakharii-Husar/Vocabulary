@@ -203,8 +203,6 @@ likeBtn.addEventListener("click", () => {
     star();
 });
 
-
-
 //FLIP
 
 const card = document.getElementsByClassName("toggle")[0];
@@ -212,17 +210,16 @@ const card = document.getElementsByClassName("toggle")[0];
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
     card.classList.toggle("active");
-    //transcription.style.display = "none";
 });
 
-//MENU
+//THE BUTTON SWITCHING TO MENU
         menuBtn.addEventListener("click", () => {
             HeaderColor = "darkblue";
     hide();
     update();
 });
 
-
+// MENU BUTTONS
         const buttonEffect = (btn, arr, color) => {
             btn.addEventListener("click", () => {
                 btn.style.boxShadow = "10px 5px 5px black";
@@ -240,6 +237,4 @@ flipBtn.addEventListener("click", () => {
         buttonEffect(doubtfulWordsBtn, doubtfulWordsArr, "yellow");
         buttonEffect(knownWordsBtn, knownWordsArr, "green");
         buttonEffect(favouriteWordsBtn, likedWordsArr, "darkgoldenrod");
-// MENU BUTTONS
-
     });
