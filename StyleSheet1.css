@@ -178,6 +178,9 @@ flex-direction: column;
         background: unset;
         border: unset;
     }
+    #container *{
+        border: unset;
+    }
 
     #menu *{
         margin: 3%;
