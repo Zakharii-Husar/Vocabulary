@@ -13,6 +13,7 @@
     font-size: large;
     font-weight: 700;
     background-color: darkblue;
+    border: 2px solid black;
 }
 
 #container {
@@ -28,10 +29,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-    #container * {
-        border: 2px solid black;
-    }
 
 #card {
     width: 100%;
@@ -151,6 +148,7 @@ flex-direction: column;
         font-family: 'Courier New';
         font-size: large;
         font-weight: 700;
+        border: 2px solid black;
     }
 
 #goldenBtn{
@@ -177,15 +175,9 @@ flex-direction: column;
         width: 60%;
         background: unset;
     }
-    #container *{
-        border: unset;
-    }
 
     #menu * {
         margin: 2%;
-        border: 2px solid black;
     }
-    #menuHead {
-        border: 2px solid black;
-    }
+
 }
