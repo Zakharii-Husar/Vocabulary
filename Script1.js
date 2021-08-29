@@ -71,14 +71,14 @@ const textContent = () => {
         if (currentArray == knownWordsArr) {
             header.textContent = `ВИВЧЕНІ: ${knownWordsArr.length}`;
         }
-        else if (currentArray == unknownWordsArr) {
-            header.textContent = `НОВІ: ${unknownWordsArr.length}`;
-        }
         else if (currentArray == doubtfulWordsArr) {
             header.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
         }
         else if (currentArray == likedWordsArr) {
             header.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
+        }
+        else {
+            header.textContent = `НОВІ: ${unknownWordsArr.length}`;
         }
     }
 };
