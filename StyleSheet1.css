@@ -177,8 +177,10 @@ flex-direction: column;
         width: 60%;
         background: unset;
     }
-    #menu *{
+    #menu {
         border: unset;
+    }
+    #menu *{
         margin: 3%;
         padding: 2%;
     }
