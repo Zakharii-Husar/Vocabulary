@@ -177,7 +177,7 @@ flex-direction: column;
         width: 60%;
         background: unset;
     }
-    #menu {
+    #container {
         border: unset;
     }
     #menu *{
