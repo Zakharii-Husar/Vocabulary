@@ -176,14 +176,17 @@ flex-direction: column;
     #container {
         width: 60%;
         background: unset;
-        border: unset;
     }
     #container *{
         border: unset;
     }
 
-    #menu *{
+    #menu * {
         margin: 3%;
         padding: 2%;
+        border: 2px solid black;
+    }
+    #menuHead {
+        border: 2px solid black;
     }
 }
