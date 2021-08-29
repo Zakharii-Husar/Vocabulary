@@ -170,12 +170,16 @@ flex-direction: column;
 }
 
 @media only screen and (min-width: 750px){
+    body {
+        background-image: url(img/flag3.jpg);
+    }
     #container{
         width: 60%;
         background: unset;
     }
-    body {
-        background-image: url(img/flag3.jpg);
+    #menu{
+        border: unset;
+        margin: 3%;
+        padding: 2%;
     }
-
 }
