@@ -223,10 +223,10 @@ flipBtn.addEventListener("click", () => {
         const buttonEffect = (btn, arr, color) => {
             btn.addEventListener("click", () => {
                 btn.style.boxShadow = "10px 5px 5px black";
-                btn.style.padding = "5%";
+                btn.style.padding = "4%";
                 setTimeout(() => {
                     btn.style.boxShadow = "none";
-                    btn.style.padding = "4%"
+                    btn.style.padding = "5%"
                     HeaderColor = color;
                     currentArray = arr;
                     unHide();
