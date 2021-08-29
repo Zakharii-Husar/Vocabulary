@@ -232,7 +232,7 @@ flipBtn.addEventListener("click", () => {
                     currentArray = arr;
                     unHide();
                     update();
-                    }, 300)
+                    }, 200)
                 }, 300)
             })
         };
