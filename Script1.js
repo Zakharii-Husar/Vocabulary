@@ -227,14 +227,14 @@ flipBtn.addEventListener("click", () => {
 
 // MENU BUTTONS
         knownWordsBtn.addEventListener("click", () => {
-            knownWordsBtn.style.padding = "10%";
+            knownWordsBtn.style.boxShadow = "10px 5px 5px white";
             setTimeout(() => {
-                knownWordsBtn.style.padding = "2%";
+                knownWordsBtn.style.boxShadow = "none";
                 HeaderColor = "green";
                 currentArray = knownWordsArr;
                 unHide();
                 update();
-            }, 1000)
+            }, 500)
 });
 
         UnknownWordsBtn.addEventListener("click", () => {
