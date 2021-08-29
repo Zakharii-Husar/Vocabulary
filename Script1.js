@@ -27,6 +27,23 @@ const favouriteWordsBtn = document.getElementById("goldenBtn");
 
 let index = 0;
 
+        //GETTING DATA FROM PREVIOUS SESSION IF POSSIBLE 
+        const retrievingData = (() => {
+            if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+                knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+            };
+            if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+                doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+            };
+            if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+                unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+            }
+
+            if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
+                likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
+            };
+        })();
+
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
     const word = document.getElementById("word");
@@ -92,22 +109,6 @@ const update = () => {
 
 update();
 
-//GETTING DATA FROM PREVIOUS SESSION IF POSSIBLE 
-const retrievingData = (() => {
-    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-    };
-    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
-        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
-    };
-    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-    }
-
-    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
-        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
-    };
-})();
 
 const actionButtons = (inputArr) => {
     //REMOVING THE WORD FROM WHENEVER IT MIGHT BE BEFORE ADDING TO A NEW LIST
