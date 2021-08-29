@@ -231,7 +231,7 @@ flipBtn.addEventListener("click", () => {
                     currentArray = arr;
                     unHide();
                     update();
-                }, 500)
+                }, 300)
             })
         };
 
