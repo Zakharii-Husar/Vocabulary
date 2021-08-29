@@ -173,13 +173,12 @@ flex-direction: column;
     body {
         background-image: url(img/flag3.jpg);
     }
-    #container{
+    #container {
         width: 60%;
         background: unset;
-    }
-    #container {
         border: unset;
     }
+
     #menu *{
         margin: 3%;
         padding: 2%;
