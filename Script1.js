@@ -222,12 +222,19 @@ flipBtn.addEventListener("click", () => {
     update();
 });
 
+
+
+
 // MENU BUTTONS
         knownWordsBtn.addEventListener("click", () => {
-            HeaderColor = "green";
-            currentArray = knownWordsArr;
-    unHide();
-    update();
+            knownWordsBtn.style.padding = "10%";
+            setTimeout(() => {
+                knownWordsBtn.style.padding = "2%";
+                HeaderColor = "green";
+                currentArray = knownWordsArr;
+                unHide();
+                update();
+            }, 1000)
 });
 
         UnknownWordsBtn.addEventListener("click", () => {
