@@ -223,11 +223,24 @@ flipBtn.addEventListener("click", () => {
 });
 
 
+        const buttonEffect = (btn, arr, color) => {
+            btn.addEventListener("click", () => {
+                btn.style.boxShadow = "10px 5px 5px black";
+                setTimeout(() => {
+                    btn.style.boxShadow = "none";
+                    HeaderColor = color;
+                    currentArray = arr;
+                    unHide();
+                    update();
+                }, 500)
+            })
+        };
 
-
+        buttonEffect(UnknownWordsBtn, unknownWordsArr, "red");
+        console.log("succses")
 // MENU BUTTONS
         knownWordsBtn.addEventListener("click", () => {
-            knownWordsBtn.style.boxShadow = "10px 5px 5px white";
+            knownWordsBtn.style.boxShadow = "10px 5px 5px black";
             setTimeout(() => {
                 knownWordsBtn.style.boxShadow = "none";
                 HeaderColor = "green";
@@ -237,12 +250,12 @@ flipBtn.addEventListener("click", () => {
             }, 500)
 });
 
-        UnknownWordsBtn.addEventListener("click", () => {
-            HeaderColor = "red";
-            currentArray = unknownWordsArr;
-    unHide();
-    update();
-});
+//        UnknownWordsBtn.addEventListener("click", () => {
+//            HeaderColor = "red";
+//            currentArray = unknownWordsArr;
+//    unHide();
+//    update();
+//});
 
         doubtfulWordsBtn.addEventListener("click", () => {
             HeaderColor = "yellow";
