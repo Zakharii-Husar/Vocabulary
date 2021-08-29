@@ -226,11 +226,13 @@ flipBtn.addEventListener("click", () => {
                 btn.style.padding = "6%";
                 setTimeout(() => {
                     btn.style.boxShadow = "none";
-                    btn.style.padding = "5%"
+                    btn.style.padding = "5%";
+                    setTimeout(() => {
                     HeaderColor = color;
                     currentArray = arr;
                     unHide();
                     update();
+                    }, 300)
                 }, 300)
             })
         };
