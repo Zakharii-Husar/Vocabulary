@@ -77,7 +77,7 @@ const textContent = () => {
         else if (currentArray == doubtfulWordsArr) {
             header.textContent = `ПОВТОРЕННЯ: ${doubtfulWordsArr.length}`;
         }
-        else {
+        else if (currentArray == likedWordsArr) {
             header.textContent = `УЛЮБЛЕНІ: ${likedWordsArr.length}`;
         }
     }
