@@ -237,37 +237,9 @@ flipBtn.addEventListener("click", () => {
         };
 
         buttonEffect(UnknownWordsBtn, unknownWordsArr, "red");
-        console.log("succses")
+        buttonEffect(doubtfulWordsBtn, doubtfulWordsArr, "yellow");
+        buttonEffect(knownWordsBtn, knownWordsArr, "green");
+        buttonEffect(favouriteWordsBtn, likedWordsArr, "darkgoldenrod");
 // MENU BUTTONS
-        knownWordsBtn.addEventListener("click", () => {
-            knownWordsBtn.style.boxShadow = "10px 5px 5px black";
-            setTimeout(() => {
-                knownWordsBtn.style.boxShadow = "none";
-                HeaderColor = "green";
-                currentArray = knownWordsArr;
-                unHide();
-                update();
-            }, 500)
-});
 
-//        UnknownWordsBtn.addEventListener("click", () => {
-//            HeaderColor = "red";
-//            currentArray = unknownWordsArr;
-//    unHide();
-//    update();
-//});
-
-        doubtfulWordsBtn.addEventListener("click", () => {
-            HeaderColor = "yellow";
-            currentArray = doubtfulWordsArr;
-    unHide();
-    update();
-});
-
-        favouriteWordsBtn.addEventListener("click", () => {
-            HeaderColor = "darkgoldenrod";
-            currentArray = likedWordsArr;
-    unHide();
-    update();
-})
     });
