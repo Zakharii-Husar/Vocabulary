@@ -238,4 +238,7 @@ flipBtn.addEventListener("click", () => {
         buttonEffect(doubtfulWordsBtn, doubtfulWordsArr, "yellow");
         buttonEffect(knownWordsBtn, knownWordsArr, "green");
         buttonEffect(favouriteWordsBtn, likedWordsArr, "darkgoldenrod");
+
+//ADDING AUDIO
+
     });
