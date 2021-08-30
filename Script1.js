@@ -48,18 +48,18 @@ let HeaderColor = "red";
         //    };
         //})();
 
-            const retrievingLocalData = (dataArr, localData) => {
+        function retrievingLocalData  (dataArr, localData) {
                 if (JSON.parse(localStorage.getItem(localData)) !== null) {
                     dataArr = JSON.parse(localStorage.getItem(localData));
                 };
 
-                retrievingLocalData(knownWordsArr, "knownWord");
-                retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-                retrievingLocalData(unknownWordsArr, "unknownWord");
-                retrievingLocalData(likedWordsArr, "likedWord");
             };
+        retrievingLocalData(knownWordsArr, "knownWord");
+        retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
+        retrievingLocalData(unknownWordsArr, "unknownWord");
+        retrievingLocalData(likedWordsArr, "likedWord");
 
-        console.log("work3")
+        console.log("work4")
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
