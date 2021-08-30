@@ -257,5 +257,5 @@ const audioInput = () => {
         }
 
         transcription.addEventListener("click", audioInput);
-        console.log("play2");
+        console.log("play3");
     });
