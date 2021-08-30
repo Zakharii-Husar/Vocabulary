@@ -54,12 +54,12 @@ let HeaderColor = "red";
                 };
 
             };
-        retrievingLocalData(knownWordsArr, "knownWord");
-        retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-        retrievingLocalData(unknownWordsArr, "unknownWord");
-        retrievingLocalData(likedWordsArr, "likedWord");
+        retrievingLocalData(knownWordsArr, "knownWordmod");
+        retrievingLocalData(doubtfulWordsArr, "doubtfulWordmod");
+        retrievingLocalData(unknownWordsArr, "unknownWordmod");
+        retrievingLocalData(likedWordsArr, "likedWordmod");
 
-        console.log("work4")
+        console.log("work5")
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
@@ -164,10 +164,10 @@ const actionButtons = (inputArr) => {
 
     //SAVING EDITED ARRAYS TO LOCAL STORAGE
 
-    localStorage.setItem("knownWord", JSON.stringify(knownWordsArr));
-    localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
-    localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
-    localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
+    localStorage.setItem("knownWordmod", JSON.stringify(knownWordsArr));
+    localStorage.setItem("doubtfulWordmod", JSON.stringify(doubtfulWordsArr));
+    localStorage.setItem("unknownWordmod", JSON.stringify(unknownWordsArr));
+    localStorage.setItem("likedWordmod", JSON.stringify(likedWordsArr));
 
 };
 
