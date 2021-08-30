@@ -49,10 +49,7 @@ let HeaderColor = "red";
         //})();
 
         function retrievingLocalData  (dataArr, localData) {
-                if (JSON.parse(localStorage.getItem(localData)) !== null) {
                     dataArr = JSON.parse(localStorage.getItem(localData));
-                    console.log(JSON.parse(localStorage.getItem(localData)))
-                };
 
             };
         retrievingLocalData(knownWordsArr, "knownWord");
