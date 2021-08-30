@@ -33,26 +33,33 @@ let HeaderColor = "red";
         ukrainianArray = data[2];
 
         //GETTING DATA FROM LOCAL STORAGE FROM PREVIOUS SESSION IF POSSIBLE
-        //const retrievingLocalData = (() => {
-        //    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-        //        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-        //    };
-        //    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
-        //        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
-        //    };
-        //    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-        //        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-        //    };
-        //    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
-        //        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
-        //    };
-        //})();
-
-        const retrievingLocalData = (dataArr, localData) => {
-            if (JSON.parse(localStorage.getItem(localData)) !== null) {
-                dataArr = JSON.parse(localStorage.getItem(localData));
+        const retrievingLocalData = (() => {
+            if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+                knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
             };
-        };
+            if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+                doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+            };
+            if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+                unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+            };
+            if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
+                likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
+            };
+        })();
+
+        //const retrievingLocalData = (dataArr, localData) => {
+        //    if (JSON.parse(localStorage.getItem(localData)) !== null) {
+        //        dataArr = JSON.parse(localStorage.getItem(localData));
+        //    };
+        //};
+
+        //retrievingLocalData(knownWordsArr, "knownWord");
+        //retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
+        //retrievingLocalData(unknownWordsArr, "unknownWord");
+        //retrievingLocalData(likedWordsArr, "likedWord");
+
+        console.log("work")
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
@@ -119,12 +126,6 @@ const update = () => {
     headerStyle();
     textContent();
     star();
-    retrievingLocalData(knownWordsArr, "knownWord");
-    retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-    retrievingLocalData(unknownWordsArr, "unknownWord");
-    retrievingLocalData(likedWordsArr, "likedWord");
-
-    console.log("work bitch2!!!")
 };
 
 update();
