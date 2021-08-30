@@ -5,6 +5,7 @@ fetch("words.json")
 //GLOBAL VARIABLES
 const header = document.getElementById("menuHead");
         const transcription = document.getElementById("transcription");
+        const card = document.getElementsByClassName("toggle")[0];
 let englishArray;
 let transcriptionArray;
 let ukrainianArray;
@@ -155,8 +156,9 @@ const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr);
     update();
+    card.classList.toggle("active2")
 });
-
+        console.log("test1")
 const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
     actionButtons(doubtfulWordsArr)
@@ -204,13 +206,11 @@ likeBtn.addEventListener("click", () => {
 
 //FLIP
 
-const card = document.getElementsByClassName("toggle")[0];
-
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
-    card.classList.toggle("active2");
+    card.classList.toggle("active");
 });
-        console.log("test3")
+
 //THE BUTTON SWITCHING TO MENU
         menuBtn.addEventListener("click", () => {
             HeaderColor = "darkblue";

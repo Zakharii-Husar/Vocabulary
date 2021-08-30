@@ -38,6 +38,10 @@
     border: 2px solid black;
 }
 
+    #card.active {
+        transform: rotateX(180deg);
+    }
+
     #card.active2 {
         transform: rotateX(180deg);
     }
