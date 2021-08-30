@@ -38,6 +38,9 @@
     border: 2px solid black;
 }
 
+    #card.active {
+        transform: rotateX(180deg);
+    }
 
 
 #word {
@@ -101,11 +104,6 @@
         padding: 0 2% 0 2%;
     }
 
-
-    #card.active {
-        transform: rotateX(180deg);
-        
-    }
 
 #panel {
     display: flex;

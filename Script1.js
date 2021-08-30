@@ -210,7 +210,7 @@ const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
     card.classList.toggle("active");
 });
-
+        console.log("test")
 //THE BUTTON SWITCHING TO MENU
         menuBtn.addEventListener("click", () => {
             HeaderColor = "darkblue";
@@ -239,15 +239,6 @@ flipBtn.addEventListener("click", () => {
         buttonEffect(knownWordsBtn, knownWordsArr, "green");
         buttonEffect(favouriteWordsBtn, likedWordsArr, "darkgoldenrod");
 
-        //ADDING AUDIO
-        const fuck = () => {
-            fetch("https://ms06.spac.me/m/045196073133214030119040135254112023094087098014057213076177/1630346587/113355697/0/c522d459711ea5add51465f5e4840658/Far_Out-Constellation_%28feat._Karra%29-spaces.im.mp3")
-                .then(responseAudio => {
-                    let audio = new Audio(responseAudio);
-                    audio.play();
-                })
-        }
-        transcription.addEventListener("click", fuck);
-        console.log("fuuuuck")
+
 
     });
