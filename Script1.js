@@ -3,16 +3,28 @@ fetch("words.json")
     .then(response => response.json())
     .then(data => {    
 //GLOBAL VARIABLES
-const header = document.getElementById("menuHead");
-        const transcription = document.getElementById("transcription");
+        //ARRAYS WITH REAL DATA FROM JSON
 let englishArray;
 let transcriptionArray;
 let ukrainianArray;
+        //ARRAYS WITH INDEXES TO ACCES ARRAYS FROM JSON
 let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
+        //CURRENT ARRAY = ARRAY WITH INDEXES; INDEX = INDEX OF CURRENT ARRAY;
 let currentArray = unknownWordsArr;
+let index = 0;
+     //DOM ELEMENTS
+        //MENU BUTTONS 
+const knownWordsBtn = document.getElementById("greenBtn");
+const UnknownWordsBtn = document.getElementById("redBtn");
+const doubtfulWordsBtn = document.getElementById("yellowBtn");
+const favouriteWordsBtn = document.getElementById("goldenBtn");
+
+const transcription = document.getElementById("transcription");
+const header = document.getElementById("menuHead");
+
 let HeaderColor = "red";
 
         //RETRIEVING DATA FROM JSON AND STORING TO THE ARRAYS
@@ -20,28 +32,33 @@ let HeaderColor = "red";
         transcriptionArray = data[1];
         ukrainianArray = data[2];
 
-const knownWordsBtn = document.getElementById("greenBtn");
-const UnknownWordsBtn = document.getElementById("redBtn");
-const doubtfulWordsBtn = document.getElementById("yellowBtn");
-const favouriteWordsBtn = document.getElementById("goldenBtn");
-
-let index = 0;
-
         //GETTING DATA FROM LOCAL STORAGE FROM PREVIOUS SESSION IF POSSIBLE
-        const retrievingData = (() => {
-            if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-                knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+        //const retrievingLocalData = (() => {
+        //    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+        //        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
+        //    };
+        //    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+        //        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+        //    };
+        //    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+        //        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+        //    };
+        //    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
+        //        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
+        //    };
+        //})();
+
+        const retrievingLocalData = (dataArr, localData) => {
+            if (JSON.parse(localStorage.getItem(localData)) !== null) {
+                dataArr = JSON.parse(localStorage.getItem(localData));
             };
-            if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
-                doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
-            };
-            if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-                unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-            };
-            if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
-                likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
-            };
-        })();
+        };
+        retrievingLocalData(knownWordsArr, "knownWord");
+        retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
+        retrievingLocalData(unknownWordsArr, "unknownWord");
+        retrievingLocalData(likedWordsArr, "likedWord");
+
+        console.log("work bitch!!!")
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
@@ -90,20 +107,24 @@ const star = () => {
     } else {
         starPic.setAttribute("src", "img/unlike.png")
     }
-};
+        };
+
+const headerStyle = () => {
+            header.style.backgroundColor = HeaderColor;
+            if (HeaderColor == "darkblue") {
+                header.style.color = "white";
+            }
+            else {
+                header.style.color = "black";
+            }
+        }
 
 const update = () => {
     let randomNum = Math.floor(Math.random() * currentArray.length);
     index = currentArray[randomNum];
+    headerStyle();
     textContent();
     star();
-    header.style.backgroundColor = HeaderColor;
-    if (HeaderColor == "darkblue") {
-        header.style.color = "white";
-    }
-    else {
-        header.style.color = "black";
-    }
 };
 
 update();
