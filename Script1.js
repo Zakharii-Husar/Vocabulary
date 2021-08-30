@@ -33,7 +33,7 @@ let HeaderColor = "red";
         ukrainianArray = data[2];
 
         //GETTING DATA FROM LOCAL STORAGE FROM PREVIOUS SESSION IF POSSIBLE
-        const retrievingLocalData = (() => {
+        const retrievingLocalData = () => {
             if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
                 knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
             };
@@ -46,7 +46,8 @@ let HeaderColor = "red";
             if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
                 likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
             };
-        })();
+        };
+        retrievingLocalData();
 
         //const retrievingLocalData = (dataArr, localData) => {
         //    if (JSON.parse(localStorage.getItem(localData)) !== null) {
