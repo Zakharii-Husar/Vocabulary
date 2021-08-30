@@ -210,7 +210,7 @@ const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
     card.classList.toggle("active2");
 });
-        console.log("test2")
+        console.log("test3")
 //THE BUTTON SWITCHING TO MENU
         menuBtn.addEventListener("click", () => {
             HeaderColor = "darkblue";
