@@ -241,7 +241,7 @@ flipBtn.addEventListener("click", () => {
 
         //ADDING AUDIO
 const audioInput = () => {
-    fetch(`https://voicerss-text-to-speech.p.rapidapi.com/?key=ef5a8c4b545243069067d5f3f4900d49&hl=en-us&src=${englishArray[index]}&f=8khz_8bit_mono&c=mp3&r=0`, {
+    fetch(`https://voicerss-text-to-speech.p.rapidapi.com/?key=ef5a8c4b545243069067d5f3f4900d49&hl=en-us&src= ${englishArray[index]} &f=8khz_8bit_mono&c=mp3&r=0`, {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "voicerss-text-to-speech.p.rapidapi.com",
