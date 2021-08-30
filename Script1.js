@@ -48,19 +48,18 @@ let HeaderColor = "red";
         //    };
         //})();
 
-        const somefunc = (() => {
             const retrievingLocalData = (dataArr, localData) => {
                 if (JSON.parse(localStorage.getItem(localData)) !== null) {
                     dataArr = JSON.parse(localStorage.getItem(localData));
                 };
+
+                retrievingLocalData(knownWordsArr, "knownWord");
+                retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
+                retrievingLocalData(unknownWordsArr, "unknownWord");
+                retrievingLocalData(likedWordsArr, "likedWord");
             };
 
-            retrievingLocalData(knownWordsArr, "knownWord");
-            retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-            retrievingLocalData(unknownWordsArr, "unknownWord");
-            retrievingLocalData(likedWordsArr, "likedWord");
-        })();
-        console.log("work2")
+        console.log("work3")
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
