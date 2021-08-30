@@ -5,8 +5,6 @@ fetch("words.json")
 //GLOBAL VARIABLES
 const header = document.getElementById("menuHead");
         const transcription = document.getElementById("transcription");
-        //const ctx = new AudioContext();
-        //let audio;
 let englishArray;
 let transcriptionArray;
 let ukrainianArray;
@@ -242,36 +240,8 @@ flipBtn.addEventListener("click", () => {
         buttonEffect(favouriteWordsBtn, likedWordsArr, "darkgoldenrod");
 
         //ADDING AUDIO
-    //fetch("https://voicerss-text-to-speech.p.rapidapi.com/?key=ef5a8c4b545243069067d5f3f4900d49&hl=en-us&src=" + englishArray[index] + "&f=8khz_8bit_mono&c=mp3&r=0", {
-    //            "method": "GET",
-    //            "headers": {
-    //                "x-rapidapi-host": "voicerss-text-to-speech.p.rapidapi.com",
-    //                "x-rapidapi-key": "ef5a8c4b545243069067d5f3f4900d49"
-    //            }
-    //        })
-    //    .then(responseAudio => {
-    //        responseAudio.arrayBuffer();
-    //    })
-    //    .then(arrayBuffer => {
-    //        ctx.decodeAudioData(arrayBuffer)
-    //    })
-    //    .then(decodeAudio => {
-    //        audio = decodeAudio
-    //    })
-    //            .catch(err => {
-    //                console.error("You exceeded the limit in 350 words");
-    //            });
-
-    //    const play = () => {
-    //        const playSound = ctx.createBufferSource();
-    //        playSound.buffer = audio;
-    //        playSound.connect(ctx.destination);
-    //        playSound.start(ctx.currentTime);
-    //    }
-
-
         const fuck = () => {
-            fetch("https://voicerss-text-to-speech.p.rapidapi.com/?key=ef5a8c4b545243069067d5f3f4900d49&hl=en-us&src=" + englishArray[index] + "&f=8khz_8bit_mono&c=mp3&r=0", {
+            fetch("https://voicerss-text-to-speech.p.rapidapi.com/?key=ef5a8c4b545243069067d5f3f4900d49&hl=en-us&src=Hello%2C%20world!&f=8khz_8bit_mono&c=mp3&r=0", {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "voicerss-text-to-speech.p.rapidapi.com",
