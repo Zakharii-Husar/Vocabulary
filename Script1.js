@@ -239,6 +239,23 @@ flipBtn.addEventListener("click", () => {
         buttonEffect(knownWordsBtn, knownWordsArr, "green");
         buttonEffect(favouriteWordsBtn, likedWordsArr, "darkgoldenrod");
 
-//ADDING AUDIO
+        //ADDING AUDIO
+const audioInput = () => {
+            fetch(`https://voicerss-text-to-speech.p.rapidapi.com/?key=040ea5deead145bb8a16aa927f24b60c&hl=en-us&src=${englishArray[index]}&f=8khz_8bit_mono&c=mp3&r=0`, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "voicerss-text-to-speech.p.rapidapi.com",
+                    "x-rapidapi-key": "040ea5deead145bb8a16aa927f24b60c"
+                }
+            })
+                .then(responseAudio => {
+                    responseAudio.play();
+                })
+                .catch(err => {
+                    console.error("You exceeded the limit in 350 words");
+                });
+        }
 
+        transcription.addEventListener("click", audioInput);
+        console.log("play");
     });
