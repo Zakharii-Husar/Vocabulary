@@ -53,12 +53,6 @@ let HeaderColor = "red";
                 dataArr = JSON.parse(localStorage.getItem(localData));
             };
         };
-        retrievingLocalData(knownWordsArr, "knownWord");
-        retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-        retrievingLocalData(unknownWordsArr, "unknownWord");
-        retrievingLocalData(likedWordsArr, "likedWord");
-
-        console.log("work bitch!!!")
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
@@ -167,6 +161,13 @@ const actionButtons = (inputArr) => {
     localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
     localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
     localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
+
+    retrievingLocalData(knownWordsArr, "knownWord");
+    retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
+    retrievingLocalData(unknownWordsArr, "unknownWord");
+    retrievingLocalData(likedWordsArr, "likedWord");
+
+    console.log("work bitch2!!!")
 
 };
 
