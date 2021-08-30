@@ -158,7 +158,7 @@ greenBtn.addEventListener("click", () => {
     update();
     card.classList.toggle("active2")
 });
-        console.log("test1")
+        console.log("test2")
 const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
     actionButtons(doubtfulWordsArr)
