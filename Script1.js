@@ -5,7 +5,6 @@ fetch("words.json")
 //GLOBAL VARIABLES
 const header = document.getElementById("menuHead");
         const transcription = document.getElementById("transcription");
-        const card = document.getElementsByClassName("toggle")[0];
 let englishArray;
 let transcriptionArray;
 let ukrainianArray;
@@ -156,9 +155,7 @@ const greenBtn = document.getElementById("green");
 greenBtn.addEventListener("click", () => {
     actionButtons(knownWordsArr);
     update();
-    card.classList.toggle("active2")
 });
-        console.log("test2")
 const yellowBtn = document.getElementById("yellow");
 yellowBtn.addEventListener("click", () => {
     actionButtons(doubtfulWordsArr)

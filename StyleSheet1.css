@@ -42,10 +42,6 @@
         transform: rotateX(180deg);
     }
 
-    #card.active2 {
-        transform: rotateY(360deg);
-    }
-
 
 #word {
     background-image: url(img/flag.jpg);
