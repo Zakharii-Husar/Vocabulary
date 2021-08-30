@@ -119,6 +119,12 @@ const update = () => {
     headerStyle();
     textContent();
     star();
+    retrievingLocalData(knownWordsArr, "knownWord");
+    retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
+    retrievingLocalData(unknownWordsArr, "unknownWord");
+    retrievingLocalData(likedWordsArr, "likedWord");
+
+    console.log("work bitch2!!!")
 };
 
 update();
@@ -161,13 +167,6 @@ const actionButtons = (inputArr) => {
     localStorage.setItem("doubtfulWord", JSON.stringify(doubtfulWordsArr));
     localStorage.setItem("unknownWord", JSON.stringify(unknownWordsArr));
     localStorage.setItem("likedWord", JSON.stringify(likedWordsArr));
-
-    retrievingLocalData(knownWordsArr, "knownWord");
-    retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-    retrievingLocalData(unknownWordsArr, "unknownWord");
-    retrievingLocalData(likedWordsArr, "likedWord");
-
-    console.log("work bitch2!!!")
 
 };
 
