@@ -208,9 +208,9 @@ const card = document.getElementsByClassName("toggle")[0];
 
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
-    card.classList.toggle("active");
+    card.classList.toggle("actives");
 });
-        console.log("test")
+        console.log("test2")
 //THE BUTTON SWITCHING TO MENU
         menuBtn.addEventListener("click", () => {
             HeaderColor = "darkblue";
