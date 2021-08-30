@@ -248,8 +248,9 @@ const audioInput = () => {
                     "x-rapidapi-key": "ef5a8c4b545243069067d5f3f4900d49"
                 }
             })
-                .then(responseAudio => {
-                    responseAudio.play();
+        .then(responseAudio => {
+            console.log("play5");
+            console.log(responseAudio)
                 })
                 .catch(err => {
                     console.error("You exceeded the limit in 350 words");
