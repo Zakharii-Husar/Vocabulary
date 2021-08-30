@@ -38,7 +38,7 @@
     border: 2px solid black;
 }
 
-    #card.actives {
+    #card.active2 {
         transform: rotateX(180deg);
     }
 

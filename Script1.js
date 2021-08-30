@@ -208,7 +208,7 @@ const card = document.getElementsByClassName("toggle")[0];
 
 const flipBtn = document.getElementById("flip");
 flipBtn.addEventListener("click", () => {
-    card.classList.toggle("actives");
+    card.classList.toggle("active2");
 });
         console.log("test2")
 //THE BUTTON SWITCHING TO MENU
