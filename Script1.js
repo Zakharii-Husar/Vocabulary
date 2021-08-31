@@ -227,11 +227,9 @@ flipBtn.addEventListener("click", () => {
 // MENU BUTTONS
         const buttonEffect = (btn, arr, color) => {
             btn.addEventListener("click", () => {
-                btn.style.boxShadow = "10px 5px 5px yellow";
-                //btn.style.padding = "6%";
+                btn.style.boxShadow = "10px 5px 5px Highlight";
                 setTimeout(() => {
                     btn.style.boxShadow = "none";
-                    //btn.style.padding = "5%";
                     HeaderColor = color;
                     currentArray = arr;
                     showCard();
