@@ -12,7 +12,7 @@ let knownWordsArr = [];
 let doubtfulWordsArr = [];
 let unknownWordsArr = Array.from(Array(1000).keys());
 let likedWordsArr = [];
-        //CURRENT ARRAY = ARRAY WITH INDEXES; INDEX = INDEX OF CURRENT ARRAY;
+        //CURRENT ARRAY = ARRAY WITH INDEXES;
 let currentArray = unknownWordsArr;
 let index = 0;
      //DOM ELEMENTS
@@ -33,31 +33,20 @@ let HeaderColor = "red";
         ukrainianArray = data[2];
 
         //GETTING DATA FROM LOCAL STORAGE FROM PREVIOUS SESSION IF POSSIBLE
-        //const retrievingLocalData = (() => {
-        //    if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
-        //        knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
-        //    };
-        //    if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
-        //        doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
-        //    };
-        //    if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
-        //        unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
-        //    };
-        //    if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
-        //        likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
-        //    };
-        //})();
-
-        function retrievingLocalData  (dataArr, localData) {
-                    dataArr = JSON.parse(localStorage.getItem(localData));
-
+        const retrievingLocalData = (() => {
+            if (JSON.parse(localStorage.getItem("knownWord")) !== null) {
+                knownWordsArr = JSON.parse(localStorage.getItem("knownWord"));
             };
-        retrievingLocalData(knownWordsArr, "knownWord");
-        retrievingLocalData(doubtfulWordsArr, "doubtfulWord");
-        retrievingLocalData(unknownWordsArr, "unknownWord");
-        retrievingLocalData(likedWordsArr, "likedWord");
-
-        console.log("work6")
+            if (JSON.parse(localStorage.getItem("doubtfulWord")) !== null) {
+                doubtfulWordsArr = JSON.parse(localStorage.getItem("doubtfulWord"));
+            };
+            if (JSON.parse(localStorage.getItem("unknownWord")) !== null) {
+                unknownWordsArr = JSON.parse(localStorage.getItem("unknownWord"));
+            };
+            if (JSON.parse(localStorage.getItem("likedWord")) !== null) {
+                likedWordsArr = JSON.parse(localStorage.getItem("likedWord"));
+            };
+        })();
 
 //CHANGING TEXT OF THE ELEMENTS
 const textContent = () => {
@@ -198,14 +187,14 @@ const hidingObject = (obj, visibility) => {
     obj.style.display = visibility;
 };
 
-const hide = () => {
+const showMenu = () => {
     hidingObject(card, "none");
     hidingObject(topPanel, "none");
     hidingObject(panel, "none");
     hidingObject(menu, "flex");
 };
 
-const unHide = () => {
+const showCard = () => {
     hidingObject(card, "flex");
     hidingObject(topPanel, "flex");
     hidingObject(panel, "flex");
@@ -231,7 +220,7 @@ flipBtn.addEventListener("click", () => {
 //THE BUTTON SWITCHING TO MENU
         menuBtn.addEventListener("click", () => {
             HeaderColor = "darkblue";
-    hide();
+    showMenu();
     update();
 });
 
@@ -245,7 +234,7 @@ flipBtn.addEventListener("click", () => {
                     btn.style.padding = "5%";
                     HeaderColor = color;
                     currentArray = arr;
-                    unHide();
+                    showCard();
                     update();
                 }, 300)
             })
