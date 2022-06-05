@@ -1,5 +1,6 @@
 ﻿html, body{
     height: 100%;
+    background-color: black;
 }
 
 * {
@@ -17,7 +18,6 @@
 }
 
 #container {
-    background-image: url(img/flag3.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -38,8 +38,44 @@
     border: 2px solid black;
 }
 
-    #card.active {
+    #card.flip {
         transform: rotateX(180deg);
+    }
+
+    @keyframes swipeRight {
+        0%{transform: translate(0);}
+        48%{transform: translateX(200vw);}
+        49%{transform: translateY(200vh);}
+        50%{transform: translateX(-200vw);}
+        51%{transform: translateY(-200vh);}
+    }
+
+    @keyframes swipeLeft {
+        0%{transform: translate(0);}
+        48%{transform: translateX(-200vw);}
+        49%{transform: translateY(200vh);}
+        50%{transform: translateX(200vw);}
+        51%{transform: translateY(-200vh);}
+    }
+
+    @keyframes swipeDown {
+        0%{transform: translate(0);}
+        48%{transform: translateY(200vw);}
+        49%{transform: translateY(200vh);}
+        50%{transform: translateX(200vw);}
+        51%{transform: translateY(-200vh);}
+    }
+
+    #card.swiperight{
+        animation: swipeRight 0.7s ease-in-out 0s;
+    }
+
+    #card.swipeleft{
+        animation: swipeLeft 0.7s ease-in-out 0s;
+    }
+
+    #card.swipedown{
+        animation: swipeDown 0.7s ease-in-out 0s;
     }
 
 
@@ -78,6 +114,23 @@
     height: inherit;
 }
 
+#arrows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    top: 12rem;
+}
+
+#arrows *{
+    width: 4rem;
+}
+
+#arrowRight{
+    transform: rotate(180deg);
+}
+
 
 #transcription {
     color: wheat;
@@ -86,6 +139,10 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#transcription.active{
+    display: none;
 }
 
 #topPanel {
@@ -123,15 +180,15 @@
         border: 2px solid black;
     }
 
-#green{
+#know{
     background-color: green;
 }
 
-#yellow{
+#doubt{
     background-color: yellow;
 }
 
-#red{
+#dontKnow{
     background-color: red;
 }
 
@@ -150,26 +207,23 @@ flex-direction: column;
         border: 2px solid black;
     }
 
-#goldenBtn{
+#favouriteList{
     background-color: darkgoldenrod;
 }
 
-#redBtn {
+#unknownList {
     background-color: red;
 }
 
-#yellowBtn {
+#doubtfulList {
     background-color: yellow;
 }
 
-#greenBtn {
+#knownList {
     background-color: green;
 }
 
 @media only screen and (min-width: 750px){
-    body {
-        background-image: url(img/flag3.jpg);
-    }
     #container {
         width: 60%;
         background: unset;

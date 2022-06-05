@@ -1,4 +1,7 @@
-const textContent = (currentArray, index, allKeys, elementsDOM) => {
+const textContent = (currentArray, index, allKeys) => {
+    const id = (id) => {
+        return document.getElementById(id)
+    };
     fetch('../words.json')
         .then(response => response.json())
         .then(data => {
@@ -8,33 +11,33 @@ const textContent = (currentArray, index, allKeys, elementsDOM) => {
             const ukrainian = data[2];
 
             if (currentArray?.length) {
-                elementsDOM.word.textContent = english[index];
-                elementsDOM.transcription.textContent = transcription[index];
-                elementsDOM.translation.textContent = ukrainian[index];
+                id("word").textContent = english[index];
+                id("transcription").textContent = transcription[index];
+                id("flipside").textContent = ukrainian[index];
             }
             else {
-                elementsDOM.word.textContent = "no words";
-                elementsDOM.translation.textContent = "немає слів";
-                elementsDOM.transcription.textContent = "";
+                id("word").textContent = "no words";
+                id("flipside").textContent = "немає слів";
+                id("transcription").textContent = "";
             }
-            elementsDOM.knownWordsBtn.textContent = `ВИВЧЕНІ: ${allKeys.knownWordsArr.length}`;
-            elementsDOM.unknownWordsBtn.textContent = `НОВІ: ${allKeys.unknownWordsArr.length}`;
-            elementsDOM.doubtfulWordsBtn.textContent = `ПОВТОРЕННЯ: ${allKeys.doubtfulWordsArr.length}`;
-            elementsDOM.favouriteWordsBtn.textContent = `УЛЮБЛЕНІ: ${allKeys.likedWordsArr.length}`;
+            id("knownList").textContent = `ВИВЧЕНІ: ${allKeys.knownWordsArr.length}`;
+            id("unknownList").textContent = `НОВІ: ${allKeys.unknownWordsArr.length}`;
+            id("doubtfulList").textContent = `ПОВТОРЕННЯ: ${allKeys.doubtfulWordsArr.length}`;
+            id("favouriteList").textContent = `УЛЮБЛЕНІ: ${allKeys.likedWordsArr.length}`;
 
-            elementsDOM.header.textContent = `НОВІ: ${allKeys.unknownWordsArr.length}`;
+            id("menuHead").textContent = `НОВІ: ${allKeys.unknownWordsArr.length}`;
 
             if (currentArray == null) {
-                elementsDOM.header.textContent = "ВИБЕРІТЬ СПИСОК";
+                id("menuHead").textContent = "ВИБЕРІТЬ СПИСОК";
             }
             if (currentArray == allKeys.knownWordsArr) {
-                elementsDOM.header.textContent = `ВИВЧЕНІ: ${allKeys.knownWordsArr.length}`;
+                id("menuHead").textContent = `ВИВЧЕНІ: ${allKeys.knownWordsArr.length}`;
             }
             if (currentArray == allKeys.doubtfulWordsArr) {
-                elementsDOM.header.textContent = `ПОВТОРЕННЯ: ${allKeys.doubtfulWordsArr.length}`;
+                id("menuHead").textContent = `ПОВТОРЕННЯ: ${allKeys.doubtfulWordsArr.length}`;
             }
             if (currentArray == allKeys.likedWordsArr) {
-                elementsDOM.header.textContent = `УЛЮБЛЕНІ: ${allKeys.likedWordsArr.length}`;
+                id("menuHead").textContent = `УЛЮБЛЕНІ: ${allKeys.likedWordsArr.length}`;
             }
         })
 };
