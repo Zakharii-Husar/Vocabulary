@@ -43,19 +43,13 @@
     }
 
     @keyframes swipeRight {
-        0%{transform: translate(0);}
-        48%{transform: translateX(200vw);}
-        49%{transform: translateY(200vh);}
-        50%{transform: translateX(-200vw);}
-        51%{transform: translateY(-200vh);}
+        from{transform: skewX(0);}
+        to{transform: skewX(-180deg);}
     }
 
     @keyframes swipeLeft {
-        0%{transform: translate(0);}
-        48%{transform: translateX(-200vw);}
-        49%{transform: translateY(200vh);}
-        50%{transform: translateX(200vw);}
-        51%{transform: translateY(-200vh);}
+        from{transform: skewX(0);}
+        to{transform: skewX(180deg);}
     }
 
     @keyframes swipeDown {
