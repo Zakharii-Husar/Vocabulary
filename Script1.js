@@ -82,11 +82,13 @@ let index = 0;
 
     };
 
-    const swipeCardAnimation = (btn, swipeDirection) => {
+    const swipeCardAnimation = (btn, swipeDirection, arr) => {
         id(btn).addEventListener("click", () => {
-            actions(currentArray, swipeDirection);
-            id("card").classList.add("swipe" + swipeDirection);
-            setTimeout(() => { id("card").classList.remove("swipe" + swipeDirection); }, 1000)
+            if(arr !== currentArray){
+                actions(currentArray, swipeDirection);
+                id("card").classList.add("swipe" + swipeDirection);
+                setTimeout(() => { id("card").classList.remove("swipe" + swipeDirection); }, 1000)
+            }
 
         });
 
@@ -97,7 +99,7 @@ let index = 0;
 
     const moveWord = (btn, arr) => {
         id(btn).addEventListener("click", () => {
-            swipeCardAnimation(btn, "down");
+            swipeCardAnimation(btn, "down", arr);
             actions(arr, "down");
         });
     };
