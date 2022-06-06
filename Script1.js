@@ -14,7 +14,6 @@ getLocalData(allKeys);
 let currentArray = allKeys.unknownWordsArr;
 let index = 0;
 
-const buttons = () => {
     let HEADERCOLOR = 'red';
 
     const id = (id) => {
@@ -98,9 +97,9 @@ const buttons = () => {
 
     const moveWord = (btn, arr) => {
         id(btn).addEventListener("click", () => {
+            if(currentArray !== arr)swipeCardAnimation(btn, "down");
             actions(arr, "down");
         });
-        if(currentArray !== arr)swipeCardAnimation(btn, "down")
     };
     moveWord("know", allKeys.knownWordsArr);
     moveWord("doubt", allKeys.doubtfulWordsArr);
@@ -163,6 +162,3 @@ const buttons = () => {
     switchList(id("doubtfulList"), allKeys.doubtfulWordsArr, "yellow");
     switchList(id("knownList"), allKeys.knownWordsArr, "green");
     switchList(id("favouriteList"), allKeys.likedWordsArr, "darkgoldenrod");
-}
-
-buttons();
