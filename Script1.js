@@ -97,7 +97,7 @@ let index = 0;
 
     const moveWord = (btn, arr) => {
         id(btn).addEventListener("click", () => {
-            if(currentArray !== arr)swipeCardAnimation(btn, "down");
+            swipeCardAnimation(btn, "down");
             actions(arr, "down");
         });
     };
@@ -147,12 +147,12 @@ let index = 0;
         };
 
         btn.addEventListener("click", () => {
-            currentArray = arr;
             btn.style.boxShadow = "10px 5px 5px Highlight";
             setTimeout(() => {
                 btn.style.boxShadow = "none";
                 HEADERCOLOR = color;
                 hideMenu();
+                currentArray = arr;
                 update();
             }, 300)
         })
