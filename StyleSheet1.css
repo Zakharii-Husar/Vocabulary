@@ -119,12 +119,12 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    position: absolute;
-    top: 12rem;
+    position: fixed;
+    top: 10rem;
 }
 
 #arrows *{
-    width: 4rem;
+    width: 10%;
 }
 
 #arrowRight{
